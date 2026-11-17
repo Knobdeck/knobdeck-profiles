@@ -1,0 +1,753 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "voicemod-fx",
+  "kind": "deck",
+  "name": "Voicemod FX",
+  "summary": "Voice changer, effects, soundboard and a bleep button.",
+  "description": "Voicemod on Windows and macOS: turn the voice changer and background effects on or off, hear yourself, pick a random or favourite voice, and hold to bleep.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Voice",
+    "Streaming"
+  ],
+  "plugins": [
+    {
+      "id": "voicemod",
+      "name": "Voicemod",
+      "setup": true
+    }
+  ],
+  "platforms": [
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 9,
+  "profile": {
+    "name": "Voicemod FX",
+    "icon": "audio-waveform",
+    "slices": [
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "voicemod",
+          "action_type": "voicemod/voice-changer",
+          "inputs": {},
+          "states": [
+            {
+              "value": "off",
+              "label": "Voice Changer Off",
+              "icon": "audio-lines"
+            },
+            {
+              "value": "on",
+              "label": "Voice Changer On",
+              "icon": "audio-waveform"
+            }
+          ],
+          "default_state": "off"
+        },
+        "label": "Voice Changer",
+        "icon": "audio-waveform",
+        "id": "voicemod-fx-slice1",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "voicemod",
+          "action_type": "voicemod/hear-myself",
+          "inputs": {},
+          "states": [
+            {
+              "value": "off",
+              "label": "Not Hearing",
+              "icon": "ear-off"
+            },
+            {
+              "value": "on",
+              "label": "Hearing Myself",
+              "icon": "ear"
+            }
+          ],
+          "default_state": "off"
+        },
+        "label": "Hear Myself",
+        "icon": "ear",
+        "id": "voicemod-fx-slice2",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "voicemod",
+          "action_type": "voicemod/background-effects",
+          "inputs": {},
+          "states": [
+            {
+              "value": "off",
+              "label": "Effects Off",
+              "icon": "circle"
+            },
+            {
+              "value": "on",
+              "label": "Effects On",
+              "icon": "sparkles"
+            }
+          ],
+          "default_state": "off"
+        },
+        "label": "Background Effects",
+        "icon": "sparkles",
+        "id": "voicemod-fx-slice3",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "voicemod",
+          "action_type": "voicemod/mute-mic",
+          "inputs": {},
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "Mic On",
+              "icon": "mic"
+            },
+            {
+              "value": "muted",
+              "label": "Mic Muted",
+              "icon": "mic-off"
+            }
+          ],
+          "default_state": "unmuted"
+        },
+        "label": "Mute Microphone",
+        "icon": "mic",
+        "id": "voicemod-fx-slice4",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "id": "voicemod-fx-cell10",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell11",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell12",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell13",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "voicemod",
+          "action_type": "voicemod/random-voice",
+          "inputs": {
+            "mode": "AllVoices"
+          }
+        },
+        "label": "Random Voice",
+        "icon": "shuffle",
+        "id": "voicemod-fx-slice5",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "kind": {
+          "type": "dynamic_wheel",
+          "plugin": "voicemod",
+          "action_type": "voicemod/favorite-voices-wheel",
+          "inputs": {}
+        },
+        "label": "Favorite Voices",
+        "icon": "star",
+        "id": "voicemod-fx-slice6",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "voicemod",
+          "action_type": "voicemod/stop-sounds",
+          "inputs": {}
+        },
+        "label": "Stop All Sounds",
+        "icon": "square",
+        "id": "voicemod-fx-slice7",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "voicemod",
+          "action_type": "voicemod/mute-sounds-for-me",
+          "inputs": {},
+          "states": [
+            {
+              "value": "off",
+              "label": "I Hear Sounds",
+              "icon": "volume-2"
+            },
+            {
+              "value": "on",
+              "label": "Sounds Muted for Me",
+              "icon": "volume-x"
+            }
+          ],
+          "default_state": "off"
+        },
+        "label": "Mute Sounds for Me",
+        "icon": "volume-x",
+        "id": "voicemod-fx-slice8",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "id": "voicemod-fx-cell14",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell15",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell16",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell17",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "hold",
+          "plugin": "voicemod",
+          "action_type": "voicemod/bleep",
+          "inputs": {},
+          "released": {
+            "label": "Bleep",
+            "icon": "message-square-off"
+          },
+          "held": {
+            "label": "Bleeping",
+            "icon": "megaphone"
+          }
+        },
+        "label": "Bleep",
+        "icon": "message-square-off",
+        "id": "voicemod-fx-slice9",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "id": "voicemod-fx-cell18",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell19",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell20",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell21",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell22",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell23",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell24",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell25",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell26",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell27",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell28",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell29",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell30",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell31",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell32",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell33",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell34",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell35",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell36",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell37",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell38",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell39",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell40",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell41",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell42",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell43",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell44",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell45",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell46",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell47",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell48",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell49",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell50",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell51",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell52",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell53",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell54",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell55",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell56",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell57",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell58",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell59",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell60",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell61",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell62",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell63",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "voicemod-fx-cell64",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      }
+    ],
+    "keybind": null,
+    "auto_open": null,
+    "show_labels": true
+  }
+}

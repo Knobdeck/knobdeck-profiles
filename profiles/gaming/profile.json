@@ -1,0 +1,746 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "gaming",
+  "kind": "deck",
+  "name": "Gaming",
+  "summary": "Launch games, talk on Discord and clip the last moments.",
+  "description": "A game wheel and Steam pages, Discord mute, deafen and push-to-talk, saving the OBS replay buffer, the system volume and the PC's stats.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Gaming",
+    "Streaming"
+  ],
+  "plugins": [
+    {
+      "id": "discord",
+      "name": "Discord",
+      "setup": true
+    },
+    {
+      "id": "game-launcher",
+      "name": "Game Launcher"
+    },
+    {
+      "id": "obs",
+      "name": "OBS Studio",
+      "setup": true
+    },
+    {
+      "id": "os-tools",
+      "name": "OS Tools",
+      "builtin": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {
+    "linux": 1,
+    "macos": 2,
+    "windows": 1
+  },
+  "ready": true,
+  "toConfigure": [],
+  "items": 13,
+  "profile": {
+    "name": "Gaming",
+    "icon": "gamepad-2",
+    "slices": [
+      {
+        "kind": {
+          "type": "dynamic_wheel",
+          "plugin": "game-launcher",
+          "action_type": "game-launcher/games-wheel",
+          "inputs": {
+            "store": "all",
+            "sort": "recent"
+          }
+        },
+        "label": "Games Wheel",
+        "icon": "layout-grid",
+        "id": "gaming-slice1",
+        "show_title": true
+      },
+      {
+        "label": "Library",
+        "kind": {
+          "type": "button",
+          "plugin": "game-launcher",
+          "action_type": "game-launcher/open-page",
+          "inputs": {
+            "page": "steam-library"
+          }
+        },
+        "icon": "library",
+        "id": "gaming-slice2",
+        "show_title": true
+      },
+      {
+        "label": "Store",
+        "kind": {
+          "type": "button",
+          "plugin": "game-launcher",
+          "action_type": "game-launcher/open-page",
+          "inputs": {
+            "page": "steam-store"
+          }
+        },
+        "icon": "library",
+        "id": "gaming-slice3",
+        "show_title": true
+      },
+      {
+        "id": "gaming-cell17",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell18",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell19",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell20",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/system-stats",
+          "inputs": {
+            "stat": "cpu"
+          }
+        },
+        "label": "System Stats",
+        "icon": "gauge",
+        "id": "gaming-slice4",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "discord",
+          "action_type": "discord/mute",
+          "inputs": {},
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "Unmuted",
+              "icon": "mic"
+            },
+            {
+              "value": "muted",
+              "label": "Muted",
+              "icon": "mic-off"
+            }
+          ],
+          "default_state": "unmuted"
+        },
+        "label": "Mute",
+        "icon": "mic",
+        "id": "gaming-slice5",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "discord",
+          "action_type": "discord/deafen",
+          "inputs": {},
+          "states": [
+            {
+              "value": "undeafened",
+              "label": "Undeafened",
+              "icon": "headphones"
+            },
+            {
+              "value": "deafened",
+              "label": "Deafened",
+              "icon": "headphone-off"
+            }
+          ],
+          "default_state": "undeafened"
+        },
+        "label": "Deafen",
+        "icon": "headphones",
+        "id": "gaming-slice6",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "hold",
+          "plugin": "discord",
+          "action_type": "discord/push-to-talk",
+          "inputs": {},
+          "released": {
+            "label": "Idle",
+            "icon": "mic-off"
+          },
+          "held": {
+            "label": "Talking",
+            "icon": "mic"
+          }
+        },
+        "label": "Push to Talk",
+        "icon": "mic-off",
+        "id": "gaming-slice7",
+        "show_title": true
+      },
+      {
+        "id": "gaming-cell21",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "obs",
+          "action_type": "obs/replay-buffer",
+          "inputs": {},
+          "states": [
+            {
+              "value": "stopped",
+              "label": "Buffer Off",
+              "icon": "circle"
+            },
+            {
+              "value": "active",
+              "label": "Buffer On",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "stopped"
+        },
+        "label": "Replay Buffer",
+        "icon": "history",
+        "id": "gaming-slice8",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/replay-buffer-save",
+          "inputs": {}
+        },
+        "label": "Save Replay",
+        "icon": "save",
+        "id": "gaming-slice9",
+        "show_title": true
+      },
+      {
+        "id": "gaming-cell22",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell23",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "slider",
+          "plugin": "knobdeck-actions",
+          "action_type": "volume",
+          "inputs": {},
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "%",
+          "span": {
+            "axis": "row",
+            "length": 4
+          }
+        },
+        "label": "Volume",
+        "icon": "volume-2",
+        "id": "gaming-slice10",
+        "show_title": true
+      },
+      {
+        "id": "gaming-span11",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "gaming-slice10"
+        }
+      },
+      {
+        "id": "gaming-span12",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "gaming-slice10"
+        }
+      },
+      {
+        "id": "gaming-span13",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "gaming-slice10"
+        }
+      },
+      {
+        "id": "gaming-cell24",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "screenshot",
+          "inputs": {}
+        },
+        "label": "Screenshot",
+        "icon": "camera",
+        "id": "gaming-slice14",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "dynamic_wheel",
+          "plugin": "os-tools",
+          "action_type": "os-tools/power-profile-wheel",
+          "inputs": {}
+        },
+        "label": "Power Profiles",
+        "icon": "battery-charging",
+        "id": "gaming-slice15",
+        "show_title": true,
+        "platforms": [
+          "linux"
+        ]
+      },
+      {
+        "kind": {
+          "type": "dynamic_wheel",
+          "plugin": "os-tools",
+          "action_type": "os-tools/power-plan-wheel",
+          "inputs": {}
+        },
+        "label": "Power Plans",
+        "icon": "battery-charging",
+        "id": "gaming-slice16",
+        "show_title": true,
+        "platforms": [
+          "windows"
+        ]
+      },
+      {
+        "id": "gaming-cell25",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell26",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell27",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell28",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell29",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell30",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell31",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell32",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell33",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell34",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell35",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell36",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell37",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell38",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell39",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell40",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell41",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell42",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell43",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell44",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell45",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell46",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell47",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell48",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell49",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell50",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell51",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell52",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell53",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell54",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell55",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell56",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell57",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell58",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell59",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell60",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell61",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell62",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell63",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "gaming-cell64",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      }
+    ],
+    "keybind": null,
+    "auto_open": null,
+    "show_labels": true
+  }
+}

@@ -1,0 +1,674 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "vlc-remote",
+  "kind": "deck",
+  "name": "VLC Remote",
+  "summary": "Play, seek, skip and fullscreen in VLC.",
+  "description": "Talks to VLC's web interface (the plugin's setup turns it on): play and pause, stop, skip, seek, volume and fullscreen, with the play state on the button.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Media",
+    "Video"
+  ],
+  "plugins": [
+    {
+      "id": "vlc",
+      "name": "VLC",
+      "setup": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 9,
+  "profile": {
+    "name": "VLC Remote",
+    "icon": "tv",
+    "slices": [
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vlc",
+          "action_type": "vlc/seek-backward",
+          "inputs": {}
+        },
+        "label": "Seek Back 10s",
+        "icon": "rewind",
+        "id": "vlc-remote-slice1",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "vlc",
+          "action_type": "vlc/play-pause",
+          "inputs": {},
+          "states": [
+            {
+              "value": "stopped",
+              "label": "Stopped",
+              "icon": "play"
+            },
+            {
+              "value": "paused",
+              "label": "Paused",
+              "icon": "pause"
+            },
+            {
+              "value": "playing",
+              "label": "Playing",
+              "icon": "play"
+            }
+          ],
+          "default_state": "stopped"
+        },
+        "label": "Play / Pause",
+        "icon": "play",
+        "id": "vlc-remote-slice2",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vlc",
+          "action_type": "vlc/seek-forward",
+          "inputs": {}
+        },
+        "label": "Seek Forward 10s",
+        "icon": "fast-forward",
+        "id": "vlc-remote-slice3",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vlc",
+          "action_type": "vlc/stop",
+          "inputs": {}
+        },
+        "label": "Stop",
+        "icon": "square",
+        "id": "vlc-remote-slice4",
+        "show_title": true
+      },
+      {
+        "id": "vlc-remote-cell10",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell11",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell12",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell13",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vlc",
+          "action_type": "vlc/previous",
+          "inputs": {}
+        },
+        "label": "Previous",
+        "icon": "skip-back",
+        "id": "vlc-remote-slice5",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "vlc",
+          "action_type": "vlc/fullscreen",
+          "inputs": {},
+          "states": [
+            {
+              "value": "off",
+              "label": "Windowed",
+              "icon": "square"
+            },
+            {
+              "value": "on",
+              "label": "Fullscreen",
+              "icon": "maximize"
+            }
+          ],
+          "default_state": "off"
+        },
+        "label": "Fullscreen",
+        "icon": "maximize",
+        "id": "vlc-remote-slice6",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vlc",
+          "action_type": "vlc/next",
+          "inputs": {}
+        },
+        "label": "Next",
+        "icon": "skip-forward",
+        "id": "vlc-remote-slice7",
+        "show_title": true
+      },
+      {
+        "id": "vlc-remote-cell14",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell15",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell16",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell17",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell18",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vlc",
+          "action_type": "vlc/volume-down",
+          "inputs": {}
+        },
+        "label": "Volume Down",
+        "icon": "volume-1",
+        "id": "vlc-remote-slice8",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vlc",
+          "action_type": "vlc/volume-up",
+          "inputs": {}
+        },
+        "label": "Volume Up",
+        "icon": "volume-2",
+        "id": "vlc-remote-slice9",
+        "show_title": true
+      },
+      {
+        "id": "vlc-remote-cell19",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell20",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell21",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell22",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell23",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell24",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell25",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell26",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell27",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell28",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell29",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell30",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell31",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell32",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell33",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell34",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell35",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell36",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell37",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell38",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell39",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell40",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell41",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell42",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell43",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell44",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell45",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell46",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell47",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell48",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell49",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell50",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell51",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell52",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell53",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell54",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell55",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell56",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell57",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell58",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell59",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell60",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell61",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell62",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell63",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "vlc-remote-cell64",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      }
+    ],
+    "keybind": null,
+    "auto_open": null,
+    "show_labels": true
+  }
+}

@@ -1,0 +1,787 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "streamlabs-live",
+  "kind": "deck",
+  "name": "Streamlabs Live",
+  "summary": "Stream, record, replay and scenes in Streamlabs Desktop.",
+  "description": "Streamlabs Desktop on Windows and macOS: go live, record, keep a replay buffer and save it, switch scenes and mute or level one audio source.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Streaming",
+    "Recording"
+  ],
+  "plugins": [
+    {
+      "id": "streamlabs",
+      "name": "Streamlabs Desktop",
+      "setup": true
+    }
+  ],
+  "platforms": [
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": false,
+  "toConfigure": [
+    "Scene 1 (scene)",
+    "Scene 2 (scene)",
+    "Scene 3 (scene)",
+    "Mic (source)",
+    "Mic Level (source)"
+  ],
+  "items": 9,
+  "profile": {
+    "name": "Streamlabs Live",
+    "icon": "radio-tower",
+    "slices": [
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "streamlabs",
+          "action_type": "streamlabs/stream",
+          "inputs": {},
+          "states": [
+            {
+              "value": "offline",
+              "label": "Offline",
+              "icon": "circle"
+            },
+            {
+              "value": "live",
+              "label": "Live",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "offline"
+        },
+        "label": "Go Live",
+        "icon": "radio-tower",
+        "id": "streamlabs-live-slice1",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "streamlabs",
+          "action_type": "streamlabs/record",
+          "inputs": {},
+          "states": [
+            {
+              "value": "offline",
+              "label": "Not Recording",
+              "icon": "square"
+            },
+            {
+              "value": "recording",
+              "label": "Recording",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "offline"
+        },
+        "label": "Record",
+        "icon": "circle",
+        "id": "streamlabs-live-slice2",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "streamlabs",
+          "action_type": "streamlabs/replay-buffer",
+          "inputs": {},
+          "states": [
+            {
+              "value": "offline",
+              "label": "Buffer Off",
+              "icon": "circle"
+            },
+            {
+              "value": "running",
+              "label": "Buffer On",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "offline"
+        },
+        "label": "Replay Buffer",
+        "icon": "history",
+        "id": "streamlabs-live-slice3",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "streamlabs",
+          "action_type": "streamlabs/save-replay",
+          "inputs": {}
+        },
+        "label": "Save Replay",
+        "icon": "save",
+        "id": "streamlabs-live-slice4",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "id": "streamlabs-live-cell12",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell13",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell14",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell15",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "label": "Scene 1",
+        "kind": {
+          "type": "toggle",
+          "plugin": "streamlabs",
+          "action_type": "streamlabs/scene",
+          "inputs": {},
+          "states": [
+            {
+              "value": "inactive",
+              "label": "Not Live",
+              "icon": "layout-grid"
+            },
+            {
+              "value": "active",
+              "label": "Live",
+              "icon": "circle-check"
+            }
+          ],
+          "default_state": "inactive"
+        },
+        "icon": "layout-grid",
+        "id": "streamlabs-live-slice5",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "label": "Scene 2",
+        "kind": {
+          "type": "toggle",
+          "plugin": "streamlabs",
+          "action_type": "streamlabs/scene",
+          "inputs": {},
+          "states": [
+            {
+              "value": "inactive",
+              "label": "Not Live",
+              "icon": "layout-grid"
+            },
+            {
+              "value": "active",
+              "label": "Live",
+              "icon": "circle-check"
+            }
+          ],
+          "default_state": "inactive"
+        },
+        "icon": "layout-grid",
+        "id": "streamlabs-live-slice6",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "label": "Scene 3",
+        "kind": {
+          "type": "toggle",
+          "plugin": "streamlabs",
+          "action_type": "streamlabs/scene",
+          "inputs": {},
+          "states": [
+            {
+              "value": "inactive",
+              "label": "Not Live",
+              "icon": "layout-grid"
+            },
+            {
+              "value": "active",
+              "label": "Live",
+              "icon": "circle-check"
+            }
+          ],
+          "default_state": "inactive"
+        },
+        "icon": "layout-grid",
+        "id": "streamlabs-live-slice7",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "id": "streamlabs-live-cell16",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell17",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell18",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell19",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell20",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "label": "Mic",
+        "kind": {
+          "type": "toggle",
+          "plugin": "streamlabs",
+          "action_type": "streamlabs/audio-mute",
+          "inputs": {},
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "On",
+              "icon": "volume-2"
+            },
+            {
+              "value": "muted",
+              "label": "Muted",
+              "icon": "volume-x"
+            }
+          ],
+          "default_state": "unmuted"
+        },
+        "icon": "volume-x",
+        "id": "streamlabs-live-slice8",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "label": "Mic Level",
+        "kind": {
+          "type": "slider",
+          "plugin": "streamlabs",
+          "action_type": "streamlabs/audio-volume",
+          "inputs": {
+            "step": "5"
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "span": {
+            "axis": "row",
+            "length": 3
+          }
+        },
+        "icon": "volume-2",
+        "id": "streamlabs-live-slice9",
+        "show_title": true,
+        "platforms": [
+          "macos",
+          "windows"
+        ]
+      },
+      {
+        "id": "streamlabs-live-span10",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "streamlabs-live-slice9"
+        }
+      },
+      {
+        "id": "streamlabs-live-span11",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "streamlabs-live-slice9"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell21",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell22",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell23",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell24",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell25",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell26",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell27",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell28",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell29",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell30",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell31",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell32",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell33",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell34",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell35",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell36",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell37",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell38",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell39",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell40",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell41",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell42",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell43",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell44",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell45",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell46",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell47",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell48",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell49",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell50",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell51",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell52",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell53",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell54",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell55",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell56",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell57",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell58",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell59",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell60",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell61",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell62",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell63",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "streamlabs-live-cell64",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      }
+    ],
+    "keybind": null,
+    "auto_open": null,
+    "show_labels": true
+  }
+}

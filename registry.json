@@ -1,0 +1,902 @@
+{
+  "format": "knobdeck-profile-registry",
+  "version": 1,
+  "profiles": [
+    {
+      "id": "browser-tabs",
+      "kind": "dial",
+      "name": "Browser Tabs",
+      "summary": "Tabs, history and zoom for Chrome, Edge and Firefox.",
+      "description": "Uses the KnobDeck browser companion extension: open, close and reopen tabs, move between them, go back and forward, zoom, and wheels for bookmarks and history.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Browser",
+        "Productivity"
+      ],
+      "icon": "globe",
+      "plugins": [
+        {
+          "id": "browser-plugin",
+          "name": "Browser Controls"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 13,
+      "profile": "browser-tabs/profile.json",
+      "preview": "browser-tabs/preview.png",
+      "sha256": "235e64e8eded7309f48b9af8002e71c63d7338f827c70e2e6399606349e975b7"
+    },
+    {
+      "id": "discord-voice",
+      "kind": "dial",
+      "name": "Discord Voice",
+      "summary": "Mute, deafen, camera, screen share and your voice channels.",
+      "description": "Discord voice controls through Discord's local RPC. The channel and soundboard wheels list your servers once the plugin is signed in.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Communication",
+        "Voice"
+      ],
+      "icon": null,
+      "plugins": [
+        {
+          "id": "discord",
+          "name": "Discord",
+          "setup": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 8,
+      "profile": "discord-voice/profile.json",
+      "preview": "discord-voice/preview.png",
+      "sha256": "14b5c650018d2f96fbc0aef85c95c110cdedb92c6ae41f763e4e6a861ef38ac2"
+    },
+    {
+      "id": "editing-shortcuts",
+      "kind": "dial",
+      "name": "Editing Shortcuts",
+      "summary": "Copy, paste, undo, redo, save and find in any app.",
+      "description": "The everyday editing shortcuts with the right keys on each OS (Ctrl on Windows and Linux, ⌘ on macOS).",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Productivity",
+        "Shortcuts",
+        "Starter"
+      ],
+      "icon": "keyboard",
+      "plugins": [],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 8,
+      "profile": "editing-shortcuts/profile.json",
+      "preview": "editing-shortcuts/preview.png",
+      "sha256": "3d3637a79fd68ed059c34301218d7c9f4a42d65ba6c791966cd08966b3bf6824"
+    },
+    {
+      "id": "file-tools",
+      "kind": "dial",
+      "name": "File Tools",
+      "summary": "Convert, resize and zip the files selected in your file manager.",
+      "description": "Works on the selection in Explorer, Finder, Dolphin or Files: image conversion and resizing, PDFs from images, zip and unzip, copy path and batch rename.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Files",
+        "Productivity"
+      ],
+      "icon": "files",
+      "plugins": [
+        {
+          "id": "files",
+          "name": "Files"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 12,
+      "profile": "file-tools/profile.json",
+      "preview": "file-tools/preview.png",
+      "sha256": "f947511c89c8321a78f46d8771b9ee61fbc519fb954c131a525e8a4645fd09ba"
+    },
+    {
+      "id": "intellij-debugging",
+      "kind": "dial",
+      "name": "IntelliJ Debugging",
+      "summary": "Run, debug and step through code in IntelliJ IDEA and other JetBrains IDEs.",
+      "description": "Run, debug, step over/into/out, resume and stop, with Search Everywhere and the terminal. Uses the KnobDeck companion plugin for JetBrains IDEs.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Developer tools",
+        "Editor"
+      ],
+      "icon": null,
+      "plugins": [
+        {
+          "id": "intellij",
+          "name": "IntelliJ IDEA",
+          "setup": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 10,
+      "profile": "intellij-debugging/profile.json",
+      "preview": "intellij-debugging/preview.png",
+      "sha256": "c116826c5395ef287a5f2623b775b97deb331ed6eaecb0e8db27d5cc893e0258"
+    },
+    {
+      "id": "media-controls",
+      "kind": "dial",
+      "name": "Media Controls",
+      "summary": "Play, skip and set the volume of whatever is playing.",
+      "description": "System media keys and the master volume. Works with any player that listens to the OS media controls: browsers, Spotify, VLC, music apps.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Media",
+        "Starter"
+      ],
+      "icon": "music",
+      "plugins": [],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 7,
+      "profile": "media-controls/profile.json",
+      "preview": "media-controls/preview.png",
+      "sha256": "1676af91e60b1a5fd1bf465ff89ba673db659d647c1437b0f8f55d88875c36d7"
+    },
+    {
+      "id": "philips-hue",
+      "kind": "dial",
+      "name": "Philips Hue",
+      "summary": "Lights on and off, brightness, warmth and scenes.",
+      "description": "Controls all Hue lights (group 0) by default; pick a room or light per item after adding. Needs the Hue Bridge pairing in the plugin's setup.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Lighting",
+        "Smart home"
+      ],
+      "icon": "lightbulb",
+      "plugins": [
+        {
+          "id": "hue",
+          "name": "Philips Hue",
+          "setup": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 6,
+      "profile": "philips-hue/profile.json",
+      "preview": "philips-hue/preview.png",
+      "sha256": "c5a2490ed8d1210b81585a18847e12675aa5ddec60660ffbbbc2b6f4b8dfe0e0"
+    },
+    {
+      "id": "power-and-session",
+      "kind": "dial",
+      "name": "Power & Session",
+      "summary": "Lock, sleep, restart and shut down from one ring.",
+      "description": "Session and power actions, plus a screenshot and the system settings. Restart and Shut Down run straight away, so place them with care.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "System",
+        "Starter"
+      ],
+      "icon": "power",
+      "plugins": [],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 9,
+      "profile": "power-and-session/profile.json",
+      "preview": "power-and-session/preview.png",
+      "sha256": "6d6ae1f8193b96262699ccb2db6589b3d8e4f4c244d1c50c8169c1fe5415a721"
+    },
+    {
+      "id": "presenter",
+      "kind": "dial",
+      "name": "Presenter",
+      "summary": "Run a slideshow in PowerPoint, Keynote or Impress.",
+      "description": "Start and end the show, move between slides, black or white out the screen and see the slide counter.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Presentation",
+        "Productivity"
+      ],
+      "icon": "presentation",
+      "plugins": [
+        {
+          "id": "slides",
+          "name": "Slides"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 8,
+      "profile": "presenter/profile.json",
+      "preview": "presenter/preview.png",
+      "sha256": "8329c958d5192fe7795a62b387fdb538af5d216409277996f3a96a31d4bea17c"
+    },
+    {
+      "id": "spotify",
+      "kind": "dial",
+      "name": "Spotify",
+      "summary": "Play, skip and see what's playing on Spotify.",
+      "description": "Spotify playback with the now-playing title, and the system volume.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Media",
+        "Music"
+      ],
+      "icon": "music-2",
+      "plugins": [
+        {
+          "id": "spotify",
+          "name": "Spotify"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 5,
+      "profile": "spotify/profile.json",
+      "preview": "spotify/preview.png",
+      "sha256": "9acb6fce5d025a5416786bdaca56e62d739bd59b26e2acf836cc04050956c8ff"
+    },
+    {
+      "id": "time-and-weather",
+      "kind": "dial",
+      "name": "Time & Weather",
+      "summary": "Clock, timer, stopwatch, world clock and the forecast.",
+      "description": "A local clock, a 5-minute timer, a stopwatch, a world clock wheel, the weather now and the next days and hours. Weather uses your approximate location unless you type one.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Time",
+        "Weather"
+      ],
+      "icon": "clock",
+      "plugins": [
+        {
+          "id": "clocks",
+          "name": "Clocks"
+        },
+        {
+          "id": "weather",
+          "name": "Weather"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 8,
+      "profile": "time-and-weather/profile.json",
+      "preview": "time-and-weather/preview.png",
+      "sha256": "7251209fcecad81f74fab983a10109cfcb678d637a8cc7a537566ad5dc46f882"
+    },
+    {
+      "id": "vs-code",
+      "kind": "dial",
+      "name": "VS Code",
+      "summary": "Command palette, panels, tasks and debugging for Visual Studio Code.",
+      "description": "Drives VS Code through the KnobDeck companion extension (the plugin's setup installs it). Task and debug wheels list what your workspace defines.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Developer tools",
+        "Editor"
+      ],
+      "icon": null,
+      "plugins": [
+        {
+          "id": "vscode",
+          "name": "Visual Studio Code",
+          "setup": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 10,
+      "profile": "vs-code/profile.json",
+      "preview": "vs-code/preview.png",
+      "sha256": "aa1db3db59716f6e73456a5ae8dfb2bbaf1e54c1739231b1d5658ea227ad7053"
+    },
+    {
+      "id": "window-snapping",
+      "kind": "dial",
+      "name": "Window Snapping",
+      "summary": "Snap the focused window to halves and corners, or move it to the next screen.",
+      "description": "Halves, quarters, maximize, center and next monitor for the window under focus, through the OS window APIs.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Productivity",
+        "Windows"
+      ],
+      "icon": "layout-grid",
+      "plugins": [
+        {
+          "id": "os-tools",
+          "name": "OS Tools",
+          "builtin": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {
+        "windows": 1
+      },
+      "ready": true,
+      "configure": 0,
+      "items": 14,
+      "profile": "window-snapping/profile.json",
+      "preview": "window-snapping/preview.png",
+      "sha256": "6cde37f7c181618d76bc42adb33f1167620d28472057e9641b3aa5e6b1699581"
+    },
+    {
+      "id": "youtube-music",
+      "kind": "dial",
+      "name": "YouTube Music",
+      "summary": "Playback, likes, shuffle and your playlists in YouTube Music Desktop.",
+      "description": "For the YouTube Music Desktop app: play, skip, like or dislike, shuffle and repeat, the player's own volume, and wheels for your playlists and the queue.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Media",
+        "Music"
+      ],
+      "icon": "list-music",
+      "plugins": [
+        {
+          "id": "ytmusic",
+          "name": "YouTube Music Desktop",
+          "setup": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 10,
+      "profile": "youtube-music/profile.json",
+      "preview": "youtube-music/preview.png",
+      "sha256": "31f0fe9759a0386aac1148dd64ea03573c7fdd1d178b9567653b38d22941fefc"
+    },
+    {
+      "id": "code-studio",
+      "kind": "deck",
+      "name": "Code Studio",
+      "summary": "VS Code panels, tasks and debugging, with your Claude and Codex limits.",
+      "description": "VS Code through its companion extension: palette, files, terminal, tasks, debugging and layout. The AI Stats cells show your Claude and Codex plan limits and usage from their local sign-in files.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Developer tools",
+        "AI"
+      ],
+      "icon": "code",
+      "plugins": [
+        {
+          "id": "ai-stats",
+          "name": "AI Stats"
+        },
+        {
+          "id": "vscode",
+          "name": "Visual Studio Code",
+          "setup": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": false,
+      "configure": 2,
+      "items": 20,
+      "profile": "code-studio/profile.json",
+      "preview": "code-studio/preview.png",
+      "sha256": "769983a4f43ab39e6d7ea338dad43f5856874127c78cd4d6b2830a821d6c1671"
+    },
+    {
+      "id": "creator-dashboard",
+      "kind": "deck",
+      "name": "Creator Dashboard",
+      "summary": "YouTube viewers and studio, Twitch status and OBS recording.",
+      "description": "Watch your YouTube live viewers and open YouTube Studio, see whether a Twitch channel is live, and control OBS streaming, recording and chapter markers.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Streaming",
+        "YouTube"
+      ],
+      "icon": "youtube",
+      "plugins": [
+        {
+          "id": "obs",
+          "name": "OBS Studio",
+          "setup": true
+        },
+        {
+          "id": "twitch",
+          "name": "Twitch",
+          "setup": true
+        },
+        {
+          "id": "youtube",
+          "name": "YouTube",
+          "setup": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": false,
+      "configure": 1,
+      "items": 8,
+      "profile": "creator-dashboard/profile.json",
+      "preview": "creator-dashboard/preview.png",
+      "sha256": "d7153973beef5544409cae687c2ba3100534a513deb7112df581d5fb11e3e716"
+    },
+    {
+      "id": "desktop-workspace",
+      "kind": "deck",
+      "name": "Desktop & Workspace",
+      "summary": "Virtual desktops, overview, audio devices and system tools for your OS.",
+      "description": "Built only from the OS tools that ship with KnobDeck, so it's ready the moment it's added. Some cells are for one OS (Mission Control on macOS, Task View on Windows, Present Windows on Linux) and are left out elsewhere.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "System",
+        "Productivity",
+        "Starter"
+      ],
+      "icon": "monitor",
+      "plugins": [
+        {
+          "id": "os-tools",
+          "name": "OS Tools",
+          "builtin": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {
+        "linux": 7,
+        "macos": 9,
+        "windows": 13
+      },
+      "ready": true,
+      "configure": 0,
+      "items": 25,
+      "profile": "desktop-workspace/profile.json",
+      "preview": "desktop-workspace/preview.png",
+      "sha256": "2572dc734fbb1c9697113180171c2e3dd08b0569f68cdf6ecffa90a1408ad233"
+    },
+    {
+      "id": "gaming",
+      "kind": "deck",
+      "name": "Gaming",
+      "summary": "Launch games, talk on Discord and clip the last moments.",
+      "description": "A game wheel and Steam pages, Discord mute, deafen and push-to-talk, saving the OBS replay buffer, the system volume and the PC's stats.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Gaming",
+        "Streaming"
+      ],
+      "icon": "gamepad-2",
+      "plugins": [
+        {
+          "id": "discord",
+          "name": "Discord",
+          "setup": true
+        },
+        {
+          "id": "game-launcher",
+          "name": "Game Launcher"
+        },
+        {
+          "id": "obs",
+          "name": "OBS Studio",
+          "setup": true
+        },
+        {
+          "id": "os-tools",
+          "name": "OS Tools",
+          "builtin": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {
+        "linux": 1,
+        "macos": 2,
+        "windows": 1
+      },
+      "ready": true,
+      "configure": 0,
+      "items": 13,
+      "profile": "gaming/profile.json",
+      "preview": "gaming/preview.png",
+      "sha256": "f518d7b9054f3edf6da6032fab526c597b222244fef2dc179006e17737e6d7f4"
+    },
+    {
+      "id": "media-deck",
+      "kind": "deck",
+      "name": "Media Deck",
+      "summary": "System media keys, volume slider and your music app's controls.",
+      "description": "The OS media keys and master volume, with Spotify on the second row. Spotify cells are left out until the plugin is installed with the profile.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Media",
+        "Music",
+        "Starter"
+      ],
+      "icon": "disc-3",
+      "plugins": [
+        {
+          "id": "spotify",
+          "name": "Spotify"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 9,
+      "profile": "media-deck/profile.json",
+      "preview": "media-deck/preview.png",
+      "sha256": "7b4e701fc943eb54a23c7702567f3ecc17f1a3446f5c8e9c8a044758b2fbb73f"
+    },
+    {
+      "id": "meetings",
+      "kind": "deck",
+      "name": "Meetings",
+      "summary": "Mic mute, audio devices, a meeting timer and quick window moves.",
+      "description": "For calls in any app: toggle the microphone at the OS level, switch output and input devices, keep a 25-minute timer and a stopwatch, and snap the call window aside.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Communication",
+        "Productivity"
+      ],
+      "icon": "video",
+      "plugins": [
+        {
+          "id": "clocks",
+          "name": "Clocks"
+        },
+        {
+          "id": "os-tools",
+          "name": "OS Tools",
+          "builtin": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 10,
+      "profile": "meetings/profile.json",
+      "preview": "meetings/preview.png",
+      "sha256": "e0f07fd047dcedeeabe433fdd8cab6d535e1c123c577dc9ee2b2485af31d88b4"
+    },
+    {
+      "id": "obs-streaming",
+      "kind": "deck",
+      "name": "OBS Streaming",
+      "summary": "Go live, record, switch scenes and mix audio in OBS Studio.",
+      "description": "Stream, record, pause, replay buffer and virtual camera on the top row; four scene buttons and the studio-mode controls; the mic mute and a volume slider for one source. Pick your scenes and audio source in each item after adding. Needs OBS's WebSocket server (Tools → WebSocket Server Settings) and the plugin's setup.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Streaming",
+        "Recording"
+      ],
+      "icon": null,
+      "plugins": [
+        {
+          "id": "obs",
+          "name": "OBS Studio",
+          "setup": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": false,
+      "configure": 7,
+      "items": 19,
+      "profile": "obs-streaming/profile.json",
+      "preview": "obs-streaming/preview.png",
+      "sha256": "7e1621f17a37d5047e447e2d9f9a5de67125b6ad8cc547884f4d825592b6d5cd"
+    },
+    {
+      "id": "smart-home",
+      "kind": "deck",
+      "name": "Smart Home",
+      "summary": "Home Assistant lights and scenes, plus Elgato key lights.",
+      "description": "Pick a Home Assistant entity for each toggle and scene after adding; the wheel lists your lights. The Elgato row controls all your Key Lights.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Smart home",
+        "Lighting"
+      ],
+      "icon": "house",
+      "plugins": [
+        {
+          "id": "elgato-lights",
+          "name": "Elgato Lights",
+          "setup": true
+        },
+        {
+          "id": "home-assistant",
+          "name": "Home Assistant",
+          "setup": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": false,
+      "configure": 5,
+      "items": 9,
+      "profile": "smart-home/profile.json",
+      "preview": "smart-home/preview.png",
+      "sha256": "0cf4feb44b44022f2a49b5be7821514390220095b991fab9348989189778f28a"
+    },
+    {
+      "id": "streamlabs-live",
+      "kind": "deck",
+      "name": "Streamlabs Live",
+      "summary": "Stream, record, replay and scenes in Streamlabs Desktop.",
+      "description": "Streamlabs Desktop on Windows and macOS: go live, record, keep a replay buffer and save it, switch scenes and mute or level one audio source.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Streaming",
+        "Recording"
+      ],
+      "icon": "radio-tower",
+      "plugins": [
+        {
+          "id": "streamlabs",
+          "name": "Streamlabs Desktop",
+          "setup": true
+        }
+      ],
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": false,
+      "configure": 5,
+      "items": 9,
+      "profile": "streamlabs-live/profile.json",
+      "preview": "streamlabs-live/preview.png",
+      "sha256": "32553d0646f7a81b1ba070c4078b3c4fef27dc31f89d1dedf01dd8acc8bfa10d"
+    },
+    {
+      "id": "twitch-streamer",
+      "kind": "deck",
+      "name": "Twitch Streamer",
+      "summary": "OBS, Twitch chat moderation, clips and Discord in one deck.",
+      "description": "Go live and record in OBS, drop markers and clips on Twitch, run an ad, switch chat modes, watch your viewer count, and stay muted or deafened on Discord.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Streaming",
+        "Twitch"
+      ],
+      "icon": "radio",
+      "plugins": [
+        {
+          "id": "discord",
+          "name": "Discord",
+          "setup": true
+        },
+        {
+          "id": "obs",
+          "name": "OBS Studio",
+          "setup": true
+        },
+        {
+          "id": "twitch",
+          "name": "Twitch",
+          "setup": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": false,
+      "configure": 2,
+      "items": 16,
+      "profile": "twitch-streamer/profile.json",
+      "preview": "twitch-streamer/preview.png",
+      "sha256": "4729ac2d88c33d358177ee518db86194a92279f947bf8b1414d6132b2ce782ee"
+    },
+    {
+      "id": "vlc-remote",
+      "kind": "deck",
+      "name": "VLC Remote",
+      "summary": "Play, seek, skip and fullscreen in VLC.",
+      "description": "Talks to VLC's web interface (the plugin's setup turns it on): play and pause, stop, skip, seek, volume and fullscreen, with the play state on the button.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Media",
+        "Video"
+      ],
+      "icon": "tv",
+      "plugins": [
+        {
+          "id": "vlc",
+          "name": "VLC",
+          "setup": true
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 9,
+      "profile": "vlc-remote/profile.json",
+      "preview": "vlc-remote/preview.png",
+      "sha256": "cc035de073a549190aa86b1bf0ab8644573f76974ab641b78483014060b5a6e0"
+    },
+    {
+      "id": "voicemod-fx",
+      "kind": "deck",
+      "name": "Voicemod FX",
+      "summary": "Voice changer, effects, soundboard and a bleep button.",
+      "description": "Voicemod on Windows and macOS: turn the voice changer and background effects on or off, hear yourself, pick a random or favourite voice, and hold to bleep.",
+      "author": "KnobDeck",
+      "version": "1.0.0",
+      "tags": [
+        "Voice",
+        "Streaming"
+      ],
+      "icon": "audio-waveform",
+      "plugins": [
+        {
+          "id": "voicemod",
+          "name": "Voicemod",
+          "setup": true
+        }
+      ],
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "skippedOn": {},
+      "ready": true,
+      "configure": 0,
+      "items": 9,
+      "profile": "voicemod-fx/profile.json",
+      "preview": "voicemod-fx/preview.png",
+      "sha256": "aa56ffb4f110b7ffb15177a3398a88a037419aae1a43ba371d8fad27b10ee9c7"
+    }
+  ]
+}

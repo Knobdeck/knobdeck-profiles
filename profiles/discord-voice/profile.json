@@ -1,0 +1,211 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "discord-voice",
+  "kind": "dial",
+  "name": "Discord Voice",
+  "summary": "Mute, deafen, camera, screen share and your voice channels.",
+  "description": "Discord voice controls through Discord's local RPC. The channel and soundboard wheels list your servers once the plugin is signed in.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Communication",
+    "Voice"
+  ],
+  "plugins": [
+    {
+      "id": "discord",
+      "name": "Discord",
+      "setup": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 8,
+  "profile": {
+    "name": "Discord Voice",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0iIzU4NjVGMiIvPjxzdmcgeD0iNDguNjQiIHk9IjQ4LjY0IiB3aWR0aD0iMTU4LjcyIiBoZWlnaHQ9IjE1OC43MiIgdmlld0JveD0iMCAwIDI1NiAxOTkiPjxwYXRoIGQ9Ik0yMTYuODU2IDE2LjU5N0EyMDguNTAyIDIwOC41MDIgMCAwIDAgMTY0LjA0MiAwYy0yLjI3NSA0LjExMy00LjkzMyA5LjY0NS02Ljc2NiAxNC4wNDYtMTkuNjkyLTIuOTYxLTM5LjIwMy0yLjk2MS01OC41MzMgMC0xLjgzMi00LjQtNC41NS05LjkzMy02Ljg0Ni0xNC4wNDZhMjA3LjgwOSAyMDcuODA5IDAgMCAwLTUyLjg1NSAxNi42MzhDNS42MTggNjcuMTQ3LTMuNDQzIDExNi40IDEuMDg3IDE2NC45NTZjMjIuMTY5IDE2LjU1NSA0My42NTMgMjYuNjEyIDY0Ljc3NSAzMy4xOTNBMTYxLjA5NCAxNjEuMDk0IDAgMCAwIDc5LjczNSAxNzUuM2ExMzYuNDEzIDEzNi40MTMgMCAwIDEtMjEuODQ2LTEwLjYzMiAxMDguNjM2IDEwOC42MzYgMCAwIDAgNS4zNTYtNC4yMzdjNDIuMTIyIDE5LjcwMiA4Ny44OSAxOS43MDIgMTI5LjUxIDBhMTMxLjY2IDEzMS42NiAwIDAgMCA1LjM1NSA0LjIzNyAxMzYuMDcgMTM2LjA3IDAgMCAxLTIxLjg4NiAxMC42NTNjNC4wMDYgOC4wMiA4LjYzOCAxNS42NyAxMy44NzMgMjIuODQ4IDIxLjE0Mi02LjU4IDQyLjY0Ni0xNi42MzcgNjQuODE1LTMzLjIxMyA1LjMxNi01Ni4yODgtOS4wOC0xMDUuMDktMzguMDU2LTE0OC4zNlpNODUuNDc0IDEzNS4wOTVjLTEyLjY0NSAwLTIzLjAxNS0xMS44MDUtMjMuMDE1LTI2LjE4czEwLjE0OS0yNi4yIDIzLjAxNS0yNi4yYzEyLjg2NyAwIDIzLjIzNiAxMS44MDQgMjMuMDE1IDI2LjIuMDIgMTQuMzc1LTEwLjE0OCAyNi4xOC0yMy4wMTUgMjYuMThabTg1LjA1MSAwYy0xMi42NDUgMC0yMy4wMTQtMTEuODA1LTIzLjAxNC0yNi4xOHMxMC4xNDgtMjYuMiAyMy4wMTQtMjYuMmMxMi44NjcgMCAyMy4yMzYgMTEuODA0IDIzLjAxNSAyNi4yIDAgMTQuMzc1LTEwLjE0OCAyNi4xOC0yMy4wMTUgMjYuMThaIiBmaWxsPSIjZmZmIi8+PC9zdmc+PC9zdmc+DQo=",
+    "items": [
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "discord",
+          "action_type": "discord/mute",
+          "inputs": {},
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "Unmuted",
+              "icon": "mic"
+            },
+            {
+              "value": "muted",
+              "label": "Muted",
+              "icon": "mic-off"
+            }
+          ],
+          "default_state": "unmuted"
+        },
+        "label": "Mute",
+        "icon": "mic",
+        "id": "discord-voice-item1"
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "discord",
+          "action_type": "discord/deafen",
+          "inputs": {},
+          "states": [
+            {
+              "value": "undeafened",
+              "label": "Undeafened",
+              "icon": "headphones"
+            },
+            {
+              "value": "deafened",
+              "label": "Deafened",
+              "icon": "headphone-off"
+            }
+          ],
+          "default_state": "undeafened"
+        },
+        "label": "Deafen",
+        "icon": "headphones",
+        "id": "discord-voice-item2"
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "discord",
+          "action_type": "discord/video-toggle",
+          "inputs": {},
+          "states": [
+            {
+              "value": "on",
+              "label": "Camera On",
+              "icon": "video"
+            },
+            {
+              "value": "off",
+              "label": "Camera Off",
+              "icon": "video-off"
+            }
+          ],
+          "default_state": "on"
+        },
+        "label": "Video Toggle",
+        "icon": "video-off",
+        "id": "discord-voice-item3"
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "discord",
+          "action_type": "discord/stream-toggle",
+          "inputs": {},
+          "states": [
+            {
+              "value": "on",
+              "label": "Sharing",
+              "icon": "screen-share"
+            },
+            {
+              "value": "off",
+              "label": "Share Off",
+              "icon": "screen-share-off"
+            }
+          ],
+          "default_state": "on"
+        },
+        "label": "Stream Toggle",
+        "icon": "screen-share-off",
+        "id": "discord-voice-item4"
+      },
+      {
+        "kind": {
+          "type": "slider",
+          "plugin": "discord",
+          "action_type": "discord/output-volume",
+          "inputs": {},
+          "min": 0,
+          "max": 200,
+          "step": 1,
+          "unit": "%"
+        },
+        "label": "Output Volume",
+        "icon": "volume-2",
+        "id": "discord-voice-item5"
+      },
+      {
+        "kind": {
+          "type": "dynamic",
+          "plugin": "discord",
+          "action_type": "discord/soundboard-wheel",
+          "inputs": {
+            "guildId": "__default__"
+          }
+        },
+        "label": "Soundboard Wheel",
+        "icon": "audio-waveform",
+        "id": "discord-voice-item6"
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "discord",
+          "action_type": "discord/leave-voice-channel",
+          "inputs": {},
+          "states": [
+            {
+              "value": "idle",
+              "label": "Not in Call",
+              "icon": "phone-off"
+            },
+            {
+              "value": "in-call",
+              "label": "In Call — Disconnect",
+              "icon": "phone-off"
+            }
+          ],
+          "default_state": "idle"
+        },
+        "label": "Leave Voice Channel",
+        "icon": "phone-off",
+        "id": "discord-voice-item7"
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "discord",
+          "action_type": "discord/voice-mode-toggle",
+          "inputs": {},
+          "states": [
+            {
+              "value": "VOICE_ACTIVITY",
+              "label": "Voice Activity",
+              "icon": "audio-lines"
+            },
+            {
+              "value": "PUSH_TO_TALK",
+              "label": "Push to Talk",
+              "icon": "keyboard"
+            }
+          ],
+          "default_state": "VOICE_ACTIVITY"
+        },
+        "label": "Voice Input Mode",
+        "icon": "audio-lines",
+        "id": "discord-voice-item8"
+      }
+    ],
+    "keybind": null,
+    "auto_open": null
+  }
+}

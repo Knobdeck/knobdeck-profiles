@@ -1,0 +1,669 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "media-deck",
+  "kind": "deck",
+  "name": "Media Deck",
+  "summary": "System media keys, volume slider and your music app's controls.",
+  "description": "The OS media keys and master volume, with Spotify on the second row. Spotify cells are left out until the plugin is installed with the profile.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Media",
+    "Music",
+    "Starter"
+  ],
+  "plugins": [
+    {
+      "id": "spotify",
+      "name": "Spotify"
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 9,
+  "profile": {
+    "name": "Media Deck",
+    "icon": "disc-3",
+    "slices": [
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "prev-track",
+          "inputs": {}
+        },
+        "label": "Previous Track",
+        "icon": "skip-back",
+        "id": "media-deck-slice1",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "play-pause",
+          "inputs": {}
+        },
+        "label": "Play / Pause",
+        "icon": "play",
+        "id": "media-deck-slice2",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "next-track",
+          "inputs": {}
+        },
+        "label": "Next Track",
+        "icon": "skip-forward",
+        "id": "media-deck-slice3",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "mute",
+          "inputs": {}
+        },
+        "label": "Mute",
+        "icon": "volume-x",
+        "id": "media-deck-slice4",
+        "show_title": true
+      },
+      {
+        "id": "media-deck-cell15",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell16",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell17",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell18",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "slider",
+          "plugin": "knobdeck-actions",
+          "action_type": "volume",
+          "inputs": {},
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "%",
+          "span": {
+            "axis": "row",
+            "length": 6
+          }
+        },
+        "label": "Volume",
+        "icon": "volume-2",
+        "id": "media-deck-slice5",
+        "show_title": true
+      },
+      {
+        "id": "media-deck-span6",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "media-deck-slice5"
+        }
+      },
+      {
+        "id": "media-deck-span7",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "media-deck-slice5"
+        }
+      },
+      {
+        "id": "media-deck-span8",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "media-deck-slice5"
+        }
+      },
+      {
+        "id": "media-deck-span9",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "media-deck-slice5"
+        }
+      },
+      {
+        "id": "media-deck-span10",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "media-deck-slice5"
+        }
+      },
+      {
+        "id": "media-deck-cell19",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell20",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "spotify",
+          "action_type": "spotify/previous",
+          "inputs": {}
+        },
+        "label": "Previous Track",
+        "icon": "skip-back",
+        "id": "media-deck-slice11",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "spotify",
+          "action_type": "spotify/play-pause",
+          "inputs": {},
+          "states": [
+            {
+              "value": "paused",
+              "label": "Paused",
+              "icon": "play"
+            },
+            {
+              "value": "playing",
+              "label": "Playing",
+              "icon": "pause"
+            }
+          ],
+          "default_state": "paused"
+        },
+        "label": "Play / Pause",
+        "icon": "play",
+        "id": "media-deck-slice12",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "spotify",
+          "action_type": "spotify/next",
+          "inputs": {}
+        },
+        "label": "Next Track",
+        "icon": "skip-forward",
+        "id": "media-deck-slice13",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "spotify",
+          "action_type": "spotify/now-playing",
+          "inputs": {}
+        },
+        "label": "Now Playing",
+        "icon": "music",
+        "id": "media-deck-slice14",
+        "show_title": true
+      },
+      {
+        "id": "media-deck-cell21",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell22",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell23",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell24",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell25",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell26",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell27",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell28",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell29",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell30",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell31",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell32",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell33",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell34",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell35",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell36",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell37",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell38",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell39",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell40",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell41",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell42",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell43",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell44",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell45",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell46",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell47",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell48",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell49",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell50",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell51",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell52",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell53",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell54",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell55",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell56",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell57",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell58",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell59",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell60",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell61",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell62",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell63",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "media-deck-cell64",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      }
+    ],
+    "keybind": null,
+    "auto_open": null,
+    "show_labels": true
+  }
+}

@@ -1,0 +1,756 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "smart-home",
+  "kind": "deck",
+  "name": "Smart Home",
+  "summary": "Home Assistant lights and scenes, plus Elgato key lights.",
+  "description": "Pick a Home Assistant entity for each toggle and scene after adding; the wheel lists your lights. The Elgato row controls all your Key Lights.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Smart home",
+    "Lighting"
+  ],
+  "plugins": [
+    {
+      "id": "elgato-lights",
+      "name": "Elgato Lights",
+      "setup": true
+    },
+    {
+      "id": "home-assistant",
+      "name": "Home Assistant",
+      "setup": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": false,
+  "toConfigure": [
+    "Light 1 (entity)",
+    "Light 2 (entity)",
+    "Plug (entity)",
+    "Scene (entity)",
+    "Dimmer (entity)"
+  ],
+  "items": 9,
+  "profile": {
+    "name": "Smart Home",
+    "icon": "house",
+    "slices": [
+      {
+        "label": "Light 1",
+        "kind": {
+          "type": "toggle",
+          "plugin": "home-assistant",
+          "action_type": "home-assistant/toggle",
+          "inputs": {
+            "show_name": true
+          },
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "toggle-left"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "toggle-right"
+            }
+          ],
+          "default_state": "off"
+        },
+        "icon": "toggle-right",
+        "id": "smart-home-slice1",
+        "show_title": true
+      },
+      {
+        "label": "Light 2",
+        "kind": {
+          "type": "toggle",
+          "plugin": "home-assistant",
+          "action_type": "home-assistant/toggle",
+          "inputs": {
+            "show_name": true
+          },
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "toggle-left"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "toggle-right"
+            }
+          ],
+          "default_state": "off"
+        },
+        "icon": "toggle-right",
+        "id": "smart-home-slice2",
+        "show_title": true
+      },
+      {
+        "label": "Plug",
+        "kind": {
+          "type": "toggle",
+          "plugin": "home-assistant",
+          "action_type": "home-assistant/toggle",
+          "inputs": {
+            "show_name": true
+          },
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "toggle-left"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "toggle-right"
+            }
+          ],
+          "default_state": "off"
+        },
+        "icon": "toggle-right",
+        "id": "smart-home-slice3",
+        "show_title": true
+      },
+      {
+        "label": "Scene",
+        "kind": {
+          "type": "button",
+          "plugin": "home-assistant",
+          "action_type": "home-assistant/activate",
+          "inputs": {}
+        },
+        "icon": "sparkles",
+        "id": "smart-home-slice4",
+        "show_title": true
+      },
+      {
+        "label": "Lights",
+        "kind": {
+          "type": "dynamic_wheel",
+          "plugin": "home-assistant",
+          "action_type": "home-assistant/entities-wheel",
+          "inputs": {
+            "domain": "light",
+            "filter": ""
+          }
+        },
+        "icon": "layout-grid",
+        "id": "smart-home-slice5",
+        "show_title": true
+      },
+      {
+        "id": "smart-home-cell17",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell18",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell19",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "label": "Dimmer",
+        "kind": {
+          "type": "slider",
+          "plugin": "home-assistant",
+          "action_type": "home-assistant/level",
+          "inputs": {
+            "step": "5"
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "span": {
+            "axis": "row",
+            "length": 4
+          }
+        },
+        "icon": "sliders-horizontal",
+        "id": "smart-home-slice6",
+        "show_title": true
+      },
+      {
+        "id": "smart-home-span7",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "smart-home-slice6"
+        }
+      },
+      {
+        "id": "smart-home-span8",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "smart-home-slice6"
+        }
+      },
+      {
+        "id": "smart-home-span9",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "smart-home-slice6"
+        }
+      },
+      {
+        "id": "smart-home-cell20",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell21",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell22",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell23",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "label": "Key Light",
+        "kind": {
+          "type": "toggle",
+          "plugin": "elgato-lights",
+          "action_type": "elgato-lights/power",
+          "inputs": {
+            "light": "__all__"
+          },
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "lightbulb-off"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "lightbulb"
+            }
+          ],
+          "default_state": "off"
+        },
+        "icon": "lightbulb",
+        "id": "smart-home-slice10",
+        "show_title": true
+      },
+      {
+        "label": "Key Brightness",
+        "kind": {
+          "type": "slider",
+          "plugin": "elgato-lights",
+          "action_type": "elgato-lights/brightness",
+          "inputs": {
+            "light": "__all__",
+            "step": "5"
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "span": {
+            "axis": "row",
+            "length": 3
+          }
+        },
+        "icon": "sun",
+        "id": "smart-home-slice11",
+        "show_title": true
+      },
+      {
+        "id": "smart-home-span12",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "smart-home-slice11"
+        }
+      },
+      {
+        "id": "smart-home-span13",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "smart-home-slice11"
+        }
+      },
+      {
+        "label": "Key Warmth",
+        "kind": {
+          "type": "slider",
+          "plugin": "elgato-lights",
+          "action_type": "elgato-lights/temperature",
+          "inputs": {
+            "light": "__all__",
+            "step": "100"
+          },
+          "min": 2900,
+          "max": 7000,
+          "step": 50,
+          "unit": "K",
+          "span": {
+            "axis": "row",
+            "length": 3
+          }
+        },
+        "icon": "thermometer",
+        "id": "smart-home-slice14",
+        "show_title": true
+      },
+      {
+        "id": "smart-home-span15",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "smart-home-slice14"
+        }
+      },
+      {
+        "id": "smart-home-span16",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "smart-home-slice14"
+        }
+      },
+      {
+        "id": "smart-home-cell24",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell25",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell26",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell27",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell28",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell29",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell30",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell31",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell32",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell33",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell34",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell35",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell36",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell37",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell38",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell39",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell40",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell41",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell42",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell43",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell44",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell45",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell46",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell47",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell48",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell49",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell50",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell51",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell52",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell53",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell54",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell55",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell56",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell57",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell58",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell59",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell60",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell61",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell62",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell63",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "smart-home-cell64",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      }
+    ],
+    "keybind": null,
+    "auto_open": null,
+    "show_labels": true
+  }
+}

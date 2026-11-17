@@ -1,0 +1,31 @@
+{
+  "_comment": "KnobDeck's built-in actions (Knobdeck app/src/lib/knobdeck-actions.js), for build.mjs. Update it when the app adds or changes one. `platforms` absent = every OS. An input with `needs: true` has to be filled in by the user unless the profile sets it.",
+  "actions": {
+    "launch": { "type": "button", "label": "Launch App", "icon": "rocket", "inputs": [{ "key": "path", "needs": true }] },
+    "windows-settings": { "type": "button", "label": "System Settings", "icon": "settings" },
+    "open-terminal": { "type": "button", "label": "Open Terminal", "icon": "square-terminal" },
+    "open-path": { "type": "button", "label": "Open File / Folder", "icon": "folder-open", "inputs": [{ "key": "path", "needs": true }] },
+    "open-explorer": { "type": "button", "label": "Open File Manager", "icon": "folder-open" },
+    "keybind": { "type": "button", "label": "Keyboard Shortcut", "icon": "keyboard", "inputs": [{ "key": "preset", "needs": true }, { "key": "keys" }] },
+    "play-pause": { "type": "button", "label": "Play / Pause", "icon": "play" },
+    "next-track": { "type": "button", "label": "Next Track", "icon": "skip-forward" },
+    "prev-track": { "type": "button", "label": "Previous Track", "icon": "skip-back" },
+    "seek-forward": { "type": "button", "label": "Skip Ahead", "icon": "skip-forward", "platforms": ["linux", "windows"], "inputs": [{ "key": "preset", "default": "10" }] },
+    "seek-backward": { "type": "button", "label": "Skip Back", "icon": "skip-back", "platforms": ["linux", "windows"], "inputs": [{ "key": "preset", "default": "10" }] },
+    "vol-up": { "type": "button", "label": "Volume Up", "icon": "volume-2" },
+    "vol-down": { "type": "button", "label": "Volume Down", "icon": "volume-1" },
+    "mute": { "type": "button", "label": "Mute", "icon": "volume-x" },
+    "volume": { "type": "slider", "label": "Volume", "icon": "volume-2", "min": 0, "max": 100, "step": 2, "unit": "%" },
+    "run": { "type": "button", "label": "Run Command", "icon": "square-terminal", "inputs": [{ "key": "command", "needs": true }] },
+    "delay": { "type": "button", "label": "Delay", "icon": "timer", "inputs": [{ "key": "ms", "default": "500" }] },
+    "lock": { "type": "button", "label": "Lock", "icon": "lock" },
+    "sleep": { "type": "button", "label": "Sleep", "icon": "moon-star" },
+    "shutdown": { "type": "button", "label": "Shut Down", "icon": "power" },
+    "restart": { "type": "button", "label": "Restart", "icon": "rotate-cw" },
+    "signout": { "type": "button", "label": "Sign Out", "icon": "log-out" },
+    "empty-recycle": { "type": "button", "label": "Empty Trash", "icon": "trash-2" },
+    "screenshot": { "type": "button", "label": "Screenshot", "icon": "camera" },
+    "open-url": { "type": "button", "label": "Open URL", "icon": "globe", "inputs": [{ "key": "preset", "default": "https://www.google.com" }, { "key": "url" }] },
+    "launch-shortcut": { "type": "button", "label": "Launch Shortcut", "icon": "link-2", "platforms": ["windows"], "inputs": [{ "key": "shortcut_path", "needs": true }] }
+  }
+}

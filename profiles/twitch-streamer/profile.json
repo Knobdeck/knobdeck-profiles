@@ -1,0 +1,789 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "twitch-streamer",
+  "kind": "deck",
+  "name": "Twitch Streamer",
+  "summary": "OBS, Twitch chat moderation, clips and Discord in one deck.",
+  "description": "Go live and record in OBS, drop markers and clips on Twitch, run an ad, switch chat modes, watch your viewer count, and stay muted or deafened on Discord.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Streaming",
+    "Twitch"
+  ],
+  "plugins": [
+    {
+      "id": "discord",
+      "name": "Discord",
+      "setup": true
+    },
+    {
+      "id": "obs",
+      "name": "OBS Studio",
+      "setup": true
+    },
+    {
+      "id": "twitch",
+      "name": "Twitch",
+      "setup": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": false,
+  "toConfigure": [
+    "Scene 1 (scene)",
+    "Scene 2 (scene)"
+  ],
+  "items": 16,
+  "profile": {
+    "name": "Twitch Streamer",
+    "icon": "radio",
+    "slices": [
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "obs",
+          "action_type": "obs/stream",
+          "inputs": {},
+          "states": [
+            {
+              "value": "stopped",
+              "label": "Offline",
+              "icon": "circle"
+            },
+            {
+              "value": "streaming",
+              "label": "Live",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "stopped"
+        },
+        "label": "Stream",
+        "icon": "radio-tower",
+        "id": "twitch-streamer-slice1",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "obs",
+          "action_type": "obs/record",
+          "inputs": {},
+          "states": [
+            {
+              "value": "stopped",
+              "label": "Record Off",
+              "icon": "square"
+            },
+            {
+              "value": "recording",
+              "label": "Recording",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "stopped"
+        },
+        "label": "Record",
+        "icon": "circle",
+        "id": "twitch-streamer-slice2",
+        "show_title": true
+      },
+      {
+        "label": "Scene 1",
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/scene",
+          "inputs": {}
+        },
+        "icon": "layout-grid",
+        "id": "twitch-streamer-slice3",
+        "show_title": true
+      },
+      {
+        "label": "Scene 2",
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/scene",
+          "inputs": {}
+        },
+        "icon": "layout-grid",
+        "id": "twitch-streamer-slice4",
+        "show_title": true
+      },
+      {
+        "id": "twitch-streamer-cell17",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "twitch",
+          "action_type": "twitch/viewers",
+          "inputs": {}
+        },
+        "label": "Viewer Count",
+        "icon": "eye",
+        "id": "twitch-streamer-slice5",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "discord",
+          "action_type": "discord/mute",
+          "inputs": {},
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "Unmuted",
+              "icon": "mic"
+            },
+            {
+              "value": "muted",
+              "label": "Muted",
+              "icon": "mic-off"
+            }
+          ],
+          "default_state": "unmuted"
+        },
+        "label": "Mute",
+        "icon": "mic",
+        "id": "twitch-streamer-slice6",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "discord",
+          "action_type": "discord/deafen",
+          "inputs": {},
+          "states": [
+            {
+              "value": "undeafened",
+              "label": "Undeafened",
+              "icon": "headphones"
+            },
+            {
+              "value": "deafened",
+              "label": "Deafened",
+              "icon": "headphone-off"
+            }
+          ],
+          "default_state": "undeafened"
+        },
+        "label": "Deafen",
+        "icon": "headphones",
+        "id": "twitch-streamer-slice7",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "twitch",
+          "action_type": "twitch/marker",
+          "inputs": {
+            "description": ""
+          }
+        },
+        "label": "Stream Marker",
+        "icon": "bookmark-plus",
+        "id": "twitch-streamer-slice8",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "twitch",
+          "action_type": "twitch/create-clip",
+          "inputs": {
+            "open": false
+          }
+        },
+        "label": "Create Clip",
+        "icon": "clapperboard",
+        "id": "twitch-streamer-slice9",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "twitch",
+          "action_type": "twitch/ad-break",
+          "inputs": {
+            "length": "60"
+          }
+        },
+        "label": "Run Ad",
+        "icon": "megaphone",
+        "id": "twitch-streamer-slice10",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/replay-buffer-save",
+          "inputs": {}
+        },
+        "label": "Save Replay",
+        "icon": "save",
+        "id": "twitch-streamer-slice11",
+        "show_title": true
+      },
+      {
+        "id": "twitch-streamer-cell18",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell19",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell20",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell21",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "twitch",
+          "action_type": "twitch/emote-only",
+          "inputs": {},
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "message-circle"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "smile"
+            }
+          ],
+          "default_state": "off"
+        },
+        "label": "Emote-Only Chat",
+        "icon": "smile",
+        "id": "twitch-streamer-slice12",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "twitch",
+          "action_type": "twitch/follower-only",
+          "inputs": {},
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "message-circle"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "user-check"
+            }
+          ],
+          "default_state": "off"
+        },
+        "label": "Follower-Only Chat",
+        "icon": "user-check",
+        "id": "twitch-streamer-slice13",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "twitch",
+          "action_type": "twitch/sub-only",
+          "inputs": {},
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "message-circle"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "star"
+            }
+          ],
+          "default_state": "off"
+        },
+        "label": "Subscriber-Only Chat",
+        "icon": "star",
+        "id": "twitch-streamer-slice14",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "twitch",
+          "action_type": "twitch/slow-mode",
+          "inputs": {
+            "seconds": "30"
+          },
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "message-circle"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "hourglass"
+            }
+          ],
+          "default_state": "off"
+        },
+        "label": "Slow Mode",
+        "icon": "hourglass",
+        "id": "twitch-streamer-slice15",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "twitch",
+          "action_type": "twitch/clear-chat",
+          "inputs": {}
+        },
+        "label": "Clear Chat",
+        "icon": "eraser",
+        "id": "twitch-streamer-slice16",
+        "show_title": true
+      },
+      {
+        "id": "twitch-streamer-cell22",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell23",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell24",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell25",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell26",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell27",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell28",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell29",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell30",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell31",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell32",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell33",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell34",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell35",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell36",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell37",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell38",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell39",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell40",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell41",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell42",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell43",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell44",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell45",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell46",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell47",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell48",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell49",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell50",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell51",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell52",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell53",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell54",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell55",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell56",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell57",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell58",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell59",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell60",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell61",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell62",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell63",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "twitch-streamer-cell64",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      }
+    ],
+    "keybind": null,
+    "auto_open": null,
+    "show_labels": true
+  }
+}

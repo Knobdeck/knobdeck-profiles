@@ -1,0 +1,142 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "philips-hue",
+  "kind": "dial",
+  "name": "Philips Hue",
+  "summary": "Lights on and off, brightness, warmth and scenes.",
+  "description": "Controls all Hue lights (group 0) by default; pick a room or light per item after adding. Needs the Hue Bridge pairing in the plugin's setup.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Lighting",
+    "Smart home"
+  ],
+  "plugins": [
+    {
+      "id": "hue",
+      "name": "Philips Hue",
+      "setup": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 6,
+  "profile": {
+    "name": "Philips Hue",
+    "icon": "lightbulb",
+    "items": [
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "hue",
+          "action_type": "hue/power",
+          "inputs": {
+            "target": "group:0"
+          },
+          "states": [
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "lightbulb"
+            },
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "lightbulb-off"
+            }
+          ],
+          "default_state": "on"
+        },
+        "label": "Power",
+        "icon": "lightbulb",
+        "id": "philips-hue-item1"
+      },
+      {
+        "kind": {
+          "type": "slider",
+          "plugin": "hue",
+          "action_type": "hue/brightness",
+          "inputs": {
+            "target": "group:0",
+            "step": "5"
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        "label": "Brightness",
+        "icon": "sun",
+        "id": "philips-hue-item2"
+      },
+      {
+        "kind": {
+          "type": "slider",
+          "plugin": "hue",
+          "action_type": "hue/temperature",
+          "inputs": {
+            "target": "group:0",
+            "step": "100"
+          },
+          "min": 2000,
+          "max": 6500,
+          "step": 100,
+          "unit": "K"
+        },
+        "label": "Color Temperature",
+        "icon": "thermometer",
+        "id": "philips-hue-item3"
+      },
+      {
+        "kind": {
+          "type": "dynamic",
+          "plugin": "hue",
+          "action_type": "hue/scenes-wheel",
+          "inputs": {
+            "room": "0"
+          }
+        },
+        "label": "Scenes Wheel",
+        "icon": "sparkles",
+        "id": "philips-hue-item4"
+      },
+      {
+        "label": "Warm Orange",
+        "kind": {
+          "type": "button",
+          "plugin": "hue",
+          "action_type": "hue/set-color",
+          "inputs": {
+            "target": "group:0",
+            "color": "#FF8800"
+          }
+        },
+        "icon": "palette",
+        "id": "philips-hue-item5"
+      },
+      {
+        "label": "50%",
+        "kind": {
+          "type": "button",
+          "plugin": "hue",
+          "action_type": "hue/set-brightness",
+          "inputs": {
+            "target": "group:0",
+            "value": "50"
+          }
+        },
+        "icon": "sun",
+        "id": "philips-hue-item6"
+      }
+    ],
+    "keybind": null,
+    "auto_open": null
+  }
+}

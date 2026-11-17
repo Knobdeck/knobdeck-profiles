@@ -1,0 +1,773 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "desktop-workspace",
+  "kind": "deck",
+  "name": "Desktop & Workspace",
+  "summary": "Virtual desktops, overview, audio devices and system tools for your OS.",
+  "description": "Built only from the OS tools that ship with KnobDeck, so it's ready the moment it's added. Some cells are for one OS (Mission Control on macOS, Task View on Windows, Present Windows on Linux) and are left out elsewhere.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "System",
+    "Productivity",
+    "Starter"
+  ],
+  "plugins": [
+    {
+      "id": "os-tools",
+      "name": "OS Tools",
+      "builtin": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {
+    "linux": 7,
+    "macos": 9,
+    "windows": 13
+  },
+  "ready": true,
+  "toConfigure": [],
+  "items": 25,
+  "profile": {
+    "name": "Desktop & Workspace",
+    "icon": "monitor",
+    "slices": [
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/desktop-previous",
+          "inputs": {}
+        },
+        "label": "Previous Desktop",
+        "icon": "chevrons-left",
+        "id": "desktop-workspace-slice1",
+        "show_title": true,
+        "platforms": [
+          "linux",
+          "macos"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/desktop-next",
+          "inputs": {}
+        },
+        "label": "Next Desktop",
+        "icon": "chevrons-right",
+        "id": "desktop-workspace-slice2",
+        "show_title": true,
+        "platforms": [
+          "linux",
+          "macos"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/desktop-new",
+          "inputs": {}
+        },
+        "label": "New Desktop",
+        "icon": "copy-plus",
+        "id": "desktop-workspace-slice3",
+        "show_title": true,
+        "platforms": [
+          "linux"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/show-desktop",
+          "inputs": {}
+        },
+        "label": "Show Desktop (Plasma)",
+        "icon": "monitor",
+        "id": "desktop-workspace-slice4",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/screen-snip",
+          "inputs": {}
+        },
+        "label": "Screenshot",
+        "icon": "scissors",
+        "id": "desktop-workspace-slice5",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/emoji-panel",
+          "inputs": {}
+        },
+        "label": "Emoji Picker (Plasma)",
+        "icon": "smile",
+        "id": "desktop-workspace-slice6",
+        "show_title": true,
+        "platforms": [
+          "linux",
+          "macos"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/system-stats",
+          "inputs": {
+            "stat": "cpu"
+          }
+        },
+        "label": "System Stats",
+        "icon": "gauge",
+        "id": "desktop-workspace-slice7",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "lock",
+          "inputs": {}
+        },
+        "label": "Lock",
+        "icon": "lock",
+        "id": "desktop-workspace-slice8",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/overview",
+          "inputs": {}
+        },
+        "label": "Overview",
+        "icon": "layout-grid",
+        "id": "desktop-workspace-slice9",
+        "show_title": true,
+        "platforms": [
+          "linux"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/present-windows",
+          "inputs": {}
+        },
+        "label": "Present Windows",
+        "icon": "app-window",
+        "id": "desktop-workspace-slice10",
+        "show_title": true,
+        "platforms": [
+          "linux"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/app-launcher",
+          "inputs": {}
+        },
+        "label": "Applications",
+        "icon": "layout-dashboard",
+        "id": "desktop-workspace-slice11",
+        "show_title": true,
+        "platforms": [
+          "linux"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/mission-control",
+          "inputs": {}
+        },
+        "label": "Mission Control",
+        "icon": "layout-grid",
+        "id": "desktop-workspace-slice12",
+        "show_title": true,
+        "platforms": [
+          "macos"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/app-windows",
+          "inputs": {}
+        },
+        "label": "App Exposé",
+        "icon": "app-window",
+        "id": "desktop-workspace-slice13",
+        "show_title": true,
+        "platforms": [
+          "macos"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/task-view",
+          "inputs": {}
+        },
+        "label": "Task View",
+        "icon": "layout-grid",
+        "id": "desktop-workspace-slice14",
+        "show_title": true,
+        "platforms": [
+          "windows"
+        ]
+      },
+      {
+        "id": "desktop-workspace-cell29",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell30",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/file-manager",
+          "inputs": {}
+        },
+        "label": "Files",
+        "icon": "folder-open",
+        "id": "desktop-workspace-slice15",
+        "show_title": true,
+        "platforms": [
+          "linux"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/finder",
+          "inputs": {}
+        },
+        "label": "Finder",
+        "icon": "folder-open",
+        "id": "desktop-workspace-slice16",
+        "show_title": true,
+        "platforms": [
+          "macos"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/file-explorer",
+          "inputs": {}
+        },
+        "label": "File Explorer",
+        "icon": "folder-open",
+        "id": "desktop-workspace-slice17",
+        "show_title": true,
+        "platforms": [
+          "windows"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/open-settings",
+          "inputs": {}
+        },
+        "label": "System Settings",
+        "icon": "settings",
+        "id": "desktop-workspace-slice18",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/system-monitor",
+          "inputs": {}
+        },
+        "label": "System Monitor",
+        "icon": "activity",
+        "id": "desktop-workspace-slice19",
+        "show_title": true,
+        "platforms": [
+          "linux"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/activity-monitor",
+          "inputs": {}
+        },
+        "label": "Activity Monitor",
+        "icon": "activity",
+        "id": "desktop-workspace-slice20",
+        "show_title": true,
+        "platforms": [
+          "macos"
+        ]
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/task-manager",
+          "inputs": {}
+        },
+        "label": "Task Manager",
+        "icon": "activity",
+        "id": "desktop-workspace-slice21",
+        "show_title": true,
+        "platforms": [
+          "windows"
+        ]
+      },
+      {
+        "id": "desktop-workspace-cell31",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "os-tools",
+          "action_type": "os-tools/toggle-mic-mute",
+          "inputs": {},
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "Mic On",
+              "icon": "mic"
+            },
+            {
+              "value": "muted",
+              "label": "Mic Muted",
+              "icon": "mic-off"
+            }
+          ],
+          "default_state": "unmuted"
+        },
+        "label": "Mute Microphone",
+        "icon": "mic",
+        "id": "desktop-workspace-slice22",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "dynamic_wheel",
+          "plugin": "os-tools",
+          "action_type": "os-tools/output-device-wheel",
+          "inputs": {}
+        },
+        "label": "Output Device",
+        "icon": "speaker",
+        "id": "desktop-workspace-slice23",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "dynamic_wheel",
+          "plugin": "os-tools",
+          "action_type": "os-tools/input-device-wheel",
+          "inputs": {}
+        },
+        "label": "Input Device",
+        "icon": "mic",
+        "id": "desktop-workspace-slice24",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "slider",
+          "plugin": "knobdeck-actions",
+          "action_type": "volume",
+          "inputs": {},
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "%",
+          "span": {
+            "axis": "row",
+            "length": 4
+          }
+        },
+        "label": "Volume",
+        "icon": "volume-2",
+        "id": "desktop-workspace-slice25",
+        "show_title": true
+      },
+      {
+        "id": "desktop-workspace-span26",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "desktop-workspace-slice25"
+        }
+      },
+      {
+        "id": "desktop-workspace-span27",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "desktop-workspace-slice25"
+        }
+      },
+      {
+        "id": "desktop-workspace-span28",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "desktop-workspace-slice25"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell32",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell33",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell34",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell35",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell36",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell37",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell38",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell39",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell40",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell41",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell42",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell43",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell44",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell45",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell46",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell47",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell48",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell49",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell50",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell51",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell52",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell53",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell54",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell55",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell56",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell57",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell58",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell59",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell60",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell61",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell62",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell63",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "desktop-workspace-cell64",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      }
+    ],
+    "keybind": null,
+    "auto_open": null,
+    "show_labels": true
+  }
+}

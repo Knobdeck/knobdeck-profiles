@@ -1,0 +1,798 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "obs-streaming",
+  "kind": "deck",
+  "name": "OBS Streaming",
+  "summary": "Go live, record, switch scenes and mix audio in OBS Studio.",
+  "description": "Stream, record, pause, replay buffer and virtual camera on the top row; four scene buttons and the studio-mode controls; the mic mute and a volume slider for one source. Pick your scenes and audio source in each item after adding. Needs OBS's WebSocket server (Tools → WebSocket Server Settings) and the plugin's setup.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Streaming",
+    "Recording"
+  ],
+  "plugins": [
+    {
+      "id": "obs",
+      "name": "OBS Studio",
+      "setup": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": false,
+  "toConfigure": [
+    "Screenshot (source, imageFormat)",
+    "Scene 1 (scene)",
+    "Scene 2 (scene)",
+    "Scene 3 (scene)",
+    "Scene 4 (scene)",
+    "Mic (source)",
+    "Mic Level (source)"
+  ],
+  "items": 19,
+  "profile": {
+    "name": "OBS Streaming",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0iIzMwMkUzMSIvPjxzdmcgeD0iNDMuNTIiIHk9IjQzLjUyIiB3aWR0aD0iMTY4Ljk2IiBoZWlnaHQ9IjE2OC45NiIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMTIsMjRDNS4zODMsMjQsMCwxOC42MTcsMCwxMlM1LjM4MywwLDEyLDBzMTIsNS4zODMsMTIsMTJTMTguNjE3LDI0LDEyLDI0eiBNMTIsMS4xMDkgQzUuOTk1LDEuMTA5LDEuMTEsNS45OTUsMS4xMSwxMkMxLjExLDE4LjAwNSw1Ljk5NSwyMi44OSwxMiwyMi44OVMyMi44OSwxOC4wMDUsMjIuODksMTJDMjIuODksNS45OTUsMTguMDA1LDEuMTA5LDEyLDEuMTA5eiBNNi4xODIsNS45OWMwLjM1Mi0xLjY5OCwxLjUwMy0zLjIyOSwzLjA1LTMuOTk2Yy0wLjI2OSwwLjI3My0wLjU5NSwwLjQ4My0wLjg0NCwwLjc4Yy0xLjAyLDEuMS0xLjQ4LDIuNjkyLTEuMTk5LDQuMTU2IGMwLjM1NSwyLjIzNSwyLjQ1NSw0LjA2LDQuNzMyLDQuMDI4YzEuNzY1LDAuMDc5LDMuNDg1LTAuOTM3LDQuMzQ4LTIuNDY4YzEuODQ4LDAuMDYzLDMuNjQ1LDEuMDE3LDQuNywyLjU0OCBjMC41NCwwLjc5OSwwLjk2MiwxLjczNiwwLjk5MSwyLjcxMWMtMC4zNDItMS4yOTUtMS4yMDItMi40NDYtMi4zNzUtMy4wOTVjLTEuMTM1LTAuNjM5LTIuNTI5LTAuODAyLTMuNzcyLTAuNDI1IGMtMS41NiwwLjQ0OC0yLjg0OSwxLjcyMy0zLjI5MywzLjI5M2MtMC4zNzcsMS4yNS0wLjIxNiwyLjYyOCwwLjM3NywzLjc3MmMtMC44MjUsMS40MjktMi4zMTUsMi40NDktMy45MzIsMi43NTYgYy0xLjI0NCwwLjI2MS0yLjU1MSwwLjA1OS0zLjcwOS0wLjQ2NGMxLjAzNiwwLjMwMiwyLjE2MSwwLjM1NSwzLjE5MS0wLjAxMWMxLjM4MS0wLjQ1NywyLjUyMi0xLjU2NywzLjAyNC0yLjkzNSBjMC41NTYtMS40OSwwLjM0NS0zLjI2MS0wLjU5MS00LjU0Yy0wLjctMS4wMDctMS44MDMtMS43MTctMy4wMDItMS45NjljLTAuMzgtMC4wNjgtMC43NjQtMC4wOTgtMS4xNDgtMC4xMzQgYy0wLjYxMS0xLjIzMS0wLjgzNC0yLjY2LTAuNTI4LTMuOTk2TDYuMTgyLDUuOTl6Ii8+PC9nPjwvc3ZnPjwvc3ZnPg0K",
+    "slices": [
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "obs",
+          "action_type": "obs/stream",
+          "inputs": {},
+          "states": [
+            {
+              "value": "stopped",
+              "label": "Offline",
+              "icon": "circle"
+            },
+            {
+              "value": "streaming",
+              "label": "Live",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "stopped"
+        },
+        "label": "Stream",
+        "icon": "radio-tower",
+        "id": "obs-streaming-slice1",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "obs",
+          "action_type": "obs/record",
+          "inputs": {},
+          "states": [
+            {
+              "value": "stopped",
+              "label": "Record Off",
+              "icon": "square"
+            },
+            {
+              "value": "recording",
+              "label": "Recording",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "stopped"
+        },
+        "label": "Record",
+        "icon": "circle",
+        "id": "obs-streaming-slice2",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "obs",
+          "action_type": "obs/record-pause",
+          "inputs": {},
+          "states": [
+            {
+              "value": "recording",
+              "label": "Recording",
+              "icon": "play"
+            },
+            {
+              "value": "paused",
+              "label": "Paused",
+              "icon": "pause"
+            }
+          ],
+          "default_state": "recording"
+        },
+        "label": "Record Pause",
+        "icon": "circle-pause",
+        "id": "obs-streaming-slice3",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "obs",
+          "action_type": "obs/replay-buffer",
+          "inputs": {},
+          "states": [
+            {
+              "value": "stopped",
+              "label": "Buffer Off",
+              "icon": "circle"
+            },
+            {
+              "value": "active",
+              "label": "Buffer On",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "stopped"
+        },
+        "label": "Replay Buffer",
+        "icon": "history",
+        "id": "obs-streaming-slice4",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/replay-buffer-save",
+          "inputs": {}
+        },
+        "label": "Save Replay",
+        "icon": "save",
+        "id": "obs-streaming-slice5",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "obs",
+          "action_type": "obs/virtual-cam",
+          "inputs": {},
+          "states": [
+            {
+              "value": "off",
+              "label": "Virtual Cam Off",
+              "icon": "circle"
+            },
+            {
+              "value": "on",
+              "label": "Virtual Cam On",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "off"
+        },
+        "label": "Virtual Camera",
+        "icon": "webcam",
+        "id": "obs-streaming-slice6",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/screenshot",
+          "inputs": {}
+        },
+        "label": "Screenshot",
+        "icon": "camera",
+        "id": "obs-streaming-slice7",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/stats",
+          "inputs": {
+            "stat": "cpu"
+          }
+        },
+        "label": "OBS Stats",
+        "icon": "gauge",
+        "id": "obs-streaming-slice8",
+        "show_title": true
+      },
+      {
+        "label": "Scene 1",
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/scene",
+          "inputs": {}
+        },
+        "icon": "layout-grid",
+        "id": "obs-streaming-slice9",
+        "show_title": true
+      },
+      {
+        "label": "Scene 2",
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/scene",
+          "inputs": {}
+        },
+        "icon": "layout-grid",
+        "id": "obs-streaming-slice10",
+        "show_title": true
+      },
+      {
+        "label": "Scene 3",
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/scene",
+          "inputs": {}
+        },
+        "icon": "layout-grid",
+        "id": "obs-streaming-slice11",
+        "show_title": true
+      },
+      {
+        "label": "Scene 4",
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/scene",
+          "inputs": {}
+        },
+        "icon": "layout-grid",
+        "id": "obs-streaming-slice12",
+        "show_title": true
+      },
+      {
+        "id": "obs-streaming-cell24",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "obs",
+          "action_type": "obs/studio-mode",
+          "inputs": {},
+          "states": [
+            {
+              "value": "off",
+              "label": "Studio Off",
+              "icon": "circle"
+            },
+            {
+              "value": "on",
+              "label": "Studio On",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "off"
+        },
+        "label": "Studio Mode",
+        "icon": "square-split-horizontal",
+        "id": "obs-streaming-slice13",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/scene-transition",
+          "inputs": {}
+        },
+        "label": "Scene Transition",
+        "icon": "arrow-right",
+        "id": "obs-streaming-slice14",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/previous-scene",
+          "inputs": {}
+        },
+        "label": "Previous Scene",
+        "icon": "undo-2",
+        "id": "obs-streaming-slice15",
+        "show_title": true
+      },
+      {
+        "label": "Mic",
+        "kind": {
+          "type": "toggle",
+          "plugin": "obs",
+          "action_type": "obs/audio-mixer",
+          "inputs": {},
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "Unmuted",
+              "icon": "volume-2"
+            },
+            {
+              "value": "muted",
+              "label": "Muted",
+              "icon": "volume-x"
+            }
+          ],
+          "default_state": "unmuted"
+        },
+        "icon": "sliders-vertical",
+        "id": "obs-streaming-slice16",
+        "show_title": true
+      },
+      {
+        "label": "Mic Level",
+        "kind": {
+          "type": "slider",
+          "plugin": "obs",
+          "action_type": "obs/source-volume",
+          "inputs": {
+            "step": "5"
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "span": {
+            "axis": "row",
+            "length": 4
+          }
+        },
+        "icon": "volume-2",
+        "id": "obs-streaming-slice17",
+        "show_title": true
+      },
+      {
+        "id": "obs-streaming-span18",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "obs-streaming-slice17"
+        }
+      },
+      {
+        "id": "obs-streaming-span19",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "obs-streaming-slice17"
+        }
+      },
+      {
+        "id": "obs-streaming-span20",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "obs-streaming-slice17"
+        }
+      },
+      {
+        "id": "obs-streaming-cell25",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/chapter-marker",
+          "inputs": {
+            "chapterName": ""
+          }
+        },
+        "label": "Chapter Marker",
+        "icon": "bookmark-plus",
+        "id": "obs-streaming-slice21",
+        "show_title": true
+      },
+      {
+        "label": "System",
+        "kind": {
+          "type": "slider",
+          "plugin": "knobdeck-actions",
+          "action_type": "volume",
+          "inputs": {},
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "%",
+          "span": {
+            "axis": "col",
+            "length": 2
+          }
+        },
+        "icon": "volume-2",
+        "id": "obs-streaming-slice22",
+        "show_title": true
+      },
+      {
+        "id": "obs-streaming-cell26",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell27",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell28",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell29",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell30",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell31",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell32",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-span23",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "obs-streaming-slice22"
+        }
+      },
+      {
+        "id": "obs-streaming-cell33",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell34",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell35",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell36",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell37",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell38",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell39",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell40",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell41",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell42",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell43",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell44",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell45",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell46",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell47",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell48",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell49",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell50",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell51",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell52",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell53",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell54",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell55",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell56",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell57",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell58",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell59",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell60",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell61",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell62",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell63",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "obs-streaming-cell64",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      }
+    ],
+    "keybind": null,
+    "auto_open": null,
+    "show_labels": true
+  }
+}

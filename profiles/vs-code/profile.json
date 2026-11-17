@@ -1,0 +1,149 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "vs-code",
+  "kind": "dial",
+  "name": "VS Code",
+  "summary": "Command palette, panels, tasks and debugging for Visual Studio Code.",
+  "description": "Drives VS Code through the KnobDeck companion extension (the plugin's setup installs it). Task and debug wheels list what your workspace defines.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Developer tools",
+    "Editor"
+  ],
+  "plugins": [
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "setup": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 10,
+  "profile": {
+    "name": "VS Code",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0iIzFlMWUxZSIvPjxzdmcgeD0iNDguNjQiIHk9IjQ4LjY0IiB3aWR0aD0iMTU4LjcyIiBoZWlnaHQ9IjE1OC43MiIgdmlld0JveD0iMCAwIDEwMCAxMDAiPjxtYXNrIGlkPSJ2YSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHg9IjAiIHk9IjAiIG1hc2stdHlwZT0iYWxwaGEiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGZpbGw9IiNmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTcwLjkxMiA5OS4zMTdhNi4yMjMgNi4yMjMgMCAwIDAgNC45Ni0uMTlsMjAuNTg5LTkuOTA3QTYuMjUgNi4yNSAwIDAgMCAxMDAgODMuNTg3VjE2LjQxM2E2LjI1IDYuMjUgMCAwIDAtMy41NC01LjYzMkw3NS44NzQuODc0YTYuMjI2IDYuMjI2IDAgMCAwLTcuMTA0IDEuMjFMMjkuMzU1IDM4LjA0IDEyLjE4NyAyNS4wMWE0LjE2MiA0LjE2MiAwIDAgMC01LjMxOC4yMzZsLTUuNTA2IDUuMDA5YTQuMTY4IDQuMTY4IDAgMCAwLS4wMDQgNi4xNjJMMTYuMjQ3IDUwIDEuMzYgNjMuNTgzYTQuMTY4IDQuMTY4IDAgMCAwIC4wMDQgNi4xNjJsNS41MDYgNS4wMWE0LjE2MiA0LjE2MiAwIDAgMCA1LjMxOC4yMzZsMTcuMTY4LTEzLjAzMkw2OC43NyA5Ny45MTdhNi4yMTcgNi4yMTcgMCAwIDAgMi4xNDMgMS40Wk03NS4wMTUgMjcuMyA0NS4xMSA1MGwyOS45MDYgMjIuNzAxVjI3LjNaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L21hc2s+PGcgbWFzaz0idXJsKCN2YSkiPjxwYXRoIGZpbGw9IiMwMDY1QTkiIGQ9Ik05Ni40NjEgMTAuNzk2IDc1Ljg1Ny44NzZhNi4yMyA2LjIzIDAgMCAwLTcuMTA3IDEuMjA3bC02Ny40NTEgNjEuNWE0LjE2NyA0LjE2NyAwIDAgMCAuMDA0IDYuMTYybDUuNTEgNS4wMDlhNC4xNjcgNC4xNjcgMCAwIDAgNS4zMi4yMzZsODEuMjI4LTYxLjYyYzIuNzI1LTIuMDY3IDYuNjM5LS4xMjQgNi42MzkgMy4yOTd2LS4yNGE2LjI1IDYuMjUgMCAwIDAtMy41MzktNS42M1oiLz48ZyBmaWx0ZXI9InVybCgjdmIpIj48cGF0aCBmaWxsPSIjMDA3QUNDIiBkPSJtOTYuNDYxIDg5LjIwNC0yMC42MDQgOS45MmE2LjIyOSA2LjIyOSAwIDAgMS03LjEwNy0xLjIwN2wtNjcuNDUxLTYxLjVhNC4xNjcgNC4xNjcgMCAwIDEgLjAwNC02LjE2Mmw1LjUxLTUuMDA5YTQuMTY3IDQuMTY3IDAgMCAxIDUuMzItLjIzNmw4MS4yMjggNjEuNjJjMi43MjUgMi4wNjcgNi42MzkuMTI0IDYuNjM5LTMuMjk3di4yNGE2LjI1IDYuMjUgMCAwIDEtMy41MzkgNS42M1oiLz48L2c+PGcgZmlsdGVyPSJ1cmwoI3ZjKSI+PHBhdGggZmlsbD0iIzFGOUNGMCIgZD0iTTc1Ljg1OCA5OS4xMjZhNi4yMzIgNi4yMzIgMCAwIDEtNy4xMDgtMS4yMWMyLjMwNiAyLjMwNyA2LjI1LjY3NCA2LjI1LTIuNTg4VjQuNjcyYzAtMy4yNjItMy45NDQtNC44OTUtNi4yNS0yLjU4OWE2LjIzMiA2LjIzMiAwIDAgMSA3LjEwOC0xLjIxbDIwLjYgOS45MDhBNi4yNSA2LjI1IDAgMCAxIDEwMCAxNi40MTN2NjcuMTc0YTYuMjUgNi4yNSAwIDAgMS0zLjU0MSA1LjYzM2wtMjAuNjAxIDkuOTA2WiIvPjwvZz48cGF0aCBmaWxsPSJ1cmwoI3ZkKSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNzAuODUxIDk5LjMxN2E2LjIyNCA2LjIyNCAwIDAgMCA0Ljk2LS4xOUw5Ni40IDg5LjIyYTYuMjUgNi4yNSAwIDAgMCAzLjU0LTUuNjMzVjE2LjQxM2E2LjI1IDYuMjUgMCAwIDAtMy41NC01LjYzMkw3NS44MTIuODc0YTYuMjI2IDYuMjI2IDAgMCAwLTcuMTA0IDEuMjFMMjkuMjk0IDM4LjA0IDEyLjEyNiAyNS4wMWE0LjE2MiA0LjE2MiAwIDAgMC01LjMxNy4yMzZsLTUuNTA3IDUuMDA5YTQuMTY4IDQuMTY4IDAgMCAwLS4wMDQgNi4xNjJMMTYuMTg2IDUwIDEuMjk4IDYzLjU4M2E0LjE2OCA0LjE2OCAwIDAgMCAuMDA0IDYuMTYybDUuNTA3IDUuMDA5YTQuMTYyIDQuMTYyIDAgMCAwIDUuMzE3LjIzNkwyOS4yOTQgNjEuOTZsMzkuNDE0IDM1Ljk1OGE2LjIxOCA2LjIxOCAwIDAgMCAyLjE0MyAxLjRaTTc0Ljk1NCAyNy4zIDQ1LjA0OCA1MGwyOS45MDYgMjIuNzAxVjI3LjNaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIG9wYWNpdHk9Ii4yNSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOm92ZXJsYXkiLz48L2c+PGRlZnM+PGZpbHRlciBpZD0idmIiIHdpZHRoPSIxMTYuNzI3IiBoZWlnaHQ9IjkyLjI0NiIgeD0iLTguMzk0IiB5PSIxNS44MjkiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48ZmVGbG9vZCBmbG9vZC1vcGFjaXR5PSIwIiByZXN1bHQ9IkJhY2tncm91bmRJbWFnZUZpeCIvPjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAxMjcgMCIvPjxmZU9mZnNldC8+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iNC4xNjciLz48ZmVDb2xvck1hdHJpeCB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAuMjUgMCIvPjxmZUJsZW5kIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiBtb2RlPSJvdmVybGF5IiByZXN1bHQ9ImVmZmVjdDFfZHJvcFNoYWRvdyIvPjxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9ImVmZmVjdDFfZHJvcFNoYWRvdyIgcmVzdWx0PSJzaGFwZSIvPjwvZmlsdGVyPjxmaWx0ZXIgaWQ9InZjIiB3aWR0aD0iNDcuOTE3IiBoZWlnaHQ9IjExNi4xNTEiIHg9IjYwLjQxNyIgeT0iLTguMDc2IiBjb2xvci1pbnRlcnBvbGF0aW9uLWZpbHRlcnM9InNSR0IiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz48ZmVDb2xvck1hdHJpeCBpbj0iU291cmNlQWxwaGEiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMTI3IDAiLz48ZmVPZmZzZXQvPjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjQuMTY3Ii8+PGZlQ29sb3JNYXRyaXggdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwLjI1IDAiLz48ZmVCbGVuZCBpbjI9IkJhY2tncm91bmRJbWFnZUZpeCIgbW9kZT0ib3ZlcmxheSIgcmVzdWx0PSJlZmZlY3QxX2Ryb3BTaGFkb3ciLz48ZmVCbGVuZCBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2Ryb3BTaGFkb3ciIHJlc3VsdD0ic2hhcGUiLz48L2ZpbHRlcj48bGluZWFyR3JhZGllbnQgaWQ9InZkIiB4MT0iNDkuOTM5IiB4Mj0iNDkuOTM5IiB5MT0iLjI1OCIgeTI9Ijk5Ljc0MiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjwvc3ZnPjwvc3ZnPg0K",
+    "items": [
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/command-palette",
+          "inputs": {}
+        },
+        "label": "Command Palette",
+        "icon": "compass",
+        "id": "vs-code-item1"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/quick-open",
+          "inputs": {}
+        },
+        "label": "Quick Open",
+        "icon": "search",
+        "id": "vs-code-item2"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/explorer",
+          "inputs": {}
+        },
+        "label": "Explorer",
+        "icon": "folder",
+        "id": "vs-code-item3"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/search",
+          "inputs": {}
+        },
+        "label": "Search",
+        "icon": "search",
+        "id": "vs-code-item4"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/source-control",
+          "inputs": {}
+        },
+        "label": "Source Control",
+        "icon": "git-branch",
+        "id": "vs-code-item5"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/terminal",
+          "inputs": {}
+        },
+        "label": "Toggle Terminal",
+        "icon": "terminal",
+        "id": "vs-code-item6"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/format-document",
+          "inputs": {}
+        },
+        "label": "Format Document",
+        "icon": "wand-sparkles",
+        "id": "vs-code-item7"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/toggle-sidebar",
+          "inputs": {}
+        },
+        "label": "Toggle Sidebar",
+        "icon": "panel-left",
+        "id": "vs-code-item8"
+      },
+      {
+        "kind": {
+          "type": "dynamic",
+          "plugin": "vscode",
+          "action_type": "vscode/task-wheel",
+          "inputs": {}
+        },
+        "label": "Task Wheel",
+        "icon": "play",
+        "id": "vs-code-item9"
+      },
+      {
+        "kind": {
+          "type": "dynamic",
+          "plugin": "vscode",
+          "action_type": "vscode/debug-wheel",
+          "inputs": {}
+        },
+        "label": "Debug Wheel",
+        "icon": "bug",
+        "id": "vs-code-item10"
+      }
+    ],
+    "keybind": null,
+    "auto_open": null
+  }
+}

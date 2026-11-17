@@ -1,0 +1,695 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "creator-dashboard",
+  "kind": "deck",
+  "name": "Creator Dashboard",
+  "summary": "YouTube viewers and studio, Twitch status and OBS recording.",
+  "description": "Watch your YouTube live viewers and open YouTube Studio, see whether a Twitch channel is live, and control OBS streaming, recording and chapter markers.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Streaming",
+    "YouTube"
+  ],
+  "plugins": [
+    {
+      "id": "obs",
+      "name": "OBS Studio",
+      "setup": true
+    },
+    {
+      "id": "twitch",
+      "name": "Twitch",
+      "setup": true
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "setup": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": false,
+  "toConfigure": [
+    "Scene (scene)"
+  ],
+  "items": 8,
+  "profile": {
+    "name": "Creator Dashboard",
+    "icon": "youtube",
+    "slices": [
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "youtube",
+          "action_type": "youtube/viewers",
+          "inputs": {}
+        },
+        "label": "Viewers",
+        "icon": "eye",
+        "id": "creator-dashboard-slice1",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "youtube",
+          "action_type": "youtube/dashboard",
+          "inputs": {}
+        },
+        "label": "Live Dashboard",
+        "icon": "layout-dashboard",
+        "id": "creator-dashboard-slice2",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "twitch",
+          "action_type": "twitch/viewers",
+          "inputs": {}
+        },
+        "label": "Viewer Count",
+        "icon": "eye",
+        "id": "creator-dashboard-slice3",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "twitch",
+          "action_type": "twitch/channel-live",
+          "inputs": {
+            "channel": ""
+          },
+          "states": [
+            {
+              "value": "offline",
+              "label": "Offline",
+              "icon": "radio"
+            },
+            {
+              "value": "live",
+              "label": "Live",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "offline"
+        },
+        "label": "Channel Monitor",
+        "icon": "radio",
+        "id": "creator-dashboard-slice4",
+        "show_title": true
+      },
+      {
+        "id": "creator-dashboard-cell9",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell10",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell11",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell12",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "obs",
+          "action_type": "obs/stream",
+          "inputs": {},
+          "states": [
+            {
+              "value": "stopped",
+              "label": "Offline",
+              "icon": "circle"
+            },
+            {
+              "value": "streaming",
+              "label": "Live",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "stopped"
+        },
+        "label": "Stream",
+        "icon": "radio-tower",
+        "id": "creator-dashboard-slice5",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "obs",
+          "action_type": "obs/record",
+          "inputs": {},
+          "states": [
+            {
+              "value": "stopped",
+              "label": "Record Off",
+              "icon": "square"
+            },
+            {
+              "value": "recording",
+              "label": "Recording",
+              "icon": "circle-dot"
+            }
+          ],
+          "default_state": "stopped"
+        },
+        "label": "Record",
+        "icon": "circle",
+        "id": "creator-dashboard-slice6",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/chapter-marker",
+          "inputs": {
+            "chapterName": ""
+          }
+        },
+        "label": "Chapter Marker",
+        "icon": "bookmark-plus",
+        "id": "creator-dashboard-slice7",
+        "show_title": true
+      },
+      {
+        "label": "Scene",
+        "kind": {
+          "type": "button",
+          "plugin": "obs",
+          "action_type": "obs/scene",
+          "inputs": {}
+        },
+        "icon": "layout-grid",
+        "id": "creator-dashboard-slice8",
+        "show_title": true
+      },
+      {
+        "id": "creator-dashboard-cell13",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell14",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell15",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell16",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell17",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell18",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell19",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell20",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell21",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell22",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell23",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell24",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell25",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell26",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell27",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell28",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell29",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell30",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell31",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell32",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell33",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell34",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell35",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell36",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell37",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell38",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell39",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell40",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell41",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell42",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell43",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell44",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell45",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell46",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell47",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell48",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell49",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell50",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell51",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell52",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell53",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell54",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell55",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell56",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell57",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell58",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell59",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell60",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell61",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell62",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell63",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "creator-dashboard-cell64",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      }
+    ],
+    "keybind": null,
+    "auto_open": null,
+    "show_labels": true
+  }
+}

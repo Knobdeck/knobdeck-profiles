@@ -1,0 +1,680 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "meetings",
+  "kind": "deck",
+  "name": "Meetings",
+  "summary": "Mic mute, audio devices, a meeting timer and quick window moves.",
+  "description": "For calls in any app: toggle the microphone at the OS level, switch output and input devices, keep a 25-minute timer and a stopwatch, and snap the call window aside.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Communication",
+    "Productivity"
+  ],
+  "plugins": [
+    {
+      "id": "clocks",
+      "name": "Clocks"
+    },
+    {
+      "id": "os-tools",
+      "name": "OS Tools",
+      "builtin": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 10,
+  "profile": {
+    "name": "Meetings",
+    "icon": "video",
+    "slices": [
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "os-tools",
+          "action_type": "os-tools/toggle-mic-mute",
+          "inputs": {},
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "Mic On",
+              "icon": "mic"
+            },
+            {
+              "value": "muted",
+              "label": "Mic Muted",
+              "icon": "mic-off"
+            }
+          ],
+          "default_state": "unmuted"
+        },
+        "label": "Mute Microphone",
+        "icon": "mic",
+        "id": "meetings-slice1",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "dynamic_wheel",
+          "plugin": "os-tools",
+          "action_type": "os-tools/output-device-wheel",
+          "inputs": {}
+        },
+        "label": "Output Device",
+        "icon": "speaker",
+        "id": "meetings-slice2",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "dynamic_wheel",
+          "plugin": "os-tools",
+          "action_type": "os-tools/input-device-wheel",
+          "inputs": {}
+        },
+        "label": "Input Device",
+        "icon": "mic",
+        "id": "meetings-slice3",
+        "show_title": true
+      },
+      {
+        "label": "25 min",
+        "kind": {
+          "type": "button",
+          "plugin": "clocks",
+          "action_type": "clocks/timer",
+          "inputs": {
+            "length": "25m"
+          }
+        },
+        "icon": "timer",
+        "id": "meetings-slice4",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "clocks",
+          "action_type": "clocks/stopwatch",
+          "inputs": {}
+        },
+        "label": "Stopwatch",
+        "icon": "timer-reset",
+        "id": "meetings-slice5",
+        "show_title": true
+      },
+      {
+        "id": "meetings-cell14",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell15",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell16",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "slider",
+          "plugin": "knobdeck-actions",
+          "action_type": "volume",
+          "inputs": {},
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "%",
+          "span": {
+            "axis": "row",
+            "length": 4
+          }
+        },
+        "label": "Volume",
+        "icon": "volume-2",
+        "id": "meetings-slice6",
+        "show_title": true
+      },
+      {
+        "id": "meetings-span7",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "meetings-slice6"
+        }
+      },
+      {
+        "id": "meetings-span8",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "meetings-slice6"
+        }
+      },
+      {
+        "id": "meetings-span9",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "slider_span",
+          "owner": "meetings-slice6"
+        }
+      },
+      {
+        "id": "meetings-cell17",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell18",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell19",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell20",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/move-left-half",
+          "inputs": {
+            "monitor": "current"
+          }
+        },
+        "label": "Move Left Half",
+        "icon": "panel-left",
+        "id": "meetings-slice10",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/move-right-half",
+          "inputs": {
+            "monitor": "current"
+          }
+        },
+        "label": "Move Right Half",
+        "icon": "panel-right",
+        "id": "meetings-slice11",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/screen-snip",
+          "inputs": {}
+        },
+        "label": "Screenshot",
+        "icon": "scissors",
+        "id": "meetings-slice12",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/show-desktop",
+          "inputs": {}
+        },
+        "label": "Show Desktop (Plasma)",
+        "icon": "monitor",
+        "id": "meetings-slice13",
+        "show_title": true
+      },
+      {
+        "id": "meetings-cell21",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell22",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell23",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell24",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell25",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell26",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell27",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell28",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell29",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell30",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell31",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell32",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell33",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell34",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell35",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell36",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell37",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell38",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell39",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell40",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell41",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell42",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell43",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell44",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell45",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell46",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell47",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell48",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell49",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell50",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell51",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell52",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell53",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell54",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell55",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell56",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell57",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell58",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell59",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell60",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell61",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell62",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell63",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "meetings-cell64",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      }
+    ],
+    "keybind": null,
+    "auto_open": null,
+    "show_labels": true
+  }
+}

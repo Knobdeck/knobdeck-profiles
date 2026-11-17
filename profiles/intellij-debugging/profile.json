@@ -1,0 +1,149 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "intellij-debugging",
+  "kind": "dial",
+  "name": "IntelliJ Debugging",
+  "summary": "Run, debug and step through code in IntelliJ IDEA and other JetBrains IDEs.",
+  "description": "Run, debug, step over/into/out, resume and stop, with Search Everywhere and the terminal. Uses the KnobDeck companion plugin for JetBrains IDEs.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Developer tools",
+    "Editor"
+  ],
+  "plugins": [
+    {
+      "id": "intellij",
+      "name": "IntelliJ IDEA",
+      "setup": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 10,
+  "profile": {
+    "name": "IntelliJ Debugging",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIiB2aWV3Qm94PSIwIDAgMjU2IDI1NiI+PHJlY3Qgd2lkdGg9IjI1NiIgaGVpZ2h0PSIyNTYiIGZpbGw9IiMwMDAiLz4NCiAgPGRlZnM+DQogICAgPGxpbmVhckdyYWRpZW50IHgxPSIzNyUiIHkxPSI1MSUiIHgyPSIxNzguMSUiIHkyPSI0MS45JSIgaWQ9ImEiPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0ZDODAxRCIgb2Zmc2V0PSI5JSIvPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0IwN0Y2MSIgb2Zmc2V0PSIyMyUiLz4NCiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiM1NzdEQjMiIG9mZnNldD0iNDElIi8+DQogICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjMUU3Q0U2IiBvZmZzZXQ9IjUzJSIvPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzA4N0NGQSIgb2Zmc2V0PSI1OSUiLz4NCiAgICA8L2xpbmVhckdyYWRpZW50Pg0KICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iNzMuNiUiIHkxPSIxMTQuOCUiIHgyPSIzNS42JSIgeTI9IjEuMSUiIGlkPSJiIj4NCiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNGRTI4NTciIG9mZnNldD0iMCUiLz4NCiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNDQjM5NzkiIG9mZnNldD0iOCUiLz4NCiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiM5RTQ5OTciIG9mZnNldD0iMTYlIi8+DQogICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjNzU1N0IyIiBvZmZzZXQ9IjI1JSIvPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzUzNjJDOCIgb2Zmc2V0PSIzNCUiLz4NCiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiMzODZDREEiIG9mZnNldD0iNDQlIi8+DQogICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjMjM3M0U4IiBvZmZzZXQ9IjU0JSIvPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzE0NzhGMiIgb2Zmc2V0PSI2NiUiLz4NCiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiMwQjdCRjgiIG9mZnNldD0iNzklIi8+DQogICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjMDg3Q0ZBIiBvZmZzZXQ9IjEwMCUiLz4NCiAgICA8L2xpbmVhckdyYWRpZW50Pg0KICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMjguNiUiIHkxPSIyMy42JSIgeDI9IjgxLjglIiB5Mj0iMTI5LjglIiBpZD0iYyI+DQogICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRkUyODU3IiBvZmZzZXQ9IjAlIi8+DQogICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRkUyOTVGIiBvZmZzZXQ9IjglIi8+DQogICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRkYyRDc2IiBvZmZzZXQ9IjIxJSIvPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0ZGMzE4QyIgb2Zmc2V0PSIzMCUiLz4NCiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNFQTM4OTYiIG9mZnNldD0iMzglIi8+DQogICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjQjI0OEFFIiBvZmZzZXQ9IjU1JSIvPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzVBNjNENiIgb2Zmc2V0PSI3OSUiLz4NCiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiMwODdDRkEiIG9mZnNldD0iMTAwJSIvPg0KICAgIDwvbGluZWFyR3JhZGllbnQ+DQogIDwvZGVmcz4NCiAgPHBhdGggZmlsbD0idXJsKCNhKSIgZD0iTTQwLjUgMTgwLjYgMi45IDE1MC44bDIyLjEtNDEgMzMuMyAxMS4xeiIvPg0KICA8cGF0aCBmaWxsPSIjMDg3Q0ZBIiBkPSJtMjU2IDY4LjItNC42IDE0OC4zLTk4LjYgMzkuNS01My43LTM0Ljd6Ii8+DQogIDxwYXRoIGZpbGw9InVybCgjYikiIGQ9Im0yNTYgNjguMi00OC44IDQ3LjZMMTQ0LjUgMzlsMzEtMzQuOHoiLz4NCiAgPHBhdGggZmlsbD0idXJsKCNjKSIgZD0ibTk5LjEgMjIxLjMtNzguNSAyOC40IDE2LjUtNTcuNSAyMS4yLTcxLjNMMCAxMDEuNCAzNy4xIDBsODMuOCA5LjkgODYuMyAxMDUuOXoiLz4NCiAgPHBhdGggZD0iTTQ5LjEgNDhoMTYwdjE2MGgtMTYweiIvPg0KICA8cGF0aCBkPSJNNjkgMTc3LjhoNjB2MTBINjl2LTEwWk05OSA3OVY2OEg2OS4ydjExaDguNHYzNy43aC04LjR2MTFIOTl2LTExaC04LjNWNzlIOTlabTI4LjUgNDkuNC4yLjFjLTQuMS4yLTguMS0uOC0xMS44LTIuNmEyNyAyNyAwIDAgMS03LjctNi4zbDguMi05LjJjMS41IDEuNyAzLjIgMy4xIDUuMiA0LjMgMS43IDEuMSAzLjcgMS43IDUuNyAxLjYgMi4yLjIgNC4zLS43IDUuOC0yLjNhMTEgMTEgMCAwIDAgMi4yLTcuNVY2OGgxMy4zdjM5YTI3IDI3IDAgMCAxLTEuNSA5LjRjLTEuNyA1LTUuNyA5LTEwLjggMTAuNi0yLjggMS01LjggMS41LTguOCAxLjRaIiBmaWxsPSIjRkZGIi8+DQo8L3N2Zz4=",
+    "items": [
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "intellij",
+          "action_type": "intellij/run",
+          "inputs": {}
+        },
+        "label": "Run",
+        "icon": "play",
+        "id": "intellij-debugging-item1"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "intellij",
+          "action_type": "intellij/debug",
+          "inputs": {}
+        },
+        "label": "Debug",
+        "icon": "bug",
+        "id": "intellij-debugging-item2"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "intellij",
+          "action_type": "intellij/step-over",
+          "inputs": {}
+        },
+        "label": "Step Over",
+        "icon": "redo",
+        "id": "intellij-debugging-item3"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "intellij",
+          "action_type": "intellij/step-into",
+          "inputs": {}
+        },
+        "label": "Step Into",
+        "icon": "arrow-down-right",
+        "id": "intellij-debugging-item4"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "intellij",
+          "action_type": "intellij/step-out",
+          "inputs": {}
+        },
+        "label": "Step Out",
+        "icon": "arrow-up-right",
+        "id": "intellij-debugging-item5"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "intellij",
+          "action_type": "intellij/resume",
+          "inputs": {}
+        },
+        "label": "Resume",
+        "icon": "play",
+        "id": "intellij-debugging-item6"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "intellij",
+          "action_type": "intellij/stop",
+          "inputs": {}
+        },
+        "label": "Stop",
+        "icon": "square",
+        "id": "intellij-debugging-item7"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "intellij",
+          "action_type": "intellij/search-everywhere",
+          "inputs": {}
+        },
+        "label": "Search Everywhere",
+        "icon": "search",
+        "id": "intellij-debugging-item8"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "intellij",
+          "action_type": "intellij/terminal",
+          "inputs": {}
+        },
+        "label": "Terminal",
+        "icon": "terminal",
+        "id": "intellij-debugging-item9"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "intellij",
+          "action_type": "intellij/open-action-browser",
+          "inputs": {}
+        },
+        "label": "Open Action Browser",
+        "icon": "compass",
+        "id": "intellij-debugging-item10"
+      }
+    ],
+    "keybind": null,
+    "auto_open": null
+  }
+}

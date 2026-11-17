@@ -1,0 +1,693 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "code-studio",
+  "kind": "deck",
+  "name": "Code Studio",
+  "summary": "VS Code panels, tasks and debugging, with your Claude and Codex limits.",
+  "description": "VS Code through its companion extension: palette, files, terminal, tasks, debugging and layout. The AI Stats cells show your Claude and Codex plan limits and usage from their local sign-in files.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Developer tools",
+    "AI"
+  ],
+  "plugins": [
+    {
+      "id": "ai-stats",
+      "name": "AI Stats"
+    },
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "setup": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": false,
+  "toConfigure": [
+    "Run Task (taskName)",
+    "Start Debugging (configName)"
+  ],
+  "items": 20,
+  "profile": {
+    "name": "Code Studio",
+    "icon": "code",
+    "slices": [
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/command-palette",
+          "inputs": {}
+        },
+        "label": "Command Palette",
+        "icon": "compass",
+        "id": "code-studio-slice1",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/quick-open",
+          "inputs": {}
+        },
+        "label": "Quick Open",
+        "icon": "search",
+        "id": "code-studio-slice2",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/terminal",
+          "inputs": {}
+        },
+        "label": "Toggle Terminal",
+        "icon": "terminal",
+        "id": "code-studio-slice3",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/new-terminal",
+          "inputs": {}
+        },
+        "label": "New Terminal",
+        "icon": "plus",
+        "id": "code-studio-slice4",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/save-all",
+          "inputs": {}
+        },
+        "label": "Save All",
+        "icon": "save-all",
+        "id": "code-studio-slice5",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/format-document",
+          "inputs": {}
+        },
+        "label": "Format Document",
+        "icon": "wand-sparkles",
+        "id": "code-studio-slice6",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/split-editor",
+          "inputs": {}
+        },
+        "label": "Split Editor",
+        "icon": "columns-2",
+        "id": "code-studio-slice7",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/zen-mode",
+          "inputs": {}
+        },
+        "label": "Zen Mode",
+        "icon": "scan",
+        "id": "code-studio-slice8",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/run-task",
+          "inputs": {}
+        },
+        "label": "Run Task",
+        "icon": "play",
+        "id": "code-studio-slice9",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/start-debugging",
+          "inputs": {}
+        },
+        "label": "Start Debugging",
+        "icon": "bug",
+        "id": "code-studio-slice10",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/stop-debugging",
+          "inputs": {}
+        },
+        "label": "Stop Debugging",
+        "icon": "square",
+        "id": "code-studio-slice11",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "dynamic_wheel",
+          "plugin": "vscode",
+          "action_type": "vscode/task-wheel",
+          "inputs": {}
+        },
+        "label": "Task Wheel",
+        "icon": "play",
+        "id": "code-studio-slice12",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "dynamic_wheel",
+          "plugin": "vscode",
+          "action_type": "vscode/debug-wheel",
+          "inputs": {}
+        },
+        "label": "Debug Wheel",
+        "icon": "bug",
+        "id": "code-studio-slice13",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/source-control",
+          "inputs": {}
+        },
+        "label": "Source Control",
+        "icon": "git-branch",
+        "id": "code-studio-slice14",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/problems",
+          "inputs": {}
+        },
+        "label": "Problems",
+        "icon": "triangle-alert",
+        "id": "code-studio-slice15",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "vscode",
+          "action_type": "vscode/toggle-panel",
+          "inputs": {}
+        },
+        "label": "Toggle Panel",
+        "icon": "blocks",
+        "id": "code-studio-slice16",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "ai-stats",
+          "action_type": "ai-stats/claude-limits",
+          "inputs": {
+            "credentials": "~/.claude/.credentials.json",
+            "window": "5h"
+          }
+        },
+        "label": "Claude Limits",
+        "icon": "gauge",
+        "id": "code-studio-slice17",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "ai-stats",
+          "action_type": "ai-stats/codex-limits",
+          "inputs": {
+            "credentials": "~/.codex/auth.json",
+            "window": "primary"
+          }
+        },
+        "label": "Codex Limits",
+        "icon": "gauge",
+        "id": "code-studio-slice18",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "ai-stats",
+          "action_type": "ai-stats/claude-usage",
+          "inputs": {
+            "folder": "~/.claude"
+          }
+        },
+        "label": "Claude Usage",
+        "icon": "sigma",
+        "id": "code-studio-slice19",
+        "show_title": true
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "ai-stats",
+          "action_type": "ai-stats/codex-usage",
+          "inputs": {
+            "folder": "~/.codex"
+          }
+        },
+        "label": "Codex Usage",
+        "icon": "sigma",
+        "id": "code-studio-slice20",
+        "show_title": true
+      },
+      {
+        "id": "code-studio-cell21",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell22",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell23",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell24",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell25",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell26",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell27",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell28",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell29",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell30",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell31",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell32",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell33",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell34",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell35",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell36",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell37",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell38",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell39",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell40",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell41",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell42",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell43",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell44",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell45",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell46",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell47",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell48",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell49",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell50",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell51",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell52",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell53",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell54",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell55",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell56",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell57",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell58",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell59",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell60",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell61",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell62",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell63",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      },
+      {
+        "id": "code-studio-cell64",
+        "label": "",
+        "icon": null,
+        "show_title": false,
+        "kind": {
+          "type": "empty"
+        }
+      }
+    ],
+    "keybind": null,
+    "auto_open": null,
+    "show_labels": true
+  }
+}

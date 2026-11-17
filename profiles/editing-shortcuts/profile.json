@@ -1,0 +1,210 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "editing-shortcuts",
+  "kind": "dial",
+  "name": "Editing Shortcuts",
+  "summary": "Copy, paste, undo, redo, save and find in any app.",
+  "description": "The everyday editing shortcuts with the right keys on each OS (Ctrl on Windows and Linux, ⌘ on macOS).",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Productivity",
+    "Shortcuts",
+    "Starter"
+  ],
+  "plugins": [],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 8,
+  "profile": {
+    "name": "Editing Shortcuts",
+    "icon": "keyboard",
+    "items": [
+      {
+        "label": "Copy",
+        "icon": "copy",
+        "platform_overrides": {
+          "macos": {
+            "kind": {
+              "inputs": {
+                "preset": "cmd c"
+              }
+            }
+          }
+        },
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "keybind",
+          "inputs": {
+            "preset": "ctrl c"
+          }
+        },
+        "id": "editing-shortcuts-item1"
+      },
+      {
+        "label": "Paste",
+        "icon": "clipboard-paste",
+        "platform_overrides": {
+          "macos": {
+            "kind": {
+              "inputs": {
+                "preset": "cmd v"
+              }
+            }
+          }
+        },
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "keybind",
+          "inputs": {
+            "preset": "ctrl v"
+          }
+        },
+        "id": "editing-shortcuts-item2"
+      },
+      {
+        "label": "Undo",
+        "icon": "undo-2",
+        "platform_overrides": {
+          "macos": {
+            "kind": {
+              "inputs": {
+                "preset": "cmd z"
+              }
+            }
+          }
+        },
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "keybind",
+          "inputs": {
+            "preset": "ctrl z"
+          }
+        },
+        "id": "editing-shortcuts-item3"
+      },
+      {
+        "label": "Redo",
+        "icon": "redo-2",
+        "platform_overrides": {
+          "macos": {
+            "kind": {
+              "inputs": {
+                "preset": "cmd shift z"
+              }
+            }
+          }
+        },
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "keybind",
+          "inputs": {
+            "preset": "ctrl y"
+          }
+        },
+        "id": "editing-shortcuts-item4"
+      },
+      {
+        "label": "Save",
+        "icon": "save",
+        "platform_overrides": {
+          "macos": {
+            "kind": {
+              "inputs": {
+                "preset": "cmd s"
+              }
+            }
+          }
+        },
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "keybind",
+          "inputs": {
+            "preset": "ctrl s"
+          }
+        },
+        "id": "editing-shortcuts-item5"
+      },
+      {
+        "label": "Find",
+        "icon": "search",
+        "platform_overrides": {
+          "macos": {
+            "kind": {
+              "inputs": {
+                "preset": "cmd f"
+              }
+            }
+          }
+        },
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "keybind",
+          "inputs": {
+            "preset": "ctrl f"
+          }
+        },
+        "id": "editing-shortcuts-item6"
+      },
+      {
+        "label": "Select All",
+        "icon": "text-select",
+        "platform_overrides": {
+          "macos": {
+            "kind": {
+              "inputs": {
+                "preset": "cmd a"
+              }
+            }
+          }
+        },
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "keybind",
+          "inputs": {
+            "preset": "ctrl a"
+          }
+        },
+        "id": "editing-shortcuts-item7"
+      },
+      {
+        "label": "Cut",
+        "icon": "scissors",
+        "platform_overrides": {
+          "macos": {
+            "kind": {
+              "inputs": {
+                "preset": "cmd x"
+              }
+            }
+          }
+        },
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "keybind",
+          "inputs": {
+            "preset": "ctrl x"
+          }
+        },
+        "id": "editing-shortcuts-item8"
+      }
+    ],
+    "keybind": null,
+    "auto_open": null
+  }
+}

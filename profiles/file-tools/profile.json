@@ -1,0 +1,181 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "file-tools",
+  "kind": "dial",
+  "name": "File Tools",
+  "summary": "Convert, resize and zip the files selected in your file manager.",
+  "description": "Works on the selection in Explorer, Finder, Dolphin or Files: image conversion and resizing, PDFs from images, zip and unzip, copy path and batch rename.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Files",
+    "Productivity"
+  ],
+  "plugins": [
+    {
+      "id": "files",
+      "name": "Files"
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 12,
+  "profile": {
+    "name": "File Tools",
+    "icon": "files",
+    "items": [
+      {
+        "label": "To PNG",
+        "kind": {
+          "type": "button",
+          "plugin": "files",
+          "action_type": "files/convert-image",
+          "inputs": {
+            "format": "png"
+          }
+        },
+        "icon": "image",
+        "id": "file-tools-item1"
+      },
+      {
+        "label": "Resize 1920",
+        "kind": {
+          "type": "button",
+          "plugin": "files",
+          "action_type": "files/resize-image",
+          "inputs": {
+            "mode": "edge",
+            "size": "1920"
+          }
+        },
+        "icon": "scaling",
+        "id": "file-tools-item2"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "files",
+          "action_type": "files/rotate-image",
+          "inputs": {
+            "angle": "90"
+          }
+        },
+        "label": "Rotate Images",
+        "icon": "rotate-cw",
+        "id": "file-tools-item3"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "files",
+          "action_type": "files/images-to-pdf",
+          "inputs": {}
+        },
+        "label": "Images to PDF",
+        "icon": "file-text",
+        "id": "file-tools-item4"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "files",
+          "action_type": "files/zip",
+          "inputs": {}
+        },
+        "label": "Zip",
+        "icon": "archive",
+        "id": "file-tools-item5"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "files",
+          "action_type": "files/unzip",
+          "inputs": {}
+        },
+        "label": "Unzip",
+        "icon": "package-open",
+        "id": "file-tools-item6"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "files",
+          "action_type": "files/copy-path",
+          "inputs": {
+            "what": "path"
+          }
+        },
+        "label": "Copy Path",
+        "icon": "clipboard-copy",
+        "id": "file-tools-item7"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "files",
+          "action_type": "files/rename",
+          "inputs": {
+            "pattern": "{name}-{n}",
+            "start": "1"
+          }
+        },
+        "label": "Rename",
+        "icon": "pencil",
+        "id": "file-tools-item8"
+      },
+      {
+        "label": "PDF",
+        "icon": "file-text",
+        "kind": {
+          "type": "folder",
+          "items": [
+            {
+              "kind": {
+                "type": "button",
+                "plugin": "files",
+                "action_type": "files/merge-pdfs",
+                "inputs": {}
+              },
+              "label": "Merge PDFs",
+              "icon": "combine",
+              "id": "file-tools-item10"
+            },
+            {
+              "kind": {
+                "type": "button",
+                "plugin": "files",
+                "action_type": "files/split-pdf",
+                "inputs": {}
+              },
+              "label": "Split PDF into Pages",
+              "icon": "split",
+              "id": "file-tools-item11"
+            },
+            {
+              "kind": {
+                "type": "button",
+                "plugin": "files",
+                "action_type": "files/strip-metadata",
+                "inputs": {}
+              },
+              "label": "Remove Image Metadata",
+              "icon": "eraser",
+              "id": "file-tools-item12"
+            }
+          ]
+        },
+        "id": "file-tools-item9"
+      }
+    ],
+    "keybind": null,
+    "auto_open": null
+  }
+}

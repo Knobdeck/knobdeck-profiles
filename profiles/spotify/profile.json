@@ -1,0 +1,110 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "spotify",
+  "kind": "dial",
+  "name": "Spotify",
+  "summary": "Play, skip and see what's playing on Spotify.",
+  "description": "Spotify playback with the now-playing title, and the system volume.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Media",
+    "Music"
+  ],
+  "plugins": [
+    {
+      "id": "spotify",
+      "name": "Spotify"
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 5,
+  "profile": {
+    "name": "Spotify",
+    "icon": "music-2",
+    "items": [
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "spotify",
+          "action_type": "spotify/play-pause",
+          "inputs": {},
+          "states": [
+            {
+              "value": "paused",
+              "label": "Paused",
+              "icon": "play"
+            },
+            {
+              "value": "playing",
+              "label": "Playing",
+              "icon": "pause"
+            }
+          ],
+          "default_state": "paused"
+        },
+        "label": "Play / Pause",
+        "icon": "play",
+        "id": "spotify-item1"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "spotify",
+          "action_type": "spotify/next",
+          "inputs": {}
+        },
+        "label": "Next Track",
+        "icon": "skip-forward",
+        "id": "spotify-item2"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "spotify",
+          "action_type": "spotify/now-playing",
+          "inputs": {}
+        },
+        "label": "Now Playing",
+        "icon": "music",
+        "id": "spotify-item3"
+      },
+      {
+        "kind": {
+          "type": "slider",
+          "plugin": "knobdeck-actions",
+          "action_type": "volume",
+          "inputs": {},
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "%"
+        },
+        "label": "Volume",
+        "icon": "volume-2",
+        "id": "spotify-item4"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "spotify",
+          "action_type": "spotify/previous",
+          "inputs": {}
+        },
+        "label": "Previous Track",
+        "icon": "skip-back",
+        "id": "spotify-item5"
+      }
+    ],
+    "keybind": null,
+    "auto_open": null
+  }
+}

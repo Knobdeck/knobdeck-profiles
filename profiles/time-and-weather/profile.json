@@ -1,0 +1,151 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "time-and-weather",
+  "kind": "dial",
+  "name": "Time & Weather",
+  "summary": "Clock, timer, stopwatch, world clock and the forecast.",
+  "description": "A local clock, a 5-minute timer, a stopwatch, a world clock wheel, the weather now and the next days and hours. Weather uses your approximate location unless you type one.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Time",
+    "Weather"
+  ],
+  "plugins": [
+    {
+      "id": "clocks",
+      "name": "Clocks"
+    },
+    {
+      "id": "weather",
+      "name": "Weather"
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 8,
+  "profile": {
+    "name": "Time & Weather",
+    "icon": "clock",
+    "items": [
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "clocks",
+          "action_type": "clocks/clock",
+          "inputs": {
+            "zone": "__local__",
+            "format": "24",
+            "name": ""
+          }
+        },
+        "label": "Clock",
+        "icon": "clock",
+        "id": "time-and-weather-item1"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "clocks",
+          "action_type": "clocks/timer",
+          "inputs": {
+            "length": "5m"
+          }
+        },
+        "label": "Countdown Timer",
+        "icon": "timer",
+        "id": "time-and-weather-item2"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "clocks",
+          "action_type": "clocks/stopwatch",
+          "inputs": {}
+        },
+        "label": "Stopwatch",
+        "icon": "timer-reset",
+        "id": "time-and-weather-item3"
+      },
+      {
+        "kind": {
+          "type": "dynamic",
+          "plugin": "clocks",
+          "action_type": "clocks/world-clock-wheel",
+          "inputs": {
+            "format": "24",
+            "zones": "America/New_York\nEurope/London\nAsia/Tokyo"
+          }
+        },
+        "label": "World Clock",
+        "icon": "globe",
+        "id": "time-and-weather-item4"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "weather",
+          "action_type": "weather/weather",
+          "inputs": {
+            "units": "c",
+            "location": ""
+          }
+        },
+        "label": "Weather",
+        "icon": "cloud-sun",
+        "id": "time-and-weather-item5"
+      },
+      {
+        "kind": {
+          "type": "dynamic",
+          "plugin": "weather",
+          "action_type": "weather/forecast-wheel",
+          "inputs": {
+            "units": "c",
+            "location": ""
+          }
+        },
+        "label": "Forecast (7 days)",
+        "icon": "calendar-days",
+        "id": "time-and-weather-item6"
+      },
+      {
+        "kind": {
+          "type": "dynamic",
+          "plugin": "weather",
+          "action_type": "weather/hourly-wheel",
+          "inputs": {
+            "units": "c",
+            "location": ""
+          }
+        },
+        "label": "Next 24 hours",
+        "icon": "clock",
+        "id": "time-and-weather-item7"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "weather",
+          "action_type": "weather/air-quality",
+          "inputs": {
+            "scale": "us",
+            "location": ""
+          }
+        },
+        "label": "Air Quality",
+        "icon": "wind",
+        "id": "time-and-weather-item8"
+      }
+    ],
+    "keybind": null,
+    "auto_open": null
+  }
+}

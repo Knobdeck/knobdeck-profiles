@@ -1,0 +1,169 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "presenter",
+  "kind": "dial",
+  "name": "Presenter",
+  "summary": "Run a slideshow in PowerPoint, Keynote or Impress.",
+  "description": "Start and end the show, move between slides, black or white out the screen and see the slide counter.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Presentation",
+    "Productivity"
+  ],
+  "plugins": [
+    {
+      "id": "slides",
+      "name": "Slides"
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 8,
+  "profile": {
+    "name": "Presenter",
+    "icon": "presentation",
+    "items": [
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "slides",
+          "action_type": "slides/next",
+          "inputs": {
+            "app": "auto"
+          }
+        },
+        "label": "Next Slide",
+        "icon": "chevron-right",
+        "id": "presenter-item1"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "slides",
+          "action_type": "slides/counter",
+          "inputs": {
+            "app": "auto"
+          }
+        },
+        "label": "Slide Counter",
+        "icon": "presentation",
+        "id": "presenter-item2"
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "slides",
+          "action_type": "slides/black",
+          "inputs": {
+            "app": "auto"
+          },
+          "states": [
+            {
+              "value": "showing",
+              "label": "Showing",
+              "icon": "square"
+            },
+            {
+              "value": "blank",
+              "label": "Black",
+              "icon": "eye-off"
+            }
+          ],
+          "default_state": "showing"
+        },
+        "label": "Black Screen",
+        "icon": "square",
+        "id": "presenter-item3"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "slides",
+          "action_type": "slides/end",
+          "inputs": {
+            "app": "auto"
+          }
+        },
+        "label": "End Slide Show",
+        "icon": "square",
+        "id": "presenter-item4"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "slides",
+          "action_type": "slides/previous",
+          "inputs": {
+            "app": "auto"
+          }
+        },
+        "label": "Previous Slide",
+        "icon": "chevron-left",
+        "id": "presenter-item5"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "slides",
+          "action_type": "slides/start",
+          "inputs": {
+            "app": "auto"
+          }
+        },
+        "label": "Start Slide Show",
+        "icon": "play",
+        "id": "presenter-item6"
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "slides",
+          "action_type": "slides/white",
+          "inputs": {
+            "app": "auto"
+          },
+          "states": [
+            {
+              "value": "showing",
+              "label": "Showing",
+              "icon": "square-dashed"
+            },
+            {
+              "value": "blank",
+              "label": "White",
+              "icon": "eye-off"
+            }
+          ],
+          "default_state": "showing"
+        },
+        "label": "White Screen",
+        "icon": "square-dashed",
+        "id": "presenter-item7"
+      },
+      {
+        "label": "First Slide",
+        "kind": {
+          "type": "button",
+          "plugin": "slides",
+          "action_type": "slides/goto",
+          "inputs": {
+            "app": "auto",
+            "slide": "1"
+          }
+        },
+        "icon": "hash",
+        "id": "presenter-item8"
+      }
+    ],
+    "keybind": null,
+    "auto_open": null
+  }
+}

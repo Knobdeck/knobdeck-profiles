@@ -1,0 +1,7265 @@
+{
+  "tag": "v2026.11.16-1746",
+  "plugins": {
+    "ai-stats": {
+      "name": "AI Stats",
+      "builtin": false,
+      "setup": false,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "claude-limits": {
+          "type": "button",
+          "label": "Claude Limits",
+          "icon": "gauge",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "credentials",
+              "type": "text",
+              "label": "Credentials path",
+              "default": "~/.claude/.credentials.json"
+            },
+            {
+              "key": "window",
+              "type": "select",
+              "label": "Usage type",
+              "default": "5h",
+              "options": [
+                "5h",
+                "7d",
+                "fable"
+              ]
+            }
+          ]
+        },
+        "codex-limits": {
+          "type": "button",
+          "label": "Codex Limits",
+          "icon": "gauge",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "credentials",
+              "type": "text",
+              "label": "Credentials path",
+              "default": "~/.codex/auth.json"
+            },
+            {
+              "key": "window",
+              "type": "select",
+              "label": "Usage type",
+              "default": "primary",
+              "options": [
+                "primary",
+                "secondary"
+              ]
+            }
+          ]
+        },
+        "claude-usage": {
+          "type": "button",
+          "label": "Claude Usage",
+          "icon": "sigma",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "folder",
+              "type": "text",
+              "label": "Data folder",
+              "default": "~/.claude"
+            }
+          ]
+        },
+        "codex-usage": {
+          "type": "button",
+          "label": "Codex Usage",
+          "icon": "sigma",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "folder",
+              "type": "text",
+              "label": "Data folder",
+              "default": "~/.codex"
+            }
+          ]
+        }
+      }
+    },
+    "browser-plugin": {
+      "name": "Browser Controls",
+      "builtin": false,
+      "setup": false,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "new-tab": {
+          "type": "button",
+          "label": "New Tab",
+          "icon": "notebook-tabs",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "new-window": {
+          "type": "button",
+          "label": "New Window",
+          "icon": "app-window",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "new-private-window": {
+          "type": "button",
+          "label": "New Private / Incognito Window",
+          "icon": "app-window",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "close-tab": {
+          "type": "button",
+          "label": "Close Tab",
+          "icon": "notebook-tabs",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "reopen-closed-tab": {
+          "type": "button",
+          "label": "Reopen Closed Tab",
+          "icon": "notebook-tabs",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "next-tab": {
+          "type": "button",
+          "label": "Next Tab",
+          "icon": "notebook-tabs",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "previous-tab": {
+          "type": "button",
+          "label": "Previous Tab",
+          "icon": "notebook-tabs",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "reload-tab": {
+          "type": "button",
+          "label": "Reload Tab",
+          "icon": "refresh-cw",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "hard-reload-tab": {
+          "type": "button",
+          "label": "Hard Reload",
+          "icon": "refresh-cw",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "go-back": {
+          "type": "button",
+          "label": "Back",
+          "icon": "arrow-left",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "go-forward": {
+          "type": "button",
+          "label": "Forward",
+          "icon": "arrow-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "focus-address-bar": {
+          "type": "button",
+          "label": "Focus Address Bar",
+          "icon": "search",
+          "platforms": [],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "open-downloads": {
+          "type": "button",
+          "label": "Open Downloads",
+          "icon": "download",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "open-history": {
+          "type": "button",
+          "label": "Open History",
+          "icon": "history",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "open-bookmarks-manager": {
+          "type": "button",
+          "label": "Open Bookmarks Manager",
+          "icon": "bookmark",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "bookmark-page": {
+          "type": "button",
+          "label": "Bookmark Page",
+          "icon": "bookmark",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "find-in-page": {
+          "type": "button",
+          "label": "Find in Page",
+          "icon": "search",
+          "platforms": [],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "print-page": {
+          "type": "button",
+          "label": "Print Page",
+          "icon": "printer",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "save-page": {
+          "type": "button",
+          "label": "Save Page",
+          "icon": "save",
+          "platforms": [],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "toggle-fullscreen": {
+          "type": "button",
+          "label": "Toggle Fullscreen",
+          "icon": "maximize",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "stop-loading": {
+          "type": "button",
+          "label": "Stop Loading",
+          "icon": "circle-stop",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "custom-keybind": {
+          "type": "button",
+          "label": "Custom Keybind",
+          "icon": "keyboard",
+          "platforms": [],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            },
+            {
+              "key": "keys",
+              "type": "keybind",
+              "label": "Keys"
+            }
+          ]
+        },
+        "open-url": {
+          "type": "button",
+          "label": "Open URL",
+          "icon": "link",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            },
+            {
+              "key": "url",
+              "type": "text",
+              "label": "URL"
+            }
+          ]
+        },
+        "hold-next-tab": {
+          "type": "hold",
+          "label": "Hold Next Tab",
+          "icon": "notebook-tabs",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ],
+          "released": {
+            "label": "Idle",
+            "icon": "chevron-right"
+          },
+          "held": {
+            "label": "Cycling",
+            "icon": "chevrons-right"
+          }
+        },
+        "hold-previous-tab": {
+          "type": "hold",
+          "label": "Hold Previous Tab",
+          "icon": "notebook-tabs",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ],
+          "released": {
+            "label": "Idle",
+            "icon": "chevron-left"
+          },
+          "held": {
+            "label": "Cycling",
+            "icon": "chevrons-left"
+          }
+        },
+        "hold-zoom-in": {
+          "type": "hold",
+          "label": "Hold Zoom In",
+          "icon": "zoom-in",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ],
+          "released": {
+            "label": "Idle",
+            "icon": "zoom-in"
+          },
+          "held": {
+            "label": "Zooming",
+            "icon": "zoom-in"
+          }
+        },
+        "hold-zoom-out": {
+          "type": "hold",
+          "label": "Hold Zoom Out",
+          "icon": "zoom-in",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ],
+          "released": {
+            "label": "Idle",
+            "icon": "zoom-out"
+          },
+          "held": {
+            "label": "Zooming",
+            "icon": "zoom-out"
+          }
+        },
+        "page-zoom": {
+          "type": "slider",
+          "label": "Page Zoom",
+          "icon": "zoom-in",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ],
+          "min": 25,
+          "max": 300,
+          "step": 5,
+          "unit": "%"
+        },
+        "bookmarks-wheel": {
+          "type": "wheel",
+          "label": "Bookmarks",
+          "icon": "bookmark",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        },
+        "history-wheel": {
+          "type": "wheel",
+          "label": "Recent History",
+          "icon": "history",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "browser",
+              "type": "combobox",
+              "label": "Browser"
+            }
+          ]
+        }
+      }
+    },
+    "clocks": {
+      "name": "Clocks",
+      "builtin": false,
+      "setup": false,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "clock": {
+          "type": "button",
+          "label": "Clock",
+          "icon": "clock",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "zone",
+              "type": "combobox",
+              "label": "Time zone",
+              "default": "__local__"
+            },
+            {
+              "key": "name",
+              "type": "text",
+              "label": "Name on the key (optional)"
+            },
+            {
+              "key": "format",
+              "type": "select",
+              "label": "Format",
+              "default": "24",
+              "options": [
+                "24",
+                "12"
+              ]
+            },
+            {
+              "key": "date",
+              "type": "checkbox",
+              "label": "Show the date"
+            }
+          ]
+        },
+        "world-clock-wheel": {
+          "type": "wheel",
+          "label": "World Clock",
+          "icon": "globe",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "zones",
+              "type": "textarea",
+              "label": "Time zones, one per line"
+            },
+            {
+              "key": "format",
+              "type": "select",
+              "label": "Format",
+              "default": "24",
+              "options": [
+                "24",
+                "12"
+              ]
+            },
+            {
+              "key": "date",
+              "type": "checkbox",
+              "label": "Show the date"
+            }
+          ]
+        },
+        "timer": {
+          "type": "button",
+          "label": "Countdown Timer",
+          "icon": "timer",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "length",
+              "type": "text",
+              "label": "Length",
+              "default": "5m"
+            }
+          ]
+        },
+        "stopwatch": {
+          "type": "button",
+          "label": "Stopwatch",
+          "icon": "timer-reset",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        }
+      }
+    },
+    "discord": {
+      "name": "Discord",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": "discord-logo.svg",
+      "actions": {
+        "mute": {
+          "type": "toggle",
+          "label": "Mute",
+          "icon": "mic",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "Unmuted",
+              "icon": "mic"
+            },
+            {
+              "value": "muted",
+              "label": "Muted",
+              "icon": "mic-off"
+            }
+          ]
+        },
+        "deafen": {
+          "type": "toggle",
+          "label": "Deafen",
+          "icon": "headphones",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "undeafened",
+              "label": "Undeafened",
+              "icon": "headphones"
+            },
+            {
+              "value": "deafened",
+              "label": "Deafened",
+              "icon": "headphone-off"
+            }
+          ]
+        },
+        "push-to-talk": {
+          "type": "hold",
+          "label": "Push to Talk",
+          "icon": "mic-off",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "released": {
+            "label": "Idle",
+            "icon": "mic-off"
+          },
+          "held": {
+            "label": "Talking",
+            "icon": "mic"
+          }
+        },
+        "push-to-mute": {
+          "type": "hold",
+          "label": "Push to Mute",
+          "icon": "mic",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "released": {
+            "label": "Active",
+            "icon": "mic"
+          },
+          "held": {
+            "label": "Muted",
+            "icon": "mic-off"
+          }
+        },
+        "voice-mode-toggle": {
+          "type": "toggle",
+          "label": "Voice Input Mode",
+          "icon": "audio-lines",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "VOICE_ACTIVITY",
+              "label": "Voice Activity",
+              "icon": "audio-lines"
+            },
+            {
+              "value": "PUSH_TO_TALK",
+              "label": "Push to Talk",
+              "icon": "keyboard"
+            }
+          ]
+        },
+        "join-voice-channel": {
+          "type": "toggle",
+          "label": "Join Voice Channel",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "guildId",
+              "type": "select",
+              "label": "Server"
+            },
+            {
+              "key": "channelId",
+              "type": "select",
+              "label": "Voice Channel",
+              "showIf": {
+                "key": "guildId",
+                "truthy": true
+              }
+            },
+            {
+              "key": "force",
+              "type": "checkbox",
+              "label": "Force Join (auto-disconnect current channel first)",
+              "default": true
+            }
+          ],
+          "states": [
+            {
+              "value": "idle",
+              "label": "Join",
+              "icon": "volume-2"
+            },
+            {
+              "value": "in",
+              "label": "In Channel",
+              "icon": "audio-lines"
+            }
+          ]
+        },
+        "leave-voice-channel": {
+          "type": "toggle",
+          "label": "Leave Voice Channel",
+          "icon": "phone-off",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "idle",
+              "label": "Not in Call",
+              "icon": "phone-off"
+            },
+            {
+              "value": "in-call",
+              "label": "In Call — Disconnect",
+              "icon": "phone-off"
+            }
+          ]
+        },
+        "text-channel": {
+          "type": "button",
+          "label": "Text Channel",
+          "icon": "hash",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "guildId",
+              "type": "select",
+              "label": "Server"
+            },
+            {
+              "key": "channelId",
+              "type": "select",
+              "label": "Text Channel",
+              "showIf": {
+                "key": "guildId",
+                "truthy": true
+              }
+            }
+          ]
+        },
+        "server-jump": {
+          "type": "button",
+          "label": "Server Jump",
+          "icon": "hash",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "guildId",
+              "type": "select",
+              "label": "Server"
+            },
+            {
+              "key": "channelId",
+              "type": "select",
+              "label": "Landing Channel (optional)",
+              "showIf": {
+                "key": "guildId",
+                "truthy": true
+              }
+            }
+          ]
+        },
+        "open-direct-message": {
+          "type": "button",
+          "label": "Open Direct Message",
+          "icon": "hash",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "friendId",
+              "type": "select",
+              "label": "Friend"
+            }
+          ]
+        },
+        "video-toggle": {
+          "type": "toggle",
+          "label": "Video Toggle",
+          "icon": "video-off",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "off",
+              "label": "Camera Off",
+              "icon": "video-off"
+            },
+            {
+              "value": "on",
+              "label": "Camera On",
+              "icon": "video"
+            }
+          ]
+        },
+        "stream-toggle": {
+          "type": "toggle",
+          "label": "Stream Toggle",
+          "icon": "screen-share-off",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "off",
+              "label": "Share Off",
+              "icon": "screen-share-off"
+            },
+            {
+              "value": "on",
+              "label": "Sharing",
+              "icon": "screen-share"
+            }
+          ]
+        },
+        "volume-control": {
+          "type": "button",
+          "label": "Volume Control",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "device",
+              "type": "select",
+              "label": "Device",
+              "options": [
+                "output",
+                "input",
+                "both"
+              ]
+            },
+            {
+              "key": "mode",
+              "type": "select",
+              "label": "Mode",
+              "options": [
+                "adjust",
+                "set",
+                "mute"
+              ]
+            },
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step / Target Volume (0–200)",
+              "showIf": {
+                "key": "mode",
+                "in": [
+                  "adjust",
+                  "set"
+                ]
+              }
+            }
+          ]
+        },
+        "output-volume": {
+          "type": "slider",
+          "label": "Output Volume",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "min": 0,
+          "max": 200,
+          "step": 1,
+          "unit": "%"
+        },
+        "user-volume-control": {
+          "type": "button",
+          "label": "User Volume",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "userId",
+              "type": "select",
+              "label": "Call Member"
+            },
+            {
+              "key": "mode",
+              "type": "select",
+              "label": "Mode",
+              "options": [
+                "adjust",
+                "set",
+                "mute"
+              ]
+            },
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step / Target (0–200)",
+              "showIf": {
+                "key": "mode",
+                "in": [
+                  "adjust",
+                  "set"
+                ]
+              }
+            }
+          ]
+        },
+        "set-audio-device": {
+          "type": "button",
+          "label": "Set Audio Device",
+          "icon": "headset",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "deviceType",
+              "type": "select",
+              "label": "Device Type",
+              "options": [
+                "output",
+                "input",
+                "both"
+              ]
+            },
+            {
+              "key": "deviceId",
+              "type": "select",
+              "label": "Device"
+            }
+          ]
+        },
+        "soundboard": {
+          "type": "button",
+          "label": "Soundboard",
+          "icon": "audio-waveform",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "guildId",
+              "type": "select",
+              "label": "Sound Source",
+              "default": "__default__",
+              "options": [
+                "__default__"
+              ]
+            },
+            {
+              "key": "soundId",
+              "type": "select",
+              "label": "Sound"
+            }
+          ]
+        },
+        "voice-channel-wheel": {
+          "type": "wheel",
+          "label": "Voice Channels",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "guildId",
+              "type": "select",
+              "label": "Server"
+            },
+            {
+              "key": "force",
+              "type": "checkbox",
+              "label": "Force Join",
+              "default": true
+            }
+          ]
+        },
+        "call-member-mute-wheel": {
+          "type": "wheel",
+          "label": "Call Member Mute",
+          "icon": "mic",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "activity-preset": {
+          "type": "button",
+          "label": "Activity Preset",
+          "icon": "discord-logo.svg",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "details",
+              "type": "text",
+              "label": "Details"
+            },
+            {
+              "key": "stateText",
+              "type": "text",
+              "label": "State"
+            },
+            {
+              "key": "clearExisting",
+              "type": "checkbox",
+              "label": "Clear current activity instead",
+              "default": false
+            }
+          ]
+        },
+        "soundboard-wheel": {
+          "type": "wheel",
+          "label": "Soundboard Wheel",
+          "icon": "audio-waveform",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "guildId",
+              "type": "select",
+              "label": "Sound Source",
+              "default": "__default__",
+              "options": [
+                "__default__"
+              ]
+            }
+          ]
+        },
+        "notifications": {
+          "type": "toggle",
+          "label": "Notifications",
+          "icon": "bell",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "onPress",
+              "type": "select",
+              "label": "On Press Action",
+              "options": [
+                "nothing",
+                "clear",
+                "open_channel"
+              ]
+            }
+          ],
+          "states": [
+            {
+              "value": "none",
+              "label": "No Alerts",
+              "icon": "bell"
+            },
+            {
+              "value": "active",
+              "label": "Unread!",
+              "icon": "bell"
+            }
+          ]
+        }
+      }
+    },
+    "elgato-lights": {
+      "name": "Elgato Lights",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "power": {
+          "type": "toggle",
+          "label": "Power",
+          "icon": "lightbulb",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "light",
+              "type": "select",
+              "label": "Light",
+              "default": "__all__"
+            }
+          ],
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "lightbulb-off"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "lightbulb"
+            }
+          ]
+        },
+        "brightness": {
+          "type": "slider",
+          "label": "Brightness",
+          "icon": "sun",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "light",
+              "type": "select",
+              "label": "Light",
+              "default": "__all__"
+            },
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step (%)",
+              "default": "5"
+            }
+          ],
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        "set-brightness": {
+          "type": "button",
+          "label": "Set Brightness",
+          "icon": "sun",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "light",
+              "type": "select",
+              "label": "Light",
+              "default": "__all__"
+            },
+            {
+              "key": "value",
+              "type": "text",
+              "label": "Brightness (%)",
+              "default": "50"
+            }
+          ]
+        },
+        "temperature": {
+          "type": "slider",
+          "label": "Temperature",
+          "icon": "thermometer",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "light",
+              "type": "select",
+              "label": "Light",
+              "default": "__all__"
+            },
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step (K)",
+              "default": "100"
+            }
+          ],
+          "min": 2900,
+          "max": 7000,
+          "step": 50,
+          "unit": "K"
+        },
+        "set-temperature": {
+          "type": "button",
+          "label": "Set Temperature",
+          "icon": "thermometer",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "light",
+              "type": "select",
+              "label": "Light",
+              "default": "__all__"
+            },
+            {
+              "key": "value",
+              "type": "text",
+              "label": "Temperature (K, 2900–7000)",
+              "default": "5000"
+            }
+          ]
+        },
+        "set-color": {
+          "type": "button",
+          "label": "Set Color (Light Strip)",
+          "icon": "palette",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "light",
+              "type": "select",
+              "label": "Light",
+              "default": "__all__"
+            },
+            {
+              "key": "color",
+              "type": "text",
+              "label": "Color (#RRGGBB)",
+              "default": "#FF8800"
+            }
+          ]
+        },
+        "battery": {
+          "type": "button",
+          "label": "Battery (Key Light Mini)",
+          "icon": "battery",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "light",
+              "type": "select",
+              "label": "Light"
+            }
+          ]
+        }
+      }
+    },
+    "files": {
+      "name": "Files",
+      "builtin": false,
+      "setup": false,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "convert-image": {
+          "type": "button",
+          "label": "Convert Images",
+          "icon": "image",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "format",
+              "type": "select",
+              "label": "To",
+              "default": "png",
+              "options": [
+                "png",
+                "jpeg",
+                "webp"
+              ]
+            }
+          ]
+        },
+        "resize-image": {
+          "type": "button",
+          "label": "Resize Images",
+          "icon": "scaling",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "mode",
+              "type": "select",
+              "label": "By",
+              "default": "edge",
+              "options": [
+                "edge",
+                "percent"
+              ]
+            },
+            {
+              "key": "size",
+              "type": "text",
+              "label": "Size",
+              "default": "1920"
+            }
+          ]
+        },
+        "rotate-image": {
+          "type": "button",
+          "label": "Rotate Images",
+          "icon": "rotate-cw",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "angle",
+              "type": "select",
+              "label": "Angle",
+              "default": "90",
+              "options": [
+                "90",
+                "180",
+                "270"
+              ]
+            }
+          ]
+        },
+        "strip-metadata": {
+          "type": "button",
+          "label": "Remove Image Metadata",
+          "icon": "eraser",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "images-to-pdf": {
+          "type": "button",
+          "label": "Images to PDF",
+          "icon": "file-text",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "merge-pdfs": {
+          "type": "button",
+          "label": "Merge PDFs",
+          "icon": "combine",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "split-pdf": {
+          "type": "button",
+          "label": "Split PDF into Pages",
+          "icon": "split",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "zip": {
+          "type": "button",
+          "label": "Zip",
+          "icon": "archive",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "unzip": {
+          "type": "button",
+          "label": "Unzip",
+          "icon": "package-open",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "copy-path": {
+          "type": "button",
+          "label": "Copy Path",
+          "icon": "clipboard-copy",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "what",
+              "type": "select",
+              "label": "Copy",
+              "default": "path",
+              "options": [
+                "path",
+                "name",
+                "folder"
+              ]
+            }
+          ]
+        },
+        "rename": {
+          "type": "button",
+          "label": "Rename",
+          "icon": "pencil",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "pattern",
+              "type": "text",
+              "label": "New name",
+              "default": "{name}-{n}"
+            },
+            {
+              "key": "start",
+              "type": "text",
+              "label": "First number",
+              "default": "1"
+            }
+          ]
+        },
+        "move-copy": {
+          "type": "button",
+          "label": "Move or Copy to Folder",
+          "icon": "folder-input",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "mode",
+              "type": "select",
+              "label": "Action",
+              "default": "move",
+              "options": [
+                "move",
+                "copy"
+              ]
+            },
+            {
+              "key": "folder",
+              "type": "text",
+              "label": "Folder"
+            }
+          ]
+        },
+        "new-item": {
+          "type": "button",
+          "label": "New File in Folder",
+          "icon": "file-plus",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "kind",
+              "type": "select",
+              "label": "Create",
+              "default": "file",
+              "options": [
+                "file",
+                "folder"
+              ]
+            },
+            {
+              "key": "name",
+              "type": "text",
+              "label": "Name",
+              "default": "New file.txt"
+            }
+          ]
+        },
+        "files-wheel": {
+          "type": "wheel",
+          "label": "Files Wheel",
+          "icon": "files",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        }
+      }
+    },
+    "game-launcher": {
+      "name": "Game Launcher",
+      "builtin": false,
+      "setup": false,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "launch": {
+          "type": "button",
+          "label": "Launch Game",
+          "icon": "gamepad-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "game",
+              "type": "select",
+              "label": "Game"
+            },
+            {
+              "key": "show_name",
+              "type": "checkbox",
+              "label": "Show the game's name",
+              "default": true
+            }
+          ]
+        },
+        "games-wheel": {
+          "type": "wheel",
+          "label": "Games Wheel",
+          "icon": "layout-grid",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "store",
+              "type": "select",
+              "label": "Store",
+              "default": "all",
+              "options": [
+                "all",
+                "steam"
+              ]
+            },
+            {
+              "key": "sort",
+              "type": "select",
+              "label": "Show",
+              "default": "recent",
+              "options": [
+                "recent",
+                "name"
+              ]
+            }
+          ]
+        },
+        "open-page": {
+          "type": "button",
+          "label": "Open Launcher Page",
+          "icon": "library",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "page",
+              "type": "select",
+              "label": "Page",
+              "default": "steam-library",
+              "options": [
+                "steam-library",
+                "steam-store",
+                "steam-friends",
+                "steam-downloads",
+                "steam-settings",
+                "steam-bigpicture"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "home-assistant": {
+      "name": "Home Assistant",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "toggle": {
+          "type": "toggle",
+          "label": "Toggle Entity",
+          "icon": "toggle-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "entity",
+              "type": "select",
+              "label": "Entity"
+            },
+            {
+              "key": "show_name",
+              "type": "checkbox",
+              "label": "Show the entity's name",
+              "default": true
+            }
+          ],
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "toggle-left"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "toggle-right"
+            }
+          ]
+        },
+        "activate": {
+          "type": "button",
+          "label": "Run Scene / Script",
+          "icon": "sparkles",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "entity",
+              "type": "select",
+              "label": "Scene, script, automation or button"
+            }
+          ]
+        },
+        "state": {
+          "type": "button",
+          "label": "Show State",
+          "icon": "gauge",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "entity",
+              "type": "select",
+              "label": "Entity"
+            },
+            {
+              "key": "attribute",
+              "type": "text",
+              "label": "Attribute (optional)"
+            },
+            {
+              "key": "show_name",
+              "type": "checkbox",
+              "label": "Show the entity's name",
+              "default": false
+            }
+          ]
+        },
+        "level": {
+          "type": "slider",
+          "label": "Level",
+          "icon": "sliders-horizontal",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "entity",
+              "type": "select",
+              "label": "Light, cover, fan, media player or number"
+            },
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step (%)",
+              "default": "5"
+            }
+          ],
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        "call-service": {
+          "type": "button",
+          "label": "Call Service",
+          "icon": "zap",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "service",
+              "type": "combobox",
+              "label": "Service"
+            },
+            {
+              "key": "entity",
+              "type": "combobox",
+              "label": "Entity (optional)"
+            },
+            {
+              "key": "data",
+              "type": "textarea",
+              "label": "Service data (JSON, optional)"
+            }
+          ]
+        },
+        "entities-wheel": {
+          "type": "wheel",
+          "label": "Entities Wheel",
+          "icon": "layout-grid",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "domain",
+              "type": "select",
+              "label": "Show",
+              "default": "light",
+              "options": [
+                "light",
+                "switch",
+                "scene",
+                "script",
+                "automation",
+                "fan",
+                "cover",
+                "lock",
+                "media_player",
+                "input_boolean",
+                "button"
+              ]
+            },
+            {
+              "key": "filter",
+              "type": "text",
+              "label": "Name contains (optional)"
+            }
+          ]
+        }
+      }
+    },
+    "hue": {
+      "name": "Philips Hue",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "power": {
+          "type": "toggle",
+          "label": "Power",
+          "icon": "lightbulb",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "target",
+              "type": "select",
+              "label": "Light, room or zone",
+              "default": "group:0"
+            }
+          ],
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "lightbulb-off"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "lightbulb"
+            }
+          ]
+        },
+        "brightness": {
+          "type": "slider",
+          "label": "Brightness",
+          "icon": "sun",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "target",
+              "type": "select",
+              "label": "Light, room or zone",
+              "default": "group:0"
+            },
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step (%)",
+              "default": "5"
+            }
+          ],
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        "set-brightness": {
+          "type": "button",
+          "label": "Set Brightness",
+          "icon": "sun",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "target",
+              "type": "select",
+              "label": "Light, room or zone",
+              "default": "group:0"
+            },
+            {
+              "key": "value",
+              "type": "text",
+              "label": "Brightness (%)",
+              "default": "50"
+            }
+          ]
+        },
+        "temperature": {
+          "type": "slider",
+          "label": "Color Temperature",
+          "icon": "thermometer",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "target",
+              "type": "select",
+              "label": "Light, room or zone",
+              "default": "group:0"
+            },
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step (K)",
+              "default": "100"
+            }
+          ],
+          "min": 2000,
+          "max": 6500,
+          "step": 100,
+          "unit": "K"
+        },
+        "set-color": {
+          "type": "button",
+          "label": "Set Color",
+          "icon": "palette",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "target",
+              "type": "select",
+              "label": "Light, room or zone",
+              "default": "group:0"
+            },
+            {
+              "key": "color",
+              "type": "text",
+              "label": "Color (#RRGGBB)",
+              "default": "#FF8800"
+            }
+          ]
+        },
+        "scene": {
+          "type": "button",
+          "label": "Scene",
+          "icon": "sparkles",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "scene",
+              "type": "select",
+              "label": "Scene"
+            }
+          ]
+        },
+        "scenes-wheel": {
+          "type": "wheel",
+          "label": "Scenes Wheel",
+          "icon": "sparkles",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "room",
+              "type": "select",
+              "label": "Room or zone",
+              "default": "0"
+            }
+          ]
+        }
+      }
+    },
+    "intellij": {
+      "name": "IntelliJ IDEA",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": "intellij-logo.svg",
+      "actions": {
+        "open-action-browser": {
+          "type": "button",
+          "label": "Open Action Browser",
+          "icon": "compass",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "custom-action": {
+          "type": "button",
+          "label": "Customized Action",
+          "icon": "sparkles",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "actionId",
+              "type": "text",
+              "label": "Action ID"
+            },
+            {
+              "key": "runConfig",
+              "type": "text",
+              "label": "Run / Debug Configuration Name (Optional)"
+            },
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "update-project": {
+          "type": "button",
+          "label": "Update Project",
+          "icon": "arrow-down-to-line",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "new-project": {
+          "type": "button",
+          "label": "New Project",
+          "icon": "folder-plus",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "run": {
+          "type": "button",
+          "label": "Run",
+          "icon": "play",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "runConfig",
+              "type": "text",
+              "label": "Run / Debug Configuration Name (Optional)"
+            },
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "debug": {
+          "type": "button",
+          "label": "Debug",
+          "icon": "bug",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "runConfig",
+              "type": "text",
+              "label": "Run / Debug Configuration Name (Optional)"
+            },
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "step-over": {
+          "type": "button",
+          "label": "Step Over",
+          "icon": "redo",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "step-into": {
+          "type": "button",
+          "label": "Step Into",
+          "icon": "arrow-down-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "step-out": {
+          "type": "button",
+          "label": "Step Out",
+          "icon": "arrow-up-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "resume": {
+          "type": "button",
+          "label": "Resume",
+          "icon": "play",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "pause": {
+          "type": "button",
+          "label": "Pause",
+          "icon": "pause",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "search-everywhere": {
+          "type": "button",
+          "label": "Search Everywhere",
+          "icon": "search",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "stop": {
+          "type": "button",
+          "label": "Stop",
+          "icon": "square",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "project-structure": {
+          "type": "button",
+          "label": "Project Structure",
+          "icon": "blocks",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "reset-frame": {
+          "type": "button",
+          "label": "Reset Frame",
+          "icon": "rotate-ccw",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "terminal": {
+          "type": "button",
+          "label": "Terminal",
+          "icon": "terminal",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "claude-code": {
+          "type": "button",
+          "label": "Claude Code",
+          "icon": "bot",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        }
+      }
+    },
+    "obs": {
+      "name": "OBS Studio",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": "obs-logo.svg",
+      "actions": {
+        "record": {
+          "type": "toggle",
+          "label": "Record",
+          "icon": "circle",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "stopped",
+              "label": "Record Off",
+              "icon": "square"
+            },
+            {
+              "value": "recording",
+              "label": "Recording",
+              "icon": "circle-dot"
+            }
+          ]
+        },
+        "record-pause": {
+          "type": "toggle",
+          "label": "Record Pause",
+          "icon": "circle-pause",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "recording",
+              "label": "Recording",
+              "icon": "play"
+            },
+            {
+              "value": "paused",
+              "label": "Paused",
+              "icon": "pause"
+            }
+          ]
+        },
+        "chapter-marker": {
+          "type": "button",
+          "label": "Chapter Marker",
+          "icon": "bookmark-plus",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "chapterName",
+              "type": "text",
+              "label": "Chapter Name"
+            }
+          ]
+        },
+        "stream": {
+          "type": "toggle",
+          "label": "Stream",
+          "icon": "radio-tower",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "stopped",
+              "label": "Offline",
+              "icon": "circle"
+            },
+            {
+              "value": "streaming",
+              "label": "Live",
+              "icon": "circle-dot"
+            }
+          ]
+        },
+        "virtual-cam": {
+          "type": "toggle",
+          "label": "Virtual Camera",
+          "icon": "webcam",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "off",
+              "label": "Virtual Cam Off",
+              "icon": "circle"
+            },
+            {
+              "value": "on",
+              "label": "Virtual Cam On",
+              "icon": "circle-dot"
+            }
+          ]
+        },
+        "replay-buffer": {
+          "type": "toggle",
+          "label": "Replay Buffer",
+          "icon": "history",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "stopped",
+              "label": "Buffer Off",
+              "icon": "circle"
+            },
+            {
+              "value": "active",
+              "label": "Buffer On",
+              "icon": "circle-dot"
+            }
+          ]
+        },
+        "replay-buffer-save": {
+          "type": "button",
+          "label": "Save Replay",
+          "icon": "save",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "scene-collection": {
+          "type": "button",
+          "label": "Scene Collection",
+          "icon": "layers",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "collection",
+              "type": "select",
+              "label": "Scene Collection"
+            }
+          ]
+        },
+        "profile": {
+          "type": "button",
+          "label": "Profile",
+          "icon": "user-round",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "profile",
+              "type": "select",
+              "label": "Profile"
+            }
+          ]
+        },
+        "scene": {
+          "type": "button",
+          "label": "Scene",
+          "icon": "layout-grid",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "scene",
+              "type": "select",
+              "label": "Scene"
+            }
+          ]
+        },
+        "source-visibility": {
+          "type": "toggle",
+          "label": "Source Visibility",
+          "icon": "eye",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "scene",
+              "type": "select",
+              "label": "Scene"
+            },
+            {
+              "key": "source",
+              "type": "select",
+              "label": "Source",
+              "showIf": {
+                "key": "scene",
+                "truthy": true
+              }
+            }
+          ],
+          "states": [
+            {
+              "value": "visible",
+              "label": "Visible",
+              "icon": "eye"
+            },
+            {
+              "value": "hidden",
+              "label": "Hidden",
+              "icon": "eye-off"
+            }
+          ]
+        },
+        "audio-mixer": {
+          "type": "toggle",
+          "label": "Audio Mixer",
+          "icon": "sliders-vertical",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "source",
+              "type": "select",
+              "label": "Audio Source"
+            }
+          ],
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "Unmuted",
+              "icon": "volume-2"
+            },
+            {
+              "value": "muted",
+              "label": "Muted",
+              "icon": "volume-x"
+            }
+          ]
+        },
+        "media-source-control": {
+          "type": "button",
+          "label": "Media Source Control",
+          "icon": "circle-play",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "source",
+              "type": "select",
+              "label": "Media Source"
+            },
+            {
+              "key": "action",
+              "type": "select",
+              "label": "Action",
+              "options": [
+                "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_PLAY",
+                "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_PAUSE",
+                "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_STOP",
+                "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_RESTART",
+                "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_NEXT",
+                "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_PREVIOUS"
+              ]
+            }
+          ]
+        },
+        "studio-mode": {
+          "type": "toggle",
+          "label": "Studio Mode",
+          "icon": "square-split-horizontal",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "off",
+              "label": "Studio Off",
+              "icon": "circle"
+            },
+            {
+              "value": "on",
+              "label": "Studio On",
+              "icon": "circle-dot"
+            }
+          ]
+        },
+        "transition": {
+          "type": "button",
+          "label": "Transition",
+          "icon": "arrow-left-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "transition",
+              "type": "select",
+              "label": "Transition"
+            },
+            {
+              "key": "duration",
+              "type": "text",
+              "label": "Duration (ms)"
+            }
+          ]
+        },
+        "filter": {
+          "type": "toggle",
+          "label": "Filter",
+          "icon": "filter",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "source",
+              "type": "select",
+              "label": "Source"
+            },
+            {
+              "key": "filter",
+              "type": "select",
+              "label": "Filter",
+              "showIf": {
+                "key": "source",
+                "truthy": true
+              }
+            }
+          ],
+          "states": [
+            {
+              "value": "enabled",
+              "label": "Filter On",
+              "icon": "check"
+            },
+            {
+              "value": "disabled",
+              "label": "Filter Off",
+              "icon": "x"
+            }
+          ]
+        },
+        "screenshot": {
+          "type": "button",
+          "label": "Screenshot",
+          "icon": "camera",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "source",
+              "type": "select",
+              "label": "Source"
+            },
+            {
+              "key": "imageFormat",
+              "type": "select",
+              "label": "Format",
+              "options": [
+                "png",
+                "jpg",
+                "bmp"
+              ]
+            },
+            {
+              "key": "imagePath",
+              "type": "text",
+              "label": "Save Path"
+            },
+            {
+              "key": "imageWidth",
+              "type": "text",
+              "label": "Width (px)"
+            },
+            {
+              "key": "imageHeight",
+              "type": "text",
+              "label": "Height (px)"
+            }
+          ]
+        },
+        "scene-transition": {
+          "type": "button",
+          "label": "Scene Transition",
+          "icon": "arrow-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "previous-scene": {
+          "type": "button",
+          "label": "Previous Scene",
+          "icon": "undo-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "preview-scene": {
+          "type": "button",
+          "label": "Preview Scene",
+          "icon": "monitor-play",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "scene",
+              "type": "select",
+              "label": "Preview Scene"
+            }
+          ]
+        },
+        "source-volume": {
+          "type": "slider",
+          "label": "Source Volume",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "source",
+              "type": "select",
+              "label": "Audio Source"
+            },
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step (%)",
+              "default": "5"
+            }
+          ],
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        "stats": {
+          "type": "button",
+          "label": "OBS Stats",
+          "icon": "gauge",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "stat",
+              "type": "select",
+              "label": "Show",
+              "default": "cpu",
+              "options": [
+                "cpu",
+                "fps",
+                "dropped",
+                "skipped"
+              ]
+            }
+          ]
+        },
+        "browser-source": {
+          "type": "button",
+          "label": "Browser Source",
+          "icon": "globe",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "source",
+              "type": "select",
+              "label": "Browser Source"
+            },
+            {
+              "key": "url",
+              "type": "text",
+              "label": "Set URL (optional)"
+            }
+          ]
+        }
+      }
+    },
+    "os-tools": {
+      "name": "OS Tools",
+      "builtin": true,
+      "setup": false,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "minimize": {
+          "type": "button",
+          "label": "Minimize",
+          "icon": "minus",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "maximize": {
+          "type": "button",
+          "label": "Maximize",
+          "icon": "square",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "restore": {
+          "type": "button",
+          "label": "Restore",
+          "icon": "copy",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "close-window": {
+          "type": "button",
+          "label": "Close Window",
+          "icon": "x",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "send-to-back": {
+          "type": "button",
+          "label": "Send to Back",
+          "icon": "send-to-back",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "toggle-max-restore": {
+          "type": "toggle",
+          "label": "Maximize / Restore",
+          "icon": "maximize-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "normal",
+              "label": "Windowed",
+              "icon": "minimize-2"
+            },
+            {
+              "value": "maximized",
+              "label": "Maximized",
+              "icon": "maximize-2"
+            }
+          ]
+        },
+        "toggle-fullscreen": {
+          "type": "toggle",
+          "label": "Full Screen",
+          "icon": "fullscreen",
+          "platforms": [
+            "linux",
+            "macos"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "windowed",
+              "label": "Windowed",
+              "icon": "minimize-2"
+            },
+            {
+              "value": "fullscreen",
+              "label": "Full Screen",
+              "icon": "fullscreen"
+            }
+          ]
+        },
+        "toggle-always-on-top": {
+          "type": "toggle",
+          "label": "Always on Top",
+          "icon": "pin",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "off",
+              "label": "Normal",
+              "icon": "circle"
+            },
+            {
+              "value": "on",
+              "label": "Always on Top",
+              "icon": "pin"
+            }
+          ]
+        },
+        "toggle-borderless": {
+          "type": "toggle",
+          "label": "Toggle Borderless (Plasma)",
+          "icon": "square-dashed",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "bordered",
+              "label": "Bordered",
+              "icon": "square"
+            },
+            {
+              "value": "borderless",
+              "label": "Borderless",
+              "icon": "square-dashed"
+            }
+          ]
+        },
+        "toggle-transparency": {
+          "type": "toggle",
+          "label": "Toggle Transparency (Plasma)",
+          "icon": "blend",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": [
+            {
+              "key": "opacity",
+              "type": "select",
+              "label": "Opacity when enabled",
+              "default": "75",
+              "options": [
+                "90",
+                "80",
+                "75",
+                "60",
+                "50",
+                "30"
+              ]
+            }
+          ],
+          "states": [
+            {
+              "value": "opaque",
+              "label": "Opaque",
+              "icon": "square"
+            },
+            {
+              "value": "transparent",
+              "label": "Transparent",
+              "icon": "square-dashed"
+            }
+          ]
+        },
+        "set-opacity": {
+          "type": "button",
+          "label": "Set Opacity (Plasma)",
+          "icon": "droplet",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": [
+            {
+              "key": "preset",
+              "type": "select",
+              "label": "Opacity",
+              "default": "75",
+              "options": [
+                "100",
+                "90",
+                "80",
+                "75",
+                "60",
+                "50",
+                "40",
+                "30",
+                "20",
+                "10",
+                "__custom__"
+              ]
+            },
+            {
+              "key": "custom",
+              "type": "text",
+              "label": "Custom opacity (10–100)",
+              "showIf": {
+                "key": "preset",
+                "equals": "__custom__"
+              }
+            }
+          ]
+        },
+        "move-next-monitor": {
+          "type": "button",
+          "label": "Move to Next Monitor",
+          "icon": "monitor-up",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "center-window": {
+          "type": "button",
+          "label": "Center Window",
+          "icon": "focus",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "move-left-half": {
+          "type": "button",
+          "label": "Move Left Half",
+          "icon": "panel-left",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "move-right-half": {
+          "type": "button",
+          "label": "Move Right Half",
+          "icon": "panel-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "move-top-half": {
+          "type": "button",
+          "label": "Move Top Half",
+          "icon": "panel-top",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "move-bottom-half": {
+          "type": "button",
+          "label": "Move Bottom Half",
+          "icon": "panel-bottom",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "move-top-left": {
+          "type": "button",
+          "label": "Move Top Left",
+          "icon": "move-up-left",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "move-top-right": {
+          "type": "button",
+          "label": "Move Top Right",
+          "icon": "move-up-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "move-bottom-left": {
+          "type": "button",
+          "label": "Move Bottom Left",
+          "icon": "move-down-left",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "move-bottom-right": {
+          "type": "button",
+          "label": "Move Bottom Right",
+          "icon": "move-down-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "move-left-third": {
+          "type": "button",
+          "label": "Move Left Third",
+          "icon": "panel-left",
+          "platforms": [
+            "linux",
+            "macos"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "move-center-third": {
+          "type": "button",
+          "label": "Move Center Third",
+          "icon": "focus",
+          "platforms": [
+            "linux",
+            "macos"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "move-right-third": {
+          "type": "button",
+          "label": "Move Right Third",
+          "icon": "panel-right",
+          "platforms": [
+            "linux",
+            "macos"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "fill-display": {
+          "type": "button",
+          "label": "Fill Display",
+          "icon": "fullscreen",
+          "platforms": [
+            "linux",
+            "macos"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "custom-position": {
+          "type": "button",
+          "label": "Custom Position",
+          "icon": "move",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            },
+            {
+              "key": "x",
+              "type": "text",
+              "label": "X (from monitor left)"
+            },
+            {
+              "key": "y",
+              "type": "text",
+              "label": "Y (from monitor top)"
+            },
+            {
+              "key": "w",
+              "type": "text",
+              "label": "Width"
+            },
+            {
+              "key": "h",
+              "type": "text",
+              "label": "Height"
+            }
+          ]
+        },
+        "move-app-window": {
+          "type": "button",
+          "label": "Move App Window",
+          "icon": "app-window",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "combobox",
+              "label": "App"
+            },
+            {
+              "key": "position",
+              "type": "select",
+              "label": "Position",
+              "default": "left-half",
+              "options": [
+                "left-half",
+                "right-half",
+                "top-half",
+                "bottom-half",
+                "top-left",
+                "top-right",
+                "bottom-left",
+                "bottom-right",
+                "left-third",
+                "center-third",
+                "right-third",
+                "fill",
+                "center",
+                "maximize",
+                "minimize",
+                "front",
+                "custom"
+              ]
+            },
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            },
+            {
+              "key": "x",
+              "type": "text",
+              "label": "X (from monitor left)",
+              "showIf": {
+                "key": "position",
+                "equals": "custom"
+              }
+            },
+            {
+              "key": "y",
+              "type": "text",
+              "label": "Y (from monitor top)",
+              "showIf": {
+                "key": "position",
+                "equals": "custom"
+              }
+            },
+            {
+              "key": "w",
+              "type": "text",
+              "label": "Width",
+              "showIf": {
+                "key": "position",
+                "equals": "custom"
+              }
+            },
+            {
+              "key": "h",
+              "type": "text",
+              "label": "Height",
+              "showIf": {
+                "key": "position",
+                "equals": "custom"
+              }
+            },
+            {
+              "key": "focus",
+              "type": "checkbox",
+              "label": "Bring it to the front"
+            }
+          ]
+        },
+        "switch-window-wheel": {
+          "type": "wheel",
+          "label": "Switch to Window",
+          "icon": "layout-grid",
+          "platforms": [],
+          "inputs": []
+        },
+        "focus-app": {
+          "type": "button",
+          "label": "Focus App",
+          "icon": "app-window",
+          "platforms": [],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "combobox",
+              "label": "App"
+            },
+            {
+              "key": "hint",
+              "type": "text",
+              "label": "Name hint (optional)"
+            }
+          ]
+        },
+        "dynamic-minimize-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Minimize",
+          "icon": "minus",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "dynamic-maximize-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Maximize",
+          "icon": "square",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "dynamic-restore-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Restore",
+          "icon": "copy",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "dynamic-close-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Close",
+          "icon": "x",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "dynamic-send-to-back-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Send to Back",
+          "icon": "send-to-back",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "dynamic-always-on-top-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Always on Top",
+          "icon": "pin",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "dynamic-fullscreen-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Full Screen",
+          "icon": "fullscreen",
+          "platforms": [
+            "linux",
+            "macos"
+          ],
+          "inputs": []
+        },
+        "dynamic-max-restore-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Maximize / Restore",
+          "icon": "maximize-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "dynamic-transparency-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Transparency (Plasma)",
+          "icon": "blend",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": [
+            {
+              "key": "opacity",
+              "type": "select",
+              "label": "Opacity when enabled",
+              "default": "75",
+              "options": [
+                "90",
+                "80",
+                "75",
+                "60",
+                "50",
+                "30"
+              ]
+            }
+          ]
+        },
+        "dynamic-move-next-monitor-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Move to Next Monitor",
+          "icon": "monitor-up",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "dynamic-center-window-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Center Window",
+          "icon": "focus",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "dynamic-move-left-half-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Move Left Half",
+          "icon": "panel-left",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "dynamic-move-right-half-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Move Right Half",
+          "icon": "panel-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "dynamic-move-top-half-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Move Top Half",
+          "icon": "panel-top",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "dynamic-move-bottom-half-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Move Bottom Half",
+          "icon": "panel-bottom",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "dynamic-move-top-left-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Move Top Left",
+          "icon": "move-up-left",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "dynamic-move-top-right-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Move Top Right",
+          "icon": "move-up-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "dynamic-move-bottom-left-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Move Bottom Left",
+          "icon": "move-down-left",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "dynamic-move-bottom-right-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Move Bottom Right",
+          "icon": "move-down-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "dynamic-fill-display-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Fill Display",
+          "icon": "fullscreen",
+          "platforms": [
+            "linux",
+            "macos"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "dynamic-custom-position-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Custom Position",
+          "icon": "move",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            },
+            {
+              "key": "x",
+              "type": "text",
+              "label": "X (from monitor left)"
+            },
+            {
+              "key": "y",
+              "type": "text",
+              "label": "Y (from monitor top)"
+            },
+            {
+              "key": "w",
+              "type": "text",
+              "label": "Width"
+            },
+            {
+              "key": "h",
+              "type": "text",
+              "label": "Height"
+            }
+          ]
+        },
+        "desktop-previous": {
+          "type": "button",
+          "label": "Previous Desktop",
+          "icon": "chevrons-left",
+          "platforms": [
+            "linux",
+            "macos"
+          ],
+          "inputs": []
+        },
+        "desktop-next": {
+          "type": "button",
+          "label": "Next Desktop",
+          "icon": "chevrons-right",
+          "platforms": [
+            "linux",
+            "macos"
+          ],
+          "inputs": []
+        },
+        "desktop-new": {
+          "type": "button",
+          "label": "New Desktop",
+          "icon": "copy-plus",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": []
+        },
+        "desktop-close": {
+          "type": "button",
+          "label": "Close Desktop",
+          "icon": "copy-x",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": []
+        },
+        "overview": {
+          "type": "button",
+          "label": "Overview",
+          "icon": "layout-grid",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": []
+        },
+        "present-windows": {
+          "type": "button",
+          "label": "Present Windows",
+          "icon": "app-window",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": []
+        },
+        "app-launcher": {
+          "type": "button",
+          "label": "Applications",
+          "icon": "layout-dashboard",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": []
+        },
+        "search": {
+          "type": "button",
+          "label": "Search",
+          "icon": "search",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": []
+        },
+        "show-desktop": {
+          "type": "button",
+          "label": "Show Desktop (Plasma)",
+          "icon": "monitor",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "screen-snip": {
+          "type": "button",
+          "label": "Screenshot",
+          "icon": "scissors",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "emoji-panel": {
+          "type": "button",
+          "label": "Emoji Picker (Plasma)",
+          "icon": "smile",
+          "platforms": [
+            "linux",
+            "macos"
+          ],
+          "inputs": []
+        },
+        "file-manager": {
+          "type": "button",
+          "label": "Files",
+          "icon": "folder-open",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": []
+        },
+        "open-settings": {
+          "type": "button",
+          "label": "System Settings",
+          "icon": "settings",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "system-monitor": {
+          "type": "button",
+          "label": "System Monitor",
+          "icon": "activity",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": []
+        },
+        "system-stats": {
+          "type": "button",
+          "label": "System Stats",
+          "icon": "gauge",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "stat",
+              "type": "select",
+              "label": "Show",
+              "default": "cpu",
+              "options": [
+                "cpu",
+                "gpu",
+                "memory"
+              ]
+            }
+          ]
+        },
+        "lock-screen": {
+          "type": "button",
+          "label": "Lock Screen",
+          "icon": "lock",
+          "platforms": [
+            "linux",
+            "macos"
+          ],
+          "inputs": []
+        },
+        "sleep-display": {
+          "type": "button",
+          "label": "Turn Off Display (Plasma)",
+          "icon": "moon",
+          "platforms": [
+            "linux",
+            "macos"
+          ],
+          "inputs": []
+        },
+        "radio-toggle": {
+          "type": "toggle",
+          "label": "Wi-Fi / Bluetooth",
+          "icon": "wifi",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "radio",
+              "type": "select",
+              "label": "Radio",
+              "default": "wifi",
+              "options": [
+                "wifi",
+                "bluetooth"
+              ]
+            }
+          ],
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "toggle-left"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "toggle-right"
+            }
+          ]
+        },
+        "power-profile": {
+          "type": "toggle",
+          "label": "Power Profile",
+          "icon": "battery-charging",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": [
+            {
+              "key": "profile",
+              "type": "select",
+              "label": "Power profile"
+            }
+          ],
+          "states": [
+            {
+              "value": "inactive",
+              "label": "Not Active",
+              "icon": "battery"
+            },
+            {
+              "value": "active",
+              "label": "Active",
+              "icon": "battery-charging"
+            }
+          ]
+        },
+        "power-profile-wheel": {
+          "type": "wheel",
+          "label": "Power Profiles",
+          "icon": "battery-charging",
+          "platforms": [
+            "linux"
+          ],
+          "inputs": []
+        },
+        "ping": {
+          "type": "button",
+          "label": "Ping",
+          "icon": "activity",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "host",
+              "type": "text",
+              "label": "Host",
+              "default": "1.1.1.1"
+            }
+          ]
+        },
+        "text-snippet": {
+          "type": "button",
+          "label": "Text Snippet",
+          "icon": "text-cursor-input",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "text",
+              "type": "textarea",
+              "label": "Text"
+            }
+          ]
+        },
+        "set-app-volume": {
+          "type": "button",
+          "label": "Set App Volume",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "__foreground__"
+            },
+            {
+              "key": "preset",
+              "type": "select",
+              "label": "Volume",
+              "default": "75",
+              "options": [
+                "100",
+                "90",
+                "80",
+                "75",
+                "60",
+                "50",
+                "40",
+                "30",
+                "20",
+                "10",
+                "0",
+                "__custom__"
+              ]
+            },
+            {
+              "key": "custom",
+              "type": "text",
+              "label": "Custom volume (0–100)",
+              "showIf": {
+                "key": "preset",
+                "equals": "__custom__"
+              }
+            }
+          ]
+        },
+        "app-volume-up": {
+          "type": "button",
+          "label": "App Volume Up",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "__foreground__"
+            },
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step (%)",
+              "default": "5"
+            }
+          ]
+        },
+        "app-volume-down": {
+          "type": "button",
+          "label": "App Volume Down",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "__foreground__"
+            },
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step (%)",
+              "default": "5"
+            }
+          ]
+        },
+        "toggle-app-mute": {
+          "type": "toggle",
+          "label": "Mute App",
+          "icon": "volume-x",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "__foreground__"
+            }
+          ],
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "Unmuted",
+              "icon": "volume-2"
+            },
+            {
+              "value": "muted",
+              "label": "Muted",
+              "icon": "volume-x"
+            }
+          ]
+        },
+        "app-volume": {
+          "type": "slider",
+          "label": "App Volume",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "__foreground__"
+            },
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step (%)",
+              "default": "5"
+            }
+          ],
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        "toggle-mic-mute": {
+          "type": "toggle",
+          "label": "Mute Microphone",
+          "icon": "mic",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "Mic On",
+              "icon": "mic"
+            },
+            {
+              "value": "muted",
+              "label": "Mic Muted",
+              "icon": "mic-off"
+            }
+          ]
+        },
+        "push-to-talk": {
+          "type": "hold",
+          "label": "Push to Talk",
+          "icon": "mic-off",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [],
+          "released": {
+            "label": "Mic Muted",
+            "icon": "mic-off"
+          },
+          "held": {
+            "label": "Talking",
+            "icon": "mic"
+          }
+        },
+        "output-device-wheel": {
+          "type": "wheel",
+          "label": "Output Device",
+          "icon": "speaker",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "input-device-wheel": {
+          "type": "wheel",
+          "label": "Input Device",
+          "icon": "mic",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "set-audio-device": {
+          "type": "toggle",
+          "label": "Set Audio Device",
+          "icon": "speaker",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "flow",
+              "type": "select",
+              "label": "Type",
+              "default": "output",
+              "options": [
+                "output",
+                "input"
+              ]
+            },
+            {
+              "key": "device",
+              "type": "select",
+              "label": "Device"
+            }
+          ],
+          "states": [
+            {
+              "value": "inactive",
+              "label": "Not Selected",
+              "icon": "speaker"
+            },
+            {
+              "value": "active",
+              "label": "Selected",
+              "icon": "circle-check"
+            }
+          ]
+        },
+        "toggle-audio-device": {
+          "type": "toggle",
+          "label": "Toggle Audio Device",
+          "icon": "arrow-left-right",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "flow",
+              "type": "select",
+              "label": "Type",
+              "default": "output",
+              "options": [
+                "output",
+                "input"
+              ]
+            },
+            {
+              "key": "device",
+              "type": "select",
+              "label": "Device A"
+            },
+            {
+              "key": "device_b",
+              "type": "select",
+              "label": "Device B"
+            }
+          ],
+          "states": [
+            {
+              "value": "a",
+              "label": "Device A",
+              "icon": "headphones"
+            },
+            {
+              "value": "b",
+              "label": "Device B",
+              "icon": "speaker"
+            }
+          ]
+        },
+        "device-mute": {
+          "type": "toggle",
+          "label": "Mute Device",
+          "icon": "volume-x",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "flow",
+              "type": "select",
+              "label": "Type",
+              "default": "output",
+              "options": [
+                "output",
+                "input"
+              ]
+            },
+            {
+              "key": "device",
+              "type": "select",
+              "label": "Device",
+              "default": "__default__"
+            }
+          ],
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "On",
+              "icon": "volume-2"
+            },
+            {
+              "value": "muted",
+              "label": "Muted",
+              "icon": "volume-x"
+            }
+          ]
+        },
+        "device-volume": {
+          "type": "slider",
+          "label": "Device Volume",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "flow",
+              "type": "select",
+              "label": "Type",
+              "default": "output",
+              "options": [
+                "output",
+                "input"
+              ]
+            },
+            {
+              "key": "device",
+              "type": "select",
+              "label": "Device",
+              "default": "__default__"
+            },
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step (%)",
+              "default": "5"
+            }
+          ],
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        "clipboard-history-wheel": {
+          "type": "wheel",
+          "label": "Clipboard History",
+          "icon": "clipboard-list",
+          "platforms": [],
+          "inputs": []
+        },
+        "bring-to-front": {
+          "type": "button",
+          "label": "Bring to Front",
+          "icon": "bring-to-front",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "hide-app": {
+          "type": "button",
+          "label": "Hide App",
+          "icon": "eye-off",
+          "platforms": [
+            "macos"
+          ],
+          "inputs": []
+        },
+        "dynamic-hide-app-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Hide App",
+          "icon": "eye-off",
+          "platforms": [
+            "macos"
+          ],
+          "inputs": []
+        },
+        "mission-control": {
+          "type": "button",
+          "label": "Mission Control",
+          "icon": "layout-grid",
+          "platforms": [
+            "macos"
+          ],
+          "inputs": []
+        },
+        "app-windows": {
+          "type": "button",
+          "label": "App Exposé",
+          "icon": "app-window",
+          "platforms": [
+            "macos"
+          ],
+          "inputs": []
+        },
+        "spotlight": {
+          "type": "button",
+          "label": "Spotlight",
+          "icon": "search",
+          "platforms": [],
+          "inputs": []
+        },
+        "hide-others": {
+          "type": "button",
+          "label": "Hide Others",
+          "icon": "eye-off",
+          "platforms": [
+            "macos"
+          ],
+          "inputs": []
+        },
+        "menu-command": {
+          "type": "button",
+          "label": "Menu Command",
+          "icon": "menu",
+          "platforms": [
+            "macos"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "front"
+            },
+            {
+              "key": "command",
+              "type": "combobox",
+              "label": "Command"
+            }
+          ]
+        },
+        "force-quit": {
+          "type": "button",
+          "label": "Force Quit…",
+          "icon": "circle-x",
+          "platforms": [],
+          "inputs": []
+        },
+        "force-quit-wheel": {
+          "type": "wheel",
+          "label": "Force Quit App",
+          "icon": "circle-x",
+          "platforms": [
+            "macos"
+          ],
+          "inputs": []
+        },
+        "run-shortcut": {
+          "type": "button",
+          "label": "Run Shortcut",
+          "icon": "layers",
+          "platforms": [
+            "macos"
+          ],
+          "inputs": [
+            {
+              "key": "shortcut",
+              "type": "combobox",
+              "label": "Shortcut"
+            },
+            {
+              "key": "input",
+              "type": "select",
+              "label": "Input",
+              "default": "none",
+              "options": [
+                "none",
+                "selection",
+                "files",
+                "clipboard",
+                "text"
+              ]
+            },
+            {
+              "key": "input_text",
+              "type": "textarea",
+              "label": "Text",
+              "showIf": {
+                "key": "input",
+                "equals": "text"
+              }
+            },
+            {
+              "key": "output",
+              "type": "select",
+              "label": "Result",
+              "default": "none",
+              "options": [
+                "none",
+                "paste",
+                "copy",
+                "notify"
+              ]
+            }
+          ]
+        },
+        "run-applescript": {
+          "type": "button",
+          "label": "Run AppleScript",
+          "icon": "scroll-text",
+          "platforms": [
+            "macos"
+          ],
+          "inputs": [
+            {
+              "key": "source",
+              "type": "select",
+              "label": "Script",
+              "default": "text",
+              "options": [
+                "text",
+                "file"
+              ]
+            },
+            {
+              "key": "language",
+              "type": "select",
+              "label": "Language",
+              "default": "applescript",
+              "showIf": {
+                "key": "source",
+                "equals": "text"
+              },
+              "options": [
+                "applescript",
+                "javascript"
+              ]
+            },
+            {
+              "key": "script",
+              "type": "textarea",
+              "label": "Script",
+              "showIf": {
+                "key": "source",
+                "equals": "text"
+              }
+            },
+            {
+              "key": "file",
+              "type": "text",
+              "label": "Script file",
+              "showIf": {
+                "key": "source",
+                "equals": "file"
+              }
+            },
+            {
+              "key": "input",
+              "type": "select",
+              "label": "Input",
+              "default": "none",
+              "options": [
+                "none",
+                "selection",
+                "files",
+                "clipboard",
+                "text"
+              ]
+            },
+            {
+              "key": "input_text",
+              "type": "textarea",
+              "label": "Text",
+              "showIf": {
+                "key": "input",
+                "equals": "text"
+              }
+            },
+            {
+              "key": "output",
+              "type": "select",
+              "label": "Result",
+              "default": "none",
+              "options": [
+                "none",
+                "paste",
+                "copy",
+                "notify"
+              ]
+            }
+          ]
+        },
+        "run-km-macro": {
+          "type": "button",
+          "label": "Run Keyboard Maestro Macro",
+          "icon": "keyboard",
+          "platforms": [
+            "macos"
+          ],
+          "inputs": [
+            {
+              "key": "macro",
+              "type": "select",
+              "label": "Macro"
+            },
+            {
+              "key": "input",
+              "type": "select",
+              "label": "Input",
+              "default": "none",
+              "options": [
+                "none",
+                "selection",
+                "files",
+                "clipboard",
+                "text"
+              ]
+            },
+            {
+              "key": "input_text",
+              "type": "textarea",
+              "label": "Text",
+              "showIf": {
+                "key": "input",
+                "equals": "text"
+              }
+            }
+          ]
+        },
+        "finder": {
+          "type": "button",
+          "label": "Finder",
+          "icon": "folder-open",
+          "platforms": [
+            "macos"
+          ],
+          "inputs": []
+        },
+        "activity-monitor": {
+          "type": "button",
+          "label": "Activity Monitor",
+          "icon": "activity",
+          "platforms": [
+            "macos"
+          ],
+          "inputs": []
+        },
+        "mic-level": {
+          "type": "slider",
+          "label": "Microphone Level",
+          "icon": "mic",
+          "platforms": [
+            "macos"
+          ],
+          "inputs": [
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step (%)",
+              "default": "5"
+            }
+          ],
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        "toggle-click-through": {
+          "type": "toggle",
+          "label": "Toggle Click-Through",
+          "icon": "mouse-pointer-click",
+          "platforms": [],
+          "inputs": [],
+          "states": [
+            {
+              "value": "normal",
+              "label": "Normal",
+              "icon": "mouse-pointer-2"
+            },
+            {
+              "value": "clickthrough",
+              "label": "Click-Through",
+              "icon": "mouse-pointer-ban"
+            }
+          ]
+        },
+        "move-center": {
+          "type": "button",
+          "label": "Move Center",
+          "icon": "focus",
+          "platforms": [
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "fullscreen": {
+          "type": "button",
+          "label": "Fullscreen",
+          "icon": "fullscreen",
+          "platforms": [],
+          "inputs": [
+            {
+              "key": "monitor",
+              "type": "select",
+              "label": "Monitor",
+              "default": "current"
+            }
+          ]
+        },
+        "dynamic-borderless-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Borderless",
+          "icon": "square-dashed",
+          "platforms": [],
+          "inputs": []
+        },
+        "dynamic-click-through-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Click-Through",
+          "icon": "mouse-pointer-click",
+          "platforms": [],
+          "inputs": []
+        },
+        "dynamic-set-opacity-wheel": {
+          "type": "wheel",
+          "label": "Dynamic Set Opacity",
+          "icon": "droplet",
+          "platforms": [],
+          "inputs": [
+            {
+              "key": "preset",
+              "type": "select",
+              "label": "Opacity",
+              "default": "75",
+              "options": [
+                "100",
+                "90",
+                "80",
+                "75",
+                "60",
+                "50",
+                "40",
+                "30",
+                "20",
+                "10",
+                "__custom__"
+              ]
+            },
+            {
+              "key": "custom",
+              "type": "text",
+              "label": "Custom opacity (0–100)",
+              "showIf": {
+                "key": "preset",
+                "equals": "__custom__"
+              }
+            }
+          ]
+        },
+        "task-view": {
+          "type": "button",
+          "label": "Task View",
+          "icon": "layout-grid",
+          "platforms": [
+            "windows"
+          ],
+          "inputs": []
+        },
+        "file-explorer": {
+          "type": "button",
+          "label": "File Explorer",
+          "icon": "folder-open",
+          "platforms": [
+            "windows"
+          ],
+          "inputs": []
+        },
+        "run-dialog": {
+          "type": "button",
+          "label": "Run Dialog",
+          "icon": "square-terminal",
+          "platforms": [
+            "windows"
+          ],
+          "inputs": []
+        },
+        "task-manager": {
+          "type": "button",
+          "label": "Task Manager",
+          "icon": "activity",
+          "platforms": [
+            "windows"
+          ],
+          "inputs": []
+        },
+        "power-plan": {
+          "type": "toggle",
+          "label": "Power Plan",
+          "icon": "battery-charging",
+          "platforms": [
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "plan",
+              "type": "select",
+              "label": "Power plan"
+            }
+          ],
+          "states": [
+            {
+              "value": "inactive",
+              "label": "Not Active",
+              "icon": "battery"
+            },
+            {
+              "value": "active",
+              "label": "Active",
+              "icon": "battery-charging"
+            }
+          ]
+        },
+        "power-plan-wheel": {
+          "type": "wheel",
+          "label": "Power Plans",
+          "icon": "battery-charging",
+          "platforms": [
+            "windows"
+          ],
+          "inputs": []
+        },
+        "lock-pc": {
+          "type": "button",
+          "label": "Lock PC",
+          "icon": "lock",
+          "platforms": [
+            "windows"
+          ],
+          "inputs": []
+        }
+      }
+    },
+    "slides": {
+      "name": "Slides",
+      "builtin": false,
+      "setup": false,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "next": {
+          "type": "button",
+          "label": "Next Slide",
+          "icon": "chevron-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "auto",
+              "options": [
+                "auto",
+                "impress"
+              ]
+            }
+          ]
+        },
+        "previous": {
+          "type": "button",
+          "label": "Previous Slide",
+          "icon": "chevron-left",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "auto",
+              "options": [
+                "auto",
+                "impress"
+              ]
+            }
+          ]
+        },
+        "start": {
+          "type": "button",
+          "label": "Start Slide Show",
+          "icon": "play",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "auto",
+              "options": [
+                "auto",
+                "impress"
+              ]
+            }
+          ]
+        },
+        "end": {
+          "type": "button",
+          "label": "End Slide Show",
+          "icon": "square",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "auto",
+              "options": [
+                "auto",
+                "impress"
+              ]
+            }
+          ]
+        },
+        "goto": {
+          "type": "button",
+          "label": "Go to Slide",
+          "icon": "hash",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "auto",
+              "options": [
+                "auto",
+                "impress"
+              ]
+            },
+            {
+              "key": "slide",
+              "type": "text",
+              "label": "Slide number",
+              "default": "1"
+            }
+          ]
+        },
+        "black": {
+          "type": "toggle",
+          "label": "Black Screen",
+          "icon": "square",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "auto",
+              "options": [
+                "auto",
+                "impress"
+              ]
+            }
+          ],
+          "states": [
+            {
+              "value": "showing",
+              "label": "Showing",
+              "icon": "square"
+            },
+            {
+              "value": "blank",
+              "label": "Black",
+              "icon": "eye-off"
+            }
+          ]
+        },
+        "white": {
+          "type": "toggle",
+          "label": "White Screen",
+          "icon": "square-dashed",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "auto",
+              "options": [
+                "auto",
+                "impress"
+              ]
+            }
+          ],
+          "states": [
+            {
+              "value": "showing",
+              "label": "Showing",
+              "icon": "square-dashed"
+            },
+            {
+              "value": "blank",
+              "label": "White",
+              "icon": "eye-off"
+            }
+          ]
+        },
+        "counter": {
+          "type": "button",
+          "label": "Slide Counter",
+          "icon": "presentation",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "app",
+              "type": "select",
+              "label": "App",
+              "default": "auto",
+              "options": [
+                "auto",
+                "impress"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "spotify": {
+      "name": "Spotify",
+      "builtin": false,
+      "setup": false,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "play-pause": {
+          "type": "toggle",
+          "label": "Play / Pause",
+          "icon": "play",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "paused",
+              "label": "Paused",
+              "icon": "play"
+            },
+            {
+              "value": "playing",
+              "label": "Playing",
+              "icon": "pause"
+            }
+          ]
+        },
+        "next": {
+          "type": "button",
+          "label": "Next Track",
+          "icon": "skip-forward",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "previous": {
+          "type": "button",
+          "label": "Previous Track",
+          "icon": "skip-back",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "now-playing": {
+          "type": "button",
+          "label": "Now Playing",
+          "icon": "music",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        }
+      }
+    },
+    "streamlabs": {
+      "name": "Streamlabs Desktop",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "stream": {
+          "type": "toggle",
+          "label": "Go Live",
+          "icon": "radio-tower",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "offline",
+              "label": "Offline",
+              "icon": "circle"
+            },
+            {
+              "value": "live",
+              "label": "Live",
+              "icon": "circle-dot"
+            }
+          ]
+        },
+        "record": {
+          "type": "toggle",
+          "label": "Record",
+          "icon": "circle",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "offline",
+              "label": "Not Recording",
+              "icon": "square"
+            },
+            {
+              "value": "recording",
+              "label": "Recording",
+              "icon": "circle-dot"
+            }
+          ]
+        },
+        "replay-buffer": {
+          "type": "toggle",
+          "label": "Replay Buffer",
+          "icon": "history",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "offline",
+              "label": "Buffer Off",
+              "icon": "circle"
+            },
+            {
+              "value": "running",
+              "label": "Buffer On",
+              "icon": "circle-dot"
+            }
+          ]
+        },
+        "save-replay": {
+          "type": "button",
+          "label": "Save Replay",
+          "icon": "save",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "scene": {
+          "type": "toggle",
+          "label": "Scene",
+          "icon": "layout-grid",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "scene",
+              "type": "select",
+              "label": "Scene"
+            }
+          ],
+          "states": [
+            {
+              "value": "inactive",
+              "label": "Not Live",
+              "icon": "layout-grid"
+            },
+            {
+              "value": "active",
+              "label": "Live",
+              "icon": "circle-check"
+            }
+          ]
+        },
+        "source-visibility": {
+          "type": "toggle",
+          "label": "Source Visibility",
+          "icon": "eye",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "scene",
+              "type": "select",
+              "label": "Scene"
+            },
+            {
+              "key": "item",
+              "type": "select",
+              "label": "Source",
+              "showIf": {
+                "key": "scene",
+                "truthy": true
+              }
+            }
+          ],
+          "states": [
+            {
+              "value": "visible",
+              "label": "Visible",
+              "icon": "eye"
+            },
+            {
+              "value": "hidden",
+              "label": "Hidden",
+              "icon": "eye-off"
+            }
+          ]
+        },
+        "audio-mute": {
+          "type": "toggle",
+          "label": "Mute Audio Source",
+          "icon": "volume-x",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "source",
+              "type": "select",
+              "label": "Audio source"
+            }
+          ],
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "On",
+              "icon": "volume-2"
+            },
+            {
+              "value": "muted",
+              "label": "Muted",
+              "icon": "volume-x"
+            }
+          ]
+        },
+        "audio-volume": {
+          "type": "slider",
+          "label": "Audio Source Volume",
+          "icon": "volume-2",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "source",
+              "type": "select",
+              "label": "Audio source"
+            },
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step (%)",
+              "default": "5"
+            }
+          ],
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        }
+      }
+    },
+    "twitch": {
+      "name": "Twitch",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "chat-message": {
+          "type": "button",
+          "label": "Chat Message",
+          "icon": "message-square",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "message",
+              "type": "textarea",
+              "label": "Message"
+            }
+          ]
+        },
+        "clear-chat": {
+          "type": "button",
+          "label": "Clear Chat",
+          "icon": "eraser",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "emote-only": {
+          "type": "toggle",
+          "label": "Emote-Only Chat",
+          "icon": "smile",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "message-circle"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "smile"
+            }
+          ]
+        },
+        "follower-only": {
+          "type": "toggle",
+          "label": "Follower-Only Chat",
+          "icon": "user-check",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "message-circle"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "user-check"
+            }
+          ]
+        },
+        "sub-only": {
+          "type": "toggle",
+          "label": "Subscriber-Only Chat",
+          "icon": "star",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "message-circle"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "star"
+            }
+          ]
+        },
+        "slow-mode": {
+          "type": "toggle",
+          "label": "Slow Mode",
+          "icon": "hourglass",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "seconds",
+              "type": "text",
+              "label": "Seconds between messages",
+              "default": "30"
+            }
+          ],
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "message-circle"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "hourglass"
+            }
+          ]
+        },
+        "ad-break": {
+          "type": "button",
+          "label": "Run Ad",
+          "icon": "megaphone",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "length",
+              "type": "select",
+              "label": "Length",
+              "default": "60",
+              "options": [
+                "30",
+                "60",
+                "90",
+                "120",
+                "150",
+                "180"
+              ]
+            }
+          ]
+        },
+        "stream-info": {
+          "type": "button",
+          "label": "Stream Info",
+          "icon": "pencil",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "title",
+              "type": "text",
+              "label": "Title (empty keeps it)"
+            },
+            {
+              "key": "category",
+              "type": "text",
+              "label": "Category (empty keeps it)"
+            }
+          ]
+        },
+        "marker": {
+          "type": "button",
+          "label": "Stream Marker",
+          "icon": "bookmark-plus",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "description",
+              "type": "text",
+              "label": "Description (optional)"
+            }
+          ]
+        },
+        "create-clip": {
+          "type": "button",
+          "label": "Create Clip",
+          "icon": "clapperboard",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "open",
+              "type": "checkbox",
+              "label": "Open the clip editor"
+            }
+          ]
+        },
+        "viewers": {
+          "type": "button",
+          "label": "Viewer Count",
+          "icon": "eye",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "channel-live": {
+          "type": "toggle",
+          "label": "Channel Monitor",
+          "icon": "radio",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "channel",
+              "type": "text",
+              "label": "Channel"
+            }
+          ],
+          "states": [
+            {
+              "value": "offline",
+              "label": "Offline",
+              "icon": "radio"
+            },
+            {
+              "value": "live",
+              "label": "Live",
+              "icon": "circle-dot"
+            }
+          ]
+        }
+      }
+    },
+    "vlc": {
+      "name": "VLC",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "playback-status": {
+          "type": "toggle",
+          "label": "Playback Status",
+          "icon": "play",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "offline",
+              "label": "Offline",
+              "icon": "triangle-alert"
+            },
+            {
+              "value": "stopped",
+              "label": "Stopped",
+              "icon": "square"
+            },
+            {
+              "value": "paused",
+              "label": "Paused",
+              "icon": "pause"
+            },
+            {
+              "value": "playing",
+              "label": "Playing",
+              "icon": "play"
+            }
+          ]
+        },
+        "play-pause": {
+          "type": "toggle",
+          "label": "Play / Pause",
+          "icon": "play",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "stopped",
+              "label": "Stopped",
+              "icon": "play"
+            },
+            {
+              "value": "paused",
+              "label": "Paused",
+              "icon": "pause"
+            },
+            {
+              "value": "playing",
+              "label": "Playing",
+              "icon": "play"
+            }
+          ]
+        },
+        "stop": {
+          "type": "button",
+          "label": "Stop",
+          "icon": "square",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "next": {
+          "type": "button",
+          "label": "Next",
+          "icon": "skip-forward",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "previous": {
+          "type": "button",
+          "label": "Previous",
+          "icon": "skip-back",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "fullscreen": {
+          "type": "toggle",
+          "label": "Fullscreen",
+          "icon": "maximize",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "off",
+              "label": "Windowed",
+              "icon": "square"
+            },
+            {
+              "value": "on",
+              "label": "Fullscreen",
+              "icon": "maximize"
+            }
+          ]
+        },
+        "seek-backward": {
+          "type": "button",
+          "label": "Seek Back 10s",
+          "icon": "rewind",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "seek-forward": {
+          "type": "button",
+          "label": "Seek Forward 10s",
+          "icon": "fast-forward",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "volume-down": {
+          "type": "button",
+          "label": "Volume Down",
+          "icon": "volume-1",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "volume-up": {
+          "type": "button",
+          "label": "Volume Up",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "open-url": {
+          "type": "button",
+          "label": "Open Stream / URL",
+          "icon": "link",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "url",
+              "type": "text",
+              "label": "Media URL"
+            }
+          ]
+        }
+      }
+    },
+    "voicemod": {
+      "name": "Voicemod",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "voice-changer": {
+          "type": "toggle",
+          "label": "Voice Changer",
+          "icon": "audio-waveform",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "off",
+              "label": "Voice Changer Off",
+              "icon": "audio-lines"
+            },
+            {
+              "value": "on",
+              "label": "Voice Changer On",
+              "icon": "audio-waveform"
+            }
+          ]
+        },
+        "hear-myself": {
+          "type": "toggle",
+          "label": "Hear Myself",
+          "icon": "ear",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "off",
+              "label": "Not Hearing",
+              "icon": "ear-off"
+            },
+            {
+              "value": "on",
+              "label": "Hearing Myself",
+              "icon": "ear"
+            }
+          ]
+        },
+        "background-effects": {
+          "type": "toggle",
+          "label": "Background Effects",
+          "icon": "sparkles",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "off",
+              "label": "Effects Off",
+              "icon": "circle"
+            },
+            {
+              "value": "on",
+              "label": "Effects On",
+              "icon": "sparkles"
+            }
+          ]
+        },
+        "mute-mic": {
+          "type": "toggle",
+          "label": "Mute Microphone",
+          "icon": "mic",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "Mic On",
+              "icon": "mic"
+            },
+            {
+              "value": "muted",
+              "label": "Mic Muted",
+              "icon": "mic-off"
+            }
+          ]
+        },
+        "mute-sounds-for-me": {
+          "type": "toggle",
+          "label": "Mute Sounds for Me",
+          "icon": "volume-x",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "off",
+              "label": "I Hear Sounds",
+              "icon": "volume-2"
+            },
+            {
+              "value": "on",
+              "label": "Sounds Muted for Me",
+              "icon": "volume-x"
+            }
+          ]
+        },
+        "voice": {
+          "type": "toggle",
+          "label": "Select Voice",
+          "icon": "user-round",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "voice",
+              "type": "combobox",
+              "label": "Voice"
+            }
+          ],
+          "states": [
+            {
+              "value": "inactive",
+              "label": "Not Selected",
+              "icon": "user-round"
+            },
+            {
+              "value": "active",
+              "label": "Selected",
+              "icon": "circle-check"
+            }
+          ]
+        },
+        "random-voice": {
+          "type": "button",
+          "label": "Random Voice",
+          "icon": "shuffle",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "mode",
+              "type": "select",
+              "label": "From",
+              "default": "AllVoices",
+              "options": [
+                "AllVoices",
+                "FreeVoices",
+                "FavoriteVoices",
+                "CustomVoices"
+              ]
+            }
+          ]
+        },
+        "favorite-voices-wheel": {
+          "type": "wheel",
+          "label": "Favorite Voices",
+          "icon": "star",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "play-sound": {
+          "type": "button",
+          "label": "Play Sound",
+          "icon": "play",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "sound",
+              "type": "combobox",
+              "label": "Sound"
+            }
+          ]
+        },
+        "stop-sounds": {
+          "type": "button",
+          "label": "Stop All Sounds",
+          "icon": "square",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "bleep": {
+          "type": "hold",
+          "label": "Bleep",
+          "icon": "message-square-off",
+          "platforms": [
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "released": {
+            "label": "Bleep",
+            "icon": "message-square-off"
+          },
+          "held": {
+            "label": "Bleeping",
+            "icon": "megaphone"
+          }
+        }
+      }
+    },
+    "vscode": {
+      "name": "Visual Studio Code",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": "vscode-logo.svg",
+      "actions": {
+        "command-palette": {
+          "type": "button",
+          "label": "Command Palette",
+          "icon": "compass",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "quick-open": {
+          "type": "button",
+          "label": "Quick Open",
+          "icon": "search",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "explorer": {
+          "type": "button",
+          "label": "Explorer",
+          "icon": "folder",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "search": {
+          "type": "button",
+          "label": "Search",
+          "icon": "search",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "source-control": {
+          "type": "button",
+          "label": "Source Control",
+          "icon": "git-branch",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "extensions": {
+          "type": "button",
+          "label": "Extensions",
+          "icon": "puzzle",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "terminal": {
+          "type": "button",
+          "label": "Toggle Terminal",
+          "icon": "terminal",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "problems": {
+          "type": "button",
+          "label": "Problems",
+          "icon": "triangle-alert",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "save-all": {
+          "type": "button",
+          "label": "Save All",
+          "icon": "save-all",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "format-document": {
+          "type": "button",
+          "label": "Format Document",
+          "icon": "wand-sparkles",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "toggle-sidebar": {
+          "type": "button",
+          "label": "Toggle Sidebar",
+          "icon": "panel-left",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "toggle-panel": {
+          "type": "button",
+          "label": "Toggle Panel",
+          "icon": "blocks",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "zen-mode": {
+          "type": "button",
+          "label": "Zen Mode",
+          "icon": "scan",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "split-editor": {
+          "type": "button",
+          "label": "Split Editor",
+          "icon": "columns-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "new-terminal": {
+          "type": "button",
+          "label": "New Terminal",
+          "icon": "plus",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "stop-debugging": {
+          "type": "button",
+          "label": "Stop Debugging",
+          "icon": "square",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "run-task": {
+          "type": "button",
+          "label": "Run Task",
+          "icon": "play",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "taskName",
+              "type": "select",
+              "label": "Task"
+            },
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "start-debugging": {
+          "type": "button",
+          "label": "Start Debugging",
+          "icon": "bug",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "configName",
+              "type": "select",
+              "label": "Launch Configuration"
+            },
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "focus-terminal": {
+          "type": "button",
+          "label": "Focus Terminal",
+          "icon": "square-terminal",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "terminalName",
+              "type": "select",
+              "label": "Terminal"
+            },
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "open-editor": {
+          "type": "button",
+          "label": "Open Editor",
+          "icon": "file",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "editorUri",
+              "type": "select",
+              "label": "Open Editor"
+            },
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "custom-command": {
+          "type": "button",
+          "label": "Custom Command",
+          "icon": "sparkles",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "commandId",
+              "type": "text",
+              "label": "Command ID"
+            },
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "task-wheel": {
+          "type": "wheel",
+          "label": "Task Wheel",
+          "icon": "play",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "debug-wheel": {
+          "type": "wheel",
+          "label": "Debug Wheel",
+          "icon": "bug",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        },
+        "open-editor-wheel": {
+          "type": "wheel",
+          "label": "Open Editor Wheel",
+          "icon": "file",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "port",
+              "type": "text",
+              "label": "Action Port (Optional)"
+            }
+          ]
+        }
+      }
+    },
+    "weather": {
+      "name": "Weather",
+      "builtin": false,
+      "setup": false,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "weather": {
+          "type": "button",
+          "label": "Weather",
+          "icon": "cloud-sun",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "location",
+              "type": "text",
+              "label": "Location"
+            },
+            {
+              "key": "units",
+              "type": "select",
+              "label": "Units",
+              "default": "c",
+              "options": [
+                "c",
+                "f"
+              ]
+            }
+          ]
+        },
+        "forecast-wheel": {
+          "type": "wheel",
+          "label": "Forecast (7 days)",
+          "icon": "calendar-days",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "location",
+              "type": "text",
+              "label": "Location"
+            },
+            {
+              "key": "units",
+              "type": "select",
+              "label": "Units",
+              "default": "c",
+              "options": [
+                "c",
+                "f"
+              ]
+            }
+          ]
+        },
+        "hourly-wheel": {
+          "type": "wheel",
+          "label": "Next 24 hours",
+          "icon": "clock",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "location",
+              "type": "text",
+              "label": "Location"
+            },
+            {
+              "key": "units",
+              "type": "select",
+              "label": "Units",
+              "default": "c",
+              "options": [
+                "c",
+                "f"
+              ]
+            }
+          ]
+        },
+        "air-quality": {
+          "type": "button",
+          "label": "Air Quality",
+          "icon": "wind",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "location",
+              "type": "text",
+              "label": "Location"
+            },
+            {
+              "key": "scale",
+              "type": "select",
+              "label": "Scale",
+              "default": "us",
+              "options": [
+                "us",
+                "eu"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "youtube": {
+      "name": "YouTube",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "viewers": {
+          "type": "button",
+          "label": "Viewers",
+          "icon": "eye",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "dashboard": {
+          "type": "button",
+          "label": "Live Dashboard",
+          "icon": "layout-dashboard",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        }
+      }
+    },
+    "ytmusic": {
+      "name": "YouTube Music Desktop",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "play-pause": {
+          "type": "toggle",
+          "label": "Play / Pause",
+          "icon": "play",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "paused",
+              "label": "Paused",
+              "icon": "play"
+            },
+            {
+              "value": "playing",
+              "label": "Playing",
+              "icon": "pause"
+            }
+          ]
+        },
+        "next": {
+          "type": "button",
+          "label": "Next",
+          "icon": "skip-forward",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "previous": {
+          "type": "button",
+          "label": "Previous",
+          "icon": "skip-back",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "now-playing": {
+          "type": "button",
+          "label": "Now Playing",
+          "icon": "music",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "art",
+              "type": "checkbox",
+              "label": "Show album art",
+              "default": true
+            }
+          ]
+        },
+        "like": {
+          "type": "toggle",
+          "label": "Like",
+          "icon": "thumbs-up",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "none",
+              "label": "Not liked",
+              "icon": "thumbs-up"
+            },
+            {
+              "value": "liked",
+              "label": "Liked",
+              "icon": "heart"
+            }
+          ]
+        },
+        "dislike": {
+          "type": "toggle",
+          "label": "Dislike",
+          "icon": "thumbs-down",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "none",
+              "label": "Not disliked",
+              "icon": "thumbs-down"
+            },
+            {
+              "value": "disliked",
+              "label": "Disliked",
+              "icon": "thumbs-down"
+            }
+          ]
+        },
+        "volume": {
+          "type": "slider",
+          "label": "Volume",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "step",
+              "type": "text",
+              "label": "Step (%)",
+              "default": "5"
+            }
+          ],
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        "mute": {
+          "type": "toggle",
+          "label": "Mute",
+          "icon": "volume-2",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "unmuted",
+              "label": "Sound on",
+              "icon": "volume-2"
+            },
+            {
+              "value": "muted",
+              "label": "Muted",
+              "icon": "volume-x"
+            }
+          ]
+        },
+        "shuffle": {
+          "type": "button",
+          "label": "Shuffle",
+          "icon": "shuffle",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "repeat": {
+          "type": "toggle",
+          "label": "Repeat",
+          "icon": "repeat",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [],
+          "states": [
+            {
+              "value": "none",
+              "label": "Repeat off",
+              "icon": "repeat"
+            },
+            {
+              "value": "all",
+              "label": "Repeat all",
+              "icon": "repeat"
+            },
+            {
+              "value": "one",
+              "label": "Repeat one",
+              "icon": "repeat-1"
+            }
+          ]
+        },
+        "seek": {
+          "type": "button",
+          "label": "Seek",
+          "icon": "fast-forward",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "seconds",
+              "type": "text",
+              "label": "Seconds (negative goes back)",
+              "default": "10"
+            }
+          ]
+        },
+        "play-playlist": {
+          "type": "button",
+          "label": "Play Playlist",
+          "icon": "list-music",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "playlist",
+              "type": "select",
+              "label": "Playlist"
+            }
+          ]
+        },
+        "playlists-wheel": {
+          "type": "wheel",
+          "label": "Playlists Wheel",
+          "icon": "list-music",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "queue-wheel": {
+          "type": "wheel",
+          "label": "Up Next Wheel",
+          "icon": "list-ordered",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        }
+      }
+    }
+  }
+}

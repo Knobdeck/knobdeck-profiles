@@ -1,0 +1,114 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "media-controls",
+  "kind": "dial",
+  "name": "Media Controls",
+  "summary": "Play, skip and set the volume of whatever is playing.",
+  "description": "System media keys and the master volume. Works with any player that listens to the OS media controls: browsers, Spotify, VLC, music apps.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Media",
+    "Starter"
+  ],
+  "plugins": [],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 7,
+  "profile": {
+    "name": "Media Controls",
+    "icon": "music",
+    "items": [
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "play-pause",
+          "inputs": {}
+        },
+        "label": "Play / Pause",
+        "icon": "play",
+        "id": "media-controls-item1"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "next-track",
+          "inputs": {}
+        },
+        "label": "Next Track",
+        "icon": "skip-forward",
+        "id": "media-controls-item2"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "vol-up",
+          "inputs": {}
+        },
+        "label": "Volume Up",
+        "icon": "volume-2",
+        "id": "media-controls-item3"
+      },
+      {
+        "kind": {
+          "type": "slider",
+          "plugin": "knobdeck-actions",
+          "action_type": "volume",
+          "inputs": {},
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "%"
+        },
+        "label": "Volume",
+        "icon": "volume-2",
+        "id": "media-controls-item4"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "mute",
+          "inputs": {}
+        },
+        "label": "Mute",
+        "icon": "volume-x",
+        "id": "media-controls-item5"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "vol-down",
+          "inputs": {}
+        },
+        "label": "Volume Down",
+        "icon": "volume-1",
+        "id": "media-controls-item6"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "prev-track",
+          "inputs": {}
+        },
+        "label": "Previous Track",
+        "icon": "skip-back",
+        "id": "media-controls-item7"
+      }
+    ],
+    "keybind": null,
+    "auto_open": null
+  }
+}

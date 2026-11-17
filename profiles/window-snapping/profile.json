@@ -1,0 +1,231 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "window-snapping",
+  "kind": "dial",
+  "name": "Window Snapping",
+  "summary": "Snap the focused window to halves and corners, or move it to the next screen.",
+  "description": "Halves, quarters, maximize, center and next monitor for the window under focus, through the OS window APIs.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Productivity",
+    "Windows"
+  ],
+  "plugins": [
+    {
+      "id": "os-tools",
+      "name": "OS Tools",
+      "builtin": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {
+    "windows": 1
+  },
+  "ready": true,
+  "toConfigure": [],
+  "items": 14,
+  "profile": {
+    "name": "Window Snapping",
+    "icon": "layout-grid",
+    "items": [
+      {
+        "label": "Top Half",
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/move-top-half",
+          "inputs": {
+            "monitor": "current"
+          }
+        },
+        "icon": "panel-top",
+        "id": "window-snapping-item1"
+      },
+      {
+        "label": "Top Right",
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/move-top-right",
+          "inputs": {
+            "monitor": "current"
+          }
+        },
+        "icon": "move-up-right",
+        "id": "window-snapping-item2"
+      },
+      {
+        "label": "Right Half",
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/move-right-half",
+          "inputs": {
+            "monitor": "current"
+          }
+        },
+        "icon": "panel-right",
+        "id": "window-snapping-item3"
+      },
+      {
+        "label": "Bottom Right",
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/move-bottom-right",
+          "inputs": {
+            "monitor": "current"
+          }
+        },
+        "icon": "move-down-right",
+        "id": "window-snapping-item4"
+      },
+      {
+        "label": "Bottom Half",
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/move-bottom-half",
+          "inputs": {
+            "monitor": "current"
+          }
+        },
+        "icon": "panel-bottom",
+        "id": "window-snapping-item5"
+      },
+      {
+        "label": "Bottom Left",
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/move-bottom-left",
+          "inputs": {
+            "monitor": "current"
+          }
+        },
+        "icon": "move-down-left",
+        "id": "window-snapping-item6"
+      },
+      {
+        "label": "Left Half",
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/move-left-half",
+          "inputs": {
+            "monitor": "current"
+          }
+        },
+        "icon": "panel-left",
+        "id": "window-snapping-item7"
+      },
+      {
+        "label": "Top Left",
+        "kind": {
+          "type": "button",
+          "plugin": "os-tools",
+          "action_type": "os-tools/move-top-left",
+          "inputs": {
+            "monitor": "current"
+          }
+        },
+        "icon": "move-up-left",
+        "id": "window-snapping-item8"
+      },
+      {
+        "label": "More",
+        "icon": "ellipsis",
+        "kind": {
+          "type": "folder",
+          "items": [
+            {
+              "kind": {
+                "type": "button",
+                "plugin": "os-tools",
+                "action_type": "os-tools/center-window",
+                "inputs": {
+                  "monitor": "current"
+                }
+              },
+              "label": "Center Window",
+              "icon": "focus",
+              "id": "window-snapping-item10"
+            },
+            {
+              "kind": {
+                "type": "toggle",
+                "plugin": "os-tools",
+                "action_type": "os-tools/toggle-max-restore",
+                "inputs": {},
+                "states": [
+                  {
+                    "value": "normal",
+                    "label": "Windowed",
+                    "icon": "minimize-2"
+                  },
+                  {
+                    "value": "maximized",
+                    "label": "Maximized",
+                    "icon": "maximize-2"
+                  }
+                ],
+                "default_state": "normal"
+              },
+              "label": "Maximize / Restore",
+              "icon": "maximize-2",
+              "id": "window-snapping-item11"
+            },
+            {
+              "kind": {
+                "type": "button",
+                "plugin": "os-tools",
+                "action_type": "os-tools/minimize",
+                "inputs": {}
+              },
+              "label": "Minimize",
+              "icon": "minus",
+              "id": "window-snapping-item12"
+            },
+            {
+              "kind": {
+                "type": "button",
+                "plugin": "os-tools",
+                "action_type": "os-tools/move-next-monitor",
+                "inputs": {}
+              },
+              "label": "Move to Next Monitor",
+              "icon": "monitor-up",
+              "id": "window-snapping-item13"
+            },
+            {
+              "kind": {
+                "type": "button",
+                "plugin": "os-tools",
+                "action_type": "os-tools/fill-display",
+                "inputs": {
+                  "monitor": "current"
+                }
+              },
+              "label": "Fill Display",
+              "icon": "fullscreen",
+              "id": "window-snapping-item14",
+              "platforms": [
+                "linux",
+                "macos"
+              ]
+            }
+          ]
+        },
+        "id": "window-snapping-item9"
+      }
+    ],
+    "keybind": null,
+    "auto_open": null
+  }
+}

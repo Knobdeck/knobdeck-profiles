@@ -1,0 +1,131 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "power-and-session",
+  "kind": "dial",
+  "name": "Power & Session",
+  "summary": "Lock, sleep, restart and shut down from one ring.",
+  "description": "Session and power actions, plus a screenshot and the system settings. Restart and Shut Down run straight away, so place them with care.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "System",
+    "Starter"
+  ],
+  "plugins": [],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 9,
+  "profile": {
+    "name": "Power & Session",
+    "icon": "power",
+    "items": [
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "lock",
+          "inputs": {}
+        },
+        "label": "Lock",
+        "icon": "lock",
+        "id": "power-and-session-item1"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "sleep",
+          "inputs": {}
+        },
+        "label": "Sleep",
+        "icon": "moon-star",
+        "id": "power-and-session-item2"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "screenshot",
+          "inputs": {}
+        },
+        "label": "Screenshot",
+        "icon": "camera",
+        "id": "power-and-session-item3"
+      },
+      {
+        "label": "Settings",
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "windows-settings",
+          "inputs": {}
+        },
+        "icon": "settings",
+        "id": "power-and-session-item4"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "empty-recycle",
+          "inputs": {}
+        },
+        "label": "Empty Trash",
+        "icon": "trash-2",
+        "id": "power-and-session-item5"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "knobdeck-actions",
+          "action_type": "signout",
+          "inputs": {}
+        },
+        "label": "Sign Out",
+        "icon": "log-out",
+        "id": "power-and-session-item6"
+      },
+      {
+        "label": "Power",
+        "icon": "power",
+        "kind": {
+          "type": "folder",
+          "items": [
+            {
+              "kind": {
+                "type": "button",
+                "plugin": "knobdeck-actions",
+                "action_type": "restart",
+                "inputs": {}
+              },
+              "label": "Restart",
+              "icon": "rotate-cw",
+              "id": "power-and-session-item8"
+            },
+            {
+              "kind": {
+                "type": "button",
+                "plugin": "knobdeck-actions",
+                "action_type": "shutdown",
+                "inputs": {}
+              },
+              "label": "Shut Down",
+              "icon": "power",
+              "id": "power-and-session-item9"
+            }
+          ]
+        },
+        "id": "power-and-session-item7"
+      }
+    ],
+    "keybind": null,
+    "auto_open": null
+  }
+}

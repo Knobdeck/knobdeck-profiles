@@ -1,0 +1,207 @@
+{
+  "format": "knobdeck-registry-profile",
+  "version": 1,
+  "id": "youtube-music",
+  "kind": "dial",
+  "name": "YouTube Music",
+  "summary": "Playback, likes, shuffle and your playlists in YouTube Music Desktop.",
+  "description": "For the YouTube Music Desktop app: play, skip, like or dislike, shuffle and repeat, the player's own volume, and wheels for your playlists and the queue.",
+  "author": "KnobDeck",
+  "profileVersion": "1.0.0",
+  "tags": [
+    "Media",
+    "Music"
+  ],
+  "plugins": [
+    {
+      "id": "ytmusic",
+      "name": "YouTube Music Desktop",
+      "setup": true
+    }
+  ],
+  "platforms": [
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "skippedOn": {},
+  "ready": true,
+  "toConfigure": [],
+  "items": 10,
+  "profile": {
+    "name": "YouTube Music",
+    "icon": "list-music",
+    "items": [
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "ytmusic",
+          "action_type": "ytmusic/play-pause",
+          "inputs": {},
+          "states": [
+            {
+              "value": "paused",
+              "label": "Paused",
+              "icon": "play"
+            },
+            {
+              "value": "playing",
+              "label": "Playing",
+              "icon": "pause"
+            }
+          ],
+          "default_state": "paused"
+        },
+        "label": "Play / Pause",
+        "icon": "play",
+        "id": "youtube-music-item1"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "ytmusic",
+          "action_type": "ytmusic/next",
+          "inputs": {}
+        },
+        "label": "Next",
+        "icon": "skip-forward",
+        "id": "youtube-music-item2"
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "ytmusic",
+          "action_type": "ytmusic/like",
+          "inputs": {},
+          "states": [
+            {
+              "value": "none",
+              "label": "Not liked",
+              "icon": "thumbs-up"
+            },
+            {
+              "value": "liked",
+              "label": "Liked",
+              "icon": "heart"
+            }
+          ],
+          "default_state": "none"
+        },
+        "label": "Like",
+        "icon": "thumbs-up",
+        "id": "youtube-music-item3"
+      },
+      {
+        "kind": {
+          "type": "slider",
+          "plugin": "ytmusic",
+          "action_type": "ytmusic/volume",
+          "inputs": {
+            "step": "5"
+          },
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        "label": "Volume",
+        "icon": "volume-2",
+        "id": "youtube-music-item4"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "ytmusic",
+          "action_type": "ytmusic/shuffle",
+          "inputs": {}
+        },
+        "label": "Shuffle",
+        "icon": "shuffle",
+        "id": "youtube-music-item5"
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "ytmusic",
+          "action_type": "ytmusic/repeat",
+          "inputs": {},
+          "states": [
+            {
+              "value": "none",
+              "label": "Repeat off",
+              "icon": "repeat"
+            },
+            {
+              "value": "all",
+              "label": "Repeat all",
+              "icon": "repeat"
+            }
+          ],
+          "default_state": "none"
+        },
+        "label": "Repeat",
+        "icon": "repeat",
+        "id": "youtube-music-item6"
+      },
+      {
+        "kind": {
+          "type": "toggle",
+          "plugin": "ytmusic",
+          "action_type": "ytmusic/dislike",
+          "inputs": {},
+          "states": [
+            {
+              "value": "none",
+              "label": "Not disliked",
+              "icon": "thumbs-down"
+            },
+            {
+              "value": "disliked",
+              "label": "Disliked",
+              "icon": "thumbs-down"
+            }
+          ],
+          "default_state": "none"
+        },
+        "label": "Dislike",
+        "icon": "thumbs-down",
+        "id": "youtube-music-item7"
+      },
+      {
+        "kind": {
+          "type": "button",
+          "plugin": "ytmusic",
+          "action_type": "ytmusic/previous",
+          "inputs": {}
+        },
+        "label": "Previous",
+        "icon": "skip-back",
+        "id": "youtube-music-item8"
+      },
+      {
+        "kind": {
+          "type": "dynamic",
+          "plugin": "ytmusic",
+          "action_type": "ytmusic/playlists-wheel",
+          "inputs": {}
+        },
+        "label": "Playlists Wheel",
+        "icon": "list-music",
+        "id": "youtube-music-item9"
+      },
+      {
+        "kind": {
+          "type": "dynamic",
+          "plugin": "ytmusic",
+          "action_type": "ytmusic/queue-wheel",
+          "inputs": {}
+        },
+        "label": "Up Next Wheel",
+        "icon": "list-ordered",
+        "id": "youtube-music-item10"
+      }
+    ],
+    "keybind": null,
+    "auto_open": null
+  }
+}
