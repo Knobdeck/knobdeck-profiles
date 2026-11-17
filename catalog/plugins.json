@@ -1,6 +1,122 @@
 {
-  "tag": "v2026.11.16-1746",
+  "tag": "catalog-2026-11-17T13:22:14Z",
   "plugins": {
+    "ai-actions": {
+      "name": "AI Actions",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "run": {
+          "type": "button",
+          "label": "AI Action",
+          "icon": "sparkles",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "preset",
+              "type": "select",
+              "label": "Do",
+              "default": "fix",
+              "options": [
+                "fix",
+                "rewrite",
+                "shorter",
+                "professional",
+                "friendly",
+                "bullets",
+                "translate",
+                "summarize",
+                "explain",
+                "explain-code",
+                "reply",
+                "custom"
+              ]
+            },
+            {
+              "key": "prompt",
+              "type": "textarea",
+              "label": "Prompt",
+              "showIf": {
+                "key": "preset",
+                "equals": "custom"
+              }
+            },
+            {
+              "key": "language",
+              "type": "text",
+              "label": "Translate into",
+              "default": "English",
+              "showIf": {
+                "key": "preset",
+                "equals": "translate"
+              }
+            },
+            {
+              "key": "output",
+              "type": "select",
+              "label": "Put the answer",
+              "default": "auto",
+              "options": [
+                "auto",
+                "replace",
+                "copy",
+                "show"
+              ]
+            },
+            {
+              "key": "no_clipboard",
+              "type": "checkbox",
+              "label": "Don't fall back to the clipboard when nothing is selected"
+            }
+          ]
+        },
+        "wheel": {
+          "type": "wheel",
+          "label": "AI Actions Wheel",
+          "icon": "wand-sparkles",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "language",
+              "type": "text",
+              "label": "Translate into",
+              "default": "English"
+            },
+            {
+              "key": "output",
+              "type": "select",
+              "label": "Put the answer",
+              "default": "auto",
+              "options": [
+                "auto",
+                "replace",
+                "copy",
+                "show"
+              ]
+            },
+            {
+              "key": "no_clipboard",
+              "type": "checkbox",
+              "label": "Don't fall back to the clipboard when nothing is selected"
+            }
+          ]
+        }
+      }
+    },
     "ai-stats": {
       "name": "AI Stats",
       "builtin": false,
@@ -769,6 +885,127 @@
             "windows"
           ],
           "inputs": []
+        }
+      }
+    },
+    "coding-agents": {
+      "name": "Coding Agents",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "status": {
+          "type": "button",
+          "label": "Agent Status",
+          "icon": "bot",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "agent",
+              "type": "select",
+              "label": "Sessions of",
+              "default": "all",
+              "options": [
+                "all",
+                "claude",
+                "codex"
+              ]
+            },
+            {
+              "key": "show_agent",
+              "type": "checkbox",
+              "label": "Show the agent's name",
+              "default": false
+            }
+          ]
+        },
+        "attention": {
+          "type": "button",
+          "label": "Needs Me",
+          "icon": "bell",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "agent",
+              "type": "select",
+              "label": "Sessions of",
+              "default": "all",
+              "options": [
+                "all",
+                "claude",
+                "codex"
+              ]
+            }
+          ]
+        },
+        "approve": {
+          "type": "button",
+          "label": "Approve",
+          "icon": "check",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "deny": {
+          "type": "button",
+          "label": "Deny",
+          "icon": "x",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "approvals-wheel": {
+          "type": "wheel",
+          "label": "Approvals Wheel",
+          "icon": "shield-question",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": []
+        },
+        "sessions-wheel": {
+          "type": "wheel",
+          "label": "Sessions Wheel",
+          "icon": "layout-grid",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "agent",
+              "type": "select",
+              "label": "Sessions of",
+              "default": "all",
+              "options": [
+                "all",
+                "claude",
+                "codex"
+              ]
+            }
+          ]
         }
       }
     },
@@ -6958,6 +7195,284 @@
                 "us",
                 "eu"
               ]
+            }
+          ]
+        }
+      }
+    },
+    "web-requests": {
+      "name": "Web Requests",
+      "builtin": false,
+      "setup": true,
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "icon": null,
+      "actions": {
+        "request": {
+          "type": "button",
+          "label": "HTTP Request",
+          "icon": "send",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "method",
+              "type": "select",
+              "label": "method",
+              "default": "POST",
+              "options": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE",
+                "HEAD"
+              ]
+            },
+            {
+              "key": "url",
+              "type": "text",
+              "label": "URL"
+            },
+            {
+              "key": "body",
+              "type": "textarea",
+              "label": "body (optional)"
+            },
+            {
+              "key": "body_type",
+              "type": "select",
+              "label": "Body is",
+              "default": "json",
+              "options": [
+                "json",
+                "form",
+                "text"
+              ]
+            },
+            {
+              "key": "headers",
+              "type": "textarea",
+              "label": "Headers (optional)"
+            },
+            {
+              "key": "token",
+              "type": "select",
+              "label": "Token (optional)"
+            },
+            {
+              "key": "token_header",
+              "type": "text",
+              "label": "Send the token as",
+              "default": "Authorization: Bearer"
+            },
+            {
+              "key": "show",
+              "type": "select",
+              "label": "After the request, show",
+              "default": "none",
+              "options": [
+                "none",
+                "status",
+                "value",
+                "text"
+              ]
+            },
+            {
+              "key": "path",
+              "type": "text",
+              "label": "Value path",
+              "showIf": {
+                "key": "show",
+                "equals": "value"
+              }
+            }
+          ]
+        },
+        "value": {
+          "type": "button",
+          "label": "Show Value",
+          "icon": "braces",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "url",
+              "type": "text",
+              "label": "URL"
+            },
+            {
+              "key": "path",
+              "type": "text",
+              "label": "Value path"
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "Title (optional)"
+            },
+            {
+              "key": "prefix",
+              "type": "text",
+              "label": "Before the value (optional)"
+            },
+            {
+              "key": "suffix",
+              "type": "text",
+              "label": "After the value (optional)"
+            },
+            {
+              "key": "every",
+              "type": "select",
+              "label": "Refresh every",
+              "default": "30",
+              "options": [
+                "5",
+                "15",
+                "30",
+                "60",
+                "300",
+                "900"
+              ]
+            },
+            {
+              "key": "headers",
+              "type": "textarea",
+              "label": "Headers (optional)"
+            },
+            {
+              "key": "token",
+              "type": "select",
+              "label": "Token (optional)"
+            },
+            {
+              "key": "token_header",
+              "type": "text",
+              "label": "Send the token as",
+              "default": "Authorization: Bearer"
+            }
+          ]
+        },
+        "toggle": {
+          "type": "toggle",
+          "label": "HTTP Toggle",
+          "icon": "toggle-right",
+          "platforms": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "inputs": [
+            {
+              "key": "on_method",
+              "type": "select",
+              "label": "Turn on: method",
+              "default": "POST",
+              "options": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE",
+                "HEAD"
+              ]
+            },
+            {
+              "key": "on_url",
+              "type": "text",
+              "label": "Turn on: URL"
+            },
+            {
+              "key": "on_body",
+              "type": "textarea",
+              "label": "Turn on: body (optional)"
+            },
+            {
+              "key": "off_method",
+              "type": "select",
+              "label": "Turn off: method",
+              "default": "POST",
+              "options": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE",
+                "HEAD"
+              ]
+            },
+            {
+              "key": "off_url",
+              "type": "text",
+              "label": "Turn off: URL"
+            },
+            {
+              "key": "off_body",
+              "type": "textarea",
+              "label": "Turn off: body (optional)"
+            },
+            {
+              "key": "body_type",
+              "type": "select",
+              "label": "Body is",
+              "default": "json",
+              "options": [
+                "json",
+                "form",
+                "text"
+              ]
+            },
+            {
+              "key": "headers",
+              "type": "textarea",
+              "label": "Headers (optional)"
+            },
+            {
+              "key": "token",
+              "type": "select",
+              "label": "Token (optional)"
+            },
+            {
+              "key": "token_header",
+              "type": "text",
+              "label": "Send the token as",
+              "default": "Authorization: Bearer"
+            },
+            {
+              "key": "status_url",
+              "type": "text",
+              "label": "Read the state from (optional)"
+            },
+            {
+              "key": "status_path",
+              "type": "text",
+              "label": "State path"
+            },
+            {
+              "key": "on_value",
+              "type": "text",
+              "label": "On when the value is (optional)"
+            }
+          ],
+          "states": [
+            {
+              "value": "off",
+              "label": "Off",
+              "icon": "toggle-left"
+            },
+            {
+              "value": "on",
+              "label": "On",
+              "icon": "toggle-right"
             }
           ]
         }

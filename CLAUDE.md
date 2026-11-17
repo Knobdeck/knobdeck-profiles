@@ -12,7 +12,7 @@ preview images: the app draws each card from the profile itself. CI (`build.mjs 
 
 Name plugin actions `<plugin>/<action>` with the plugin's folder name in knobdeck-plugins
 (`obs/record`, `os-tools/lock-screen`), never an installed id (`obs-linux-…`). Check them against
-`catalog/plugins.json`; refresh it with `scripts/sync-catalog.mjs` after a plugins release.
+`catalog/plugins.json`; refresh it with `scripts/sync-catalog.mjs` (reads the catalog's `/v2/` files) after a plugins release.
 
 ## Rule 3: no keystrokes for what a plugin does
 
