@@ -20,7 +20,7 @@ A change is live a few minutes after it lands on `master` (the site caches for 5
 ```
 registry.json              every profile's summary (generated)
 profiles/<id>/profile.json the profile, one file
-profiles/<id>/preview.png  picture of its ring or grid (generated)
+profiles/<id>/preview.png  promo card: kind, icon, name, summary, plugins (generated)
 catalog/plugins.json       every published plugin's actions, per OS (generated)
 catalog/builtin.json       KnobDeck's built-in actions (by hand)
 catalog/icons/<plugin>/    plugin logos, inlined into profiles as data URIs
@@ -83,7 +83,7 @@ the user picks them after adding. Fill everything else, or set `""` on an option
 2. `node scripts/build.mjs`: checks every action against the catalog, completes the files and
    writes `registry.json`. It fails on unknown actions, a folder in a deck folder, overlapping
    sliders and so on.
-3. `node scripts/preview.mjs <id>`: draws `preview.png` (needs `rsvg-convert` and Lucide's icons,
+3. `node scripts/preview.mjs <id>`: draws the promo card `preview.png`, 800×600 (needs `rsvg-convert` and Lucide's icons,
    see the script).
 4. Bump `profileVersion` when you change a published profile. Commit everything; CI runs
    `node scripts/build.mjs --check`.
