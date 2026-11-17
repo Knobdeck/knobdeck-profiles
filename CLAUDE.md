@@ -5,8 +5,8 @@ no releases.
 
 ## Rule 1: build after every change, commit what it writes
 
-`node scripts/build.mjs` completes the profile files and rewrites `registry.json`; `preview.mjs`
-redraws the pictures. CI (`build.mjs --check`) fails when either is stale or an action is unknown.
+`node scripts/build.mjs` completes the profile files and rewrites `registry.json`. There are no
+preview images: the app draws each card from the profile itself. CI (`build.mjs --check`) fails when a file or `registry.json` is stale or an action is unknown.
 
 ## Rule 2: actions are portable
 

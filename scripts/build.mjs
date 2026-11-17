@@ -125,10 +125,6 @@ function buildProfile(id) {
   if (!["dial", "deck"].includes(file.kind)) problems.push(where('kind must be "dial" or "deck"'));
   for (const k of ["name", "summary", "author"]) if (typeof file[k] !== "string" || !file[k].trim()) problems.push(where(`${k} is required`));
   if (!/^\d+\.\d+\.\d+$/.test(file.profileVersion ?? "")) problems.push(where('profileVersion must be semver, e.g. "1.0.0"'));
-  if (!existsSync(`profiles/${id}/preview.png`)) {
-    if (check) problems.push(where("no preview.png (node scripts/preview.mjs " + id + ")"));
-    else console.warn(`${id}: no preview.png yet (node scripts/preview.mjs ${id})`);
-  }
 
   const deck = file.kind === "deck";
   const key = deck ? "slices" : "items";
@@ -327,7 +323,6 @@ for (const id of ids) {
     author: f.author, version: f.profileVersion, tags: f.tags ?? [], icon: typeof f.profile?.icon === "string" && !f.profile.icon.startsWith("data:") ? f.profile.icon : null,
     plugins: f.plugins, platforms: f.platforms, skippedOn: f.skippedOn, ready: f.ready, configure: f.toConfigure.length, items: f.items,
     profile: `${id}/profile.json`,
-    preview: existsSync(`profiles/${id}/preview.png`) ? `${id}/preview.png` : null,
     sha256: check ? null : createHash("sha256").update(text).digest("hex"),
   });
 }

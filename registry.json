@@ -31,7 +31,6 @@
       "configure": 0,
       "items": 13,
       "profile": "browser-tabs/profile.json",
-      "preview": "browser-tabs/preview.png",
       "sha256": "235e64e8eded7309f48b9af8002e71c63d7338f827c70e2e6399606349e975b7"
     },
     {
@@ -64,7 +63,6 @@
       "configure": 0,
       "items": 8,
       "profile": "discord-voice/profile.json",
-      "preview": "discord-voice/preview.png",
       "sha256": "14b5c650018d2f96fbc0aef85c95c110cdedb92c6ae41f763e4e6a861ef38ac2"
     },
     {
@@ -92,7 +90,6 @@
       "configure": 0,
       "items": 8,
       "profile": "editing-shortcuts/profile.json",
-      "preview": "editing-shortcuts/preview.png",
       "sha256": "3d3637a79fd68ed059c34301218d7c9f4a42d65ba6c791966cd08966b3bf6824"
     },
     {
@@ -124,7 +121,6 @@
       "configure": 0,
       "items": 12,
       "profile": "file-tools/profile.json",
-      "preview": "file-tools/preview.png",
       "sha256": "f947511c89c8321a78f46d8771b9ee61fbc519fb954c131a525e8a4645fd09ba"
     },
     {
@@ -157,7 +153,6 @@
       "configure": 0,
       "items": 10,
       "profile": "intellij-debugging/profile.json",
-      "preview": "intellij-debugging/preview.png",
       "sha256": "c116826c5395ef287a5f2623b775b97deb331ed6eaecb0e8db27d5cc893e0258"
     },
     {
@@ -184,7 +179,6 @@
       "configure": 0,
       "items": 7,
       "profile": "media-controls/profile.json",
-      "preview": "media-controls/preview.png",
       "sha256": "1676af91e60b1a5fd1bf465ff89ba673db659d647c1437b0f8f55d88875c36d7"
     },
     {
@@ -217,7 +211,6 @@
       "configure": 0,
       "items": 6,
       "profile": "philips-hue/profile.json",
-      "preview": "philips-hue/preview.png",
       "sha256": "c5a2490ed8d1210b81585a18847e12675aa5ddec60660ffbbbc2b6f4b8dfe0e0"
     },
     {
@@ -244,7 +237,6 @@
       "configure": 0,
       "items": 9,
       "profile": "power-and-session/profile.json",
-      "preview": "power-and-session/preview.png",
       "sha256": "6d6ae1f8193b96262699ccb2db6589b3d8e4f4c244d1c50c8169c1fe5415a721"
     },
     {
@@ -276,7 +268,6 @@
       "configure": 0,
       "items": 8,
       "profile": "presenter/profile.json",
-      "preview": "presenter/preview.png",
       "sha256": "8329c958d5192fe7795a62b387fdb538af5d216409277996f3a96a31d4bea17c"
     },
     {
@@ -308,7 +299,6 @@
       "configure": 0,
       "items": 5,
       "profile": "spotify/profile.json",
-      "preview": "spotify/preview.png",
       "sha256": "9acb6fce5d025a5416786bdaca56e62d739bd59b26e2acf836cc04050956c8ff"
     },
     {
@@ -344,7 +334,6 @@
       "configure": 0,
       "items": 8,
       "profile": "time-and-weather/profile.json",
-      "preview": "time-and-weather/preview.png",
       "sha256": "7251209fcecad81f74fab983a10109cfcb678d637a8cc7a537566ad5dc46f882"
     },
     {
@@ -377,7 +366,6 @@
       "configure": 0,
       "items": 10,
       "profile": "vs-code/profile.json",
-      "preview": "vs-code/preview.png",
       "sha256": "aa1db3db59716f6e73456a5ae8dfb2bbaf1e54c1739231b1d5658ea227ad7053"
     },
     {
@@ -412,7 +400,6 @@
       "configure": 0,
       "items": 14,
       "profile": "window-snapping/profile.json",
-      "preview": "window-snapping/preview.png",
       "sha256": "6cde37f7c181618d76bc42adb33f1167620d28472057e9641b3aa5e6b1699581"
     },
     {
@@ -445,7 +432,6 @@
       "configure": 0,
       "items": 10,
       "profile": "youtube-music/profile.json",
-      "preview": "youtube-music/preview.png",
       "sha256": "31f0fe9759a0386aac1148dd64ea03573c7fdd1d178b9567653b38d22941fefc"
     },
     {
@@ -482,7 +468,6 @@
       "configure": 2,
       "items": 20,
       "profile": "code-studio/profile.json",
-      "preview": "code-studio/preview.png",
       "sha256": "769983a4f43ab39e6d7ea338dad43f5856874127c78cd4d6b2830a821d6c1671"
     },
     {
@@ -525,7 +510,6 @@
       "configure": 1,
       "items": 8,
       "profile": "creator-dashboard/profile.json",
-      "preview": "creator-dashboard/preview.png",
       "sha256": "d7153973beef5544409cae687c2ba3100534a513deb7112df581d5fb11e3e716"
     },
     {
@@ -563,7 +547,6 @@
       "configure": 0,
       "items": 25,
       "profile": "desktop-workspace/profile.json",
-      "preview": "desktop-workspace/preview.png",
       "sha256": "2572dc734fbb1c9697113180171c2e3dd08b0569f68cdf6ecffa90a1408ad233"
     },
     {
@@ -614,7 +597,6 @@
       "configure": 0,
       "items": 13,
       "profile": "gaming/profile.json",
-      "preview": "gaming/preview.png",
       "sha256": "f518d7b9054f3edf6da6032fab526c597b222244fef2dc179006e17737e6d7f4"
     },
     {
@@ -647,7 +629,6 @@
       "configure": 0,
       "items": 9,
       "profile": "media-deck/profile.json",
-      "preview": "media-deck/preview.png",
       "sha256": "7b4e701fc943eb54a23c7702567f3ecc17f1a3446f5c8e9c8a044758b2fbb73f"
     },
     {
@@ -684,7 +665,6 @@
       "configure": 0,
       "items": 10,
       "profile": "meetings/profile.json",
-      "preview": "meetings/preview.png",
       "sha256": "e0f07fd047dcedeeabe433fdd8cab6d535e1c123c577dc9ee2b2485af31d88b4"
     },
     {
@@ -717,7 +697,6 @@
       "configure": 7,
       "items": 19,
       "profile": "obs-streaming/profile.json",
-      "preview": "obs-streaming/preview.png",
       "sha256": "7e1621f17a37d5047e447e2d9f9a5de67125b6ad8cc547884f4d825592b6d5cd"
     },
     {
@@ -755,7 +734,6 @@
       "configure": 5,
       "items": 9,
       "profile": "smart-home/profile.json",
-      "preview": "smart-home/preview.png",
       "sha256": "0cf4feb44b44022f2a49b5be7821514390220095b991fab9348989189778f28a"
     },
     {
@@ -787,7 +765,6 @@
       "configure": 5,
       "items": 9,
       "profile": "streamlabs-live/profile.json",
-      "preview": "streamlabs-live/preview.png",
       "sha256": "32553d0646f7a81b1ba070c4078b3c4fef27dc31f89d1dedf01dd8acc8bfa10d"
     },
     {
@@ -830,7 +807,6 @@
       "configure": 2,
       "items": 16,
       "profile": "twitch-streamer/profile.json",
-      "preview": "twitch-streamer/preview.png",
       "sha256": "4729ac2d88c33d358177ee518db86194a92279f947bf8b1414d6132b2ce782ee"
     },
     {
@@ -863,7 +839,6 @@
       "configure": 0,
       "items": 9,
       "profile": "vlc-remote/profile.json",
-      "preview": "vlc-remote/preview.png",
       "sha256": "cc035de073a549190aa86b1bf0ab8644573f76974ab641b78483014060b5a6e0"
     },
     {
@@ -895,7 +870,6 @@
       "configure": 0,
       "items": 9,
       "profile": "voicemod-fx/profile.json",
-      "preview": "voicemod-fx/preview.png",
       "sha256": "aa56ffb4f110b7ffb15177a3398a88a037419aae1a43ba371d8fad27b10ee9c7"
     }
   ]

@@ -1,7 +1,8 @@
 # knobdeck-profiles
 
 Ready-made dial and deck profiles for KnobDeck. The app lists them under **Get Profiles** at the top
-of the dial and deck profile lists; one click adds a profile, after installing (with your OK) the
+of the dial and deck profile lists, each drawn read-only from its own `profile.json` by the editor's
+canvas (no images here); one click adds a profile, after installing (with your OK) the
 plugins it uses and offering their setup.
 
 Nothing here is built or released. The app site (`knobdeck-registry`) serves `registry.json` and the
@@ -11,7 +12,6 @@ profile folders straight from `master`:
 |---|---|
 | `https://app.knobdeck.harshalkudale.com/profiles/registry.json` | `registry.json` |
 | `https://app.knobdeck.harshalkudale.com/profiles/<id>/profile.json` | `profiles/<id>/profile.json` |
-| `https://app.knobdeck.harshalkudale.com/profiles/<id>/preview.png` | `profiles/<id>/preview.png` |
 
 A change is live a few minutes after it lands on `master` (the site caches for 5 minutes).
 
@@ -20,11 +20,10 @@ A change is live a few minutes after it lands on `master` (the site caches for 5
 ```
 registry.json              every profile's summary (generated)
 profiles/<id>/profile.json the profile, one file
-profiles/<id>/preview.png  promo card: kind, icon, name, summary, plugins (generated)
 catalog/plugins.json       every published plugin's actions, per OS (generated)
 catalog/builtin.json       KnobDeck's built-in actions (by hand)
 catalog/icons/<plugin>/    plugin logos, inlined into profiles as data URIs
-scripts/                   sync-catalog, build, preview
+scripts/                   sync-catalog, build
 ```
 
 ## A profile file
@@ -83,9 +82,7 @@ the user picks them after adding. Fill everything else, or set `""` on an option
 2. `node scripts/build.mjs`: checks every action against the catalog, completes the files and
    writes `registry.json`. It fails on unknown actions, a folder in a deck folder, overlapping
    sliders and so on.
-3. `node scripts/preview.mjs <id>`: draws the promo card `preview.png`, 800×600 (needs `rsvg-convert` and Lucide's icons,
-   see the script).
-4. Bump `profileVersion` when you change a published profile. Commit everything; CI runs
+3. Bump `profileVersion` when you change a published profile. Commit everything; CI runs
    `node scripts/build.mjs --check`.
 
 When plugins gain or change actions, refresh the catalog with `node scripts/sync-catalog.mjs`
