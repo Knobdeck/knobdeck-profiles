@@ -86,7 +86,9 @@ the user picks them after adding. Fill everything else, or set `""` on an option
    `node scripts/build.mjs --check`.
 
 When plugins gain or change actions, refresh the catalog with `node scripts/sync-catalog.mjs`
-(downloads the latest `knobdeck-plugins` release; needs `gh` and `unzip`) and rebuild.
+(reads the plugin catalog at `https://app.knobdeck.harshalkudale.com/v2/`, so actions disabled by the
+catalog's policy count as unavailable; pass `../knobdeck-registry/public` to use a local catalog build)
+and rebuild.
 
 ## Licence
 
